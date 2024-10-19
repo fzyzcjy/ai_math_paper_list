@@ -2,7 +2,7 @@
 
 
 
-1. **Training Verifiers to Solve Math Word Problems** [[pdf]](http://arxiv.org/abs/2110.14168) `2021-11-17` (1000 cite) (128 AI4Math cite) 
+1. **Training Verifiers to Solve Math Word Problems** [[pdf]](http://arxiv.org/abs/2110.14168) `2021-11-17` (1000 cite) (129 AI4Math cite) 
 
 
      <details>
@@ -16,7 +16,7 @@
           State-of-the-art language models can match human performance on many tasks, but they still struggle to robustly perform multi-step mathematical reasoning. To diagnose the failures of current models and support research, we introduce GSM8K, a dataset of 8.5K high quality linguistically diverse grade school math word problems. We find that even the largest transformer models fail to achieve high test performance, despite the conceptual simplicity of this problem distribution. To increase performance, we propose training verifiers to judge the correctness of model completions. At test time, we generate many candidate solutions and select the one ranked highest by the verifier. We demonstrate that verification significantly improves performance on GSM8K, and we provide strong empirical evidence that verification scales more effectively with increased data than a finetuning baseline.
      </details>
 
-2. **Self-Consistency Improves Chain of Thought Reasoning in Language Models** [[pdf]](http://arxiv.org/abs/2203.11171) `ICLR 2023` (1000 cite) (88 AI4Math cite) 
+2. **Self-Consistency Improves Chain of Thought Reasoning in Language Models** [[pdf]](http://arxiv.org/abs/2203.11171) `ICLR 2023` (1000 cite) (89 AI4Math cite) 
 
 
      <details>
@@ -44,7 +44,7 @@
           Many intellectual endeavors require mathematical problem solving, but this skill remains beyond the capabilities of computers. To measure this ability in machine learning models, we introduce MATH, a new dataset of 12,500 challenging competition mathematics problems. Each problem in MATH has a full step-by-step solution which can be used to teach models to generate answer derivations and explanations. To facilitate future research and increase accuracy on MATH, we also contribute a large auxiliary pretraining dataset which helps teach models the fundamentals of mathematics. Even though we are able to increase accuracy on MATH, our results show that accuracy remains relatively low, even with enormous Transformer models. Moreover, we find that simply increasing budgets and model parameter counts will be impractical for achieving strong mathematical reasoning if scaling trends continue. While scaling Transformers is automatically solving most other text-based tasks, scaling is not currently solving MATH. To have more traction on mathematical problem solving we will likely need new algorithmic advancements from the broader research community.
      </details>
 
-4. **Large Language Models are Zero-Shot Reasoners** [[pdf]](https://arxiv.org/abs/2205.11916v4) `NeurIPS 2022 Poster` (1000 cite) (74 AI4Math cite) 
+4. **Large Language Models are Zero-Shot Reasoners** [[pdf]](https://arxiv.org/abs/2205.11916v4) `NeurIPS 2022 Poster` (1000 cite) (75 AI4Math cite) 
 
 
      <details>
@@ -100,7 +100,7 @@
           N/A
      </details>
 
-8. **Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks** [[pdf]](http://arxiv.org/abs/2211.12588) `2023-10-22` (524 cite) (53 AI4Math cite) 
+8. **Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks** [[pdf]](http://arxiv.org/abs/2211.12588) `2023-10-22` (524 cite) (54 AI4Math cite) 
 
 
      <details>
@@ -256,7 +256,7 @@
           Like humans, large language models (LLMs) do not always generate the best output on their first try. Motivated by how humans refine their written text, we introduce Self-Refine, an approach for improving initial outputs from LLMs through iterative feedback and refinement. The main idea is to generate an initial output using an LLMs; then, the same LLMs provides *feedback* for its output and uses it to *refine* itself, iteratively. Self-Refine does not require any supervised training data, additional training, or reinforcement learning, and instead uses a single LLM as the generator, refiner and the feedback provider. We evaluate Self-Refine across 7 diverse tasks, ranging from dialog response generation to mathematical reasoning, using state-of-the-art (GPT-3.5, ChatGPT, and GPT-4) LLMs. Across all evaluated tasks, outputs generated with Self-Refine are preferred by humans and automatic metrics over those generated with the same LLM using conventional one-step generation, improving by $\sim$20\% absolute on average in task performance. Our work demonstrates that even state-of-the-art LLMs like GPT-4 can be further improved at test-time using our simple, standalone approach.
      </details>
 
-20. **ReAct: Synergizing Reasoning and Acting in Language Models** [[pdf]](http://arxiv.org/abs/2210.03629) `ICLR 2023` (1000 cite) (29 AI4Math cite) 
+20. **ReAct: Synergizing Reasoning and Acting in Language Models** [[pdf]](http://arxiv.org/abs/2210.03629) `ICLR 2023` (1000 cite) (30 AI4Math cite) 
 
 
      <details>
@@ -382,7 +382,7 @@
           Language models are increasingly being deployed for general problem solving across a wide range of tasks, but are still confined to token-level, left-to-right decision-making processes during inference. This means they can fall short in tasks that require exploration, strategic lookahead, or where initial decisions play a pivotal role. To surmount these challenges, we introduce a new framework for language model inference, Tree of Thoughts (ToT), which generalizes over the popular Chain of Thought approach to prompting language models, and enables exploration over coherent units of text (thoughts) that serve as intermediate steps toward problem solving. ToT allows LMs to perform deliberate decision making by considering multiple different reasoning paths and self-evaluating choices to decide the next course of action, as well as looking ahead or backtracking when necessary to make global choices.Our experiments show that ToT significantly enhances language models’ problem-solving abilities on three novel tasks requiring non-trivial planning or search: Game of 24, Creative Writing, and Mini Crosswords. For instance, in Game of 24, while GPT-4 with chain-of-thought prompting only solved 4\% of tasks, our method achieved a success rate of 74\%. Code repo with all prompts: https://github.com/princeton-nlp/tree-of-thought-llm.
      </details>
 
-29. **Complexity-Based Prompting for Multi-step Reasoning** [[pdf]](http://arxiv.org/abs/2210.00720) `ICLR 2023 Poster` (309 cite) (24 AI4Math cite) 
+29. **Complexity-Based Prompting for Multi-step Reasoning** [[pdf]](http://arxiv.org/abs/2210.00720) `ICLR 2023 Poster` (309 cite) (25 AI4Math cite) 
 
 
      <details>
@@ -396,7 +396,21 @@
           We study the task of prompting large-scale language models to perform multi-step reasoning. Existing work shows that when prompted with a chain of thoughts (CoT), sequences of short sentences describing intermediate reasoning steps towards a final answer, large language models can generate new reasoning chains and predict answers for new inputs. A central question is which reasoning examples make the most effective prompts. In this work, we propose complexity-based prompting, a simple and effective example selection scheme for multi-step reasoning. We show that prompts with higher reasoning complexity, i.e., chains with more reasoning steps, achieve substantially better performance on math word reasoning tasks over strong baselines. We further extend our complexity-based criteria from prompting (selecting inputs) to decoding (selecting outputs), where we sample multiple reasoning chains from the model, then choose the majorityof generated answers from complex reasoning chains (over simple chains). When used to prompt GPT-3, our approach substantially improves multi-step reasoning accuracy, with an 8.6% absolute improvement on GSM8K, and 6.4% on MathQA. Compared with existing example selection schemes like manual tuning or retrieval-based selection, selection based on reasoning complexity is intuitive, easy to implement, and annotation-efficient. Further results demonstrate the robustness of performance gains from complex prompts under format perturbation and distribution shift.
      </details>
 
-30. **Toolformer: Language Models Can Teach Themselves to Use Tools** [[pdf]](http://arxiv.org/abs/2302.04761) `NeurIPS 2023 Oral` (1000 cite) (23 AI4Math cite) 
+30. **MAmmoTH: Building Math Generalist Models through Hybrid Instruction Tuning** [[pdf]](http://arxiv.org/abs/2309.05653) `ICLR 2024` (232 cite) (23 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          The MAmmoTH series substantially outperform existing open-source models on nine mathematical reasoning datasets across all scales with an average accuracy gain between 16% and 32%, and underscores the importance of diverse problem coverage and the use of hybrid rationales in developing superior math generalist models.
+     </details>
+
+
+     <details>
+          <summary>Abstract</summary>
+          We introduce MAmmoTH, a series of open-source large language models (LLMs) specifically tailored for general math problem-solving. The MAmmoTH models are trained on MathInstruct, our meticulously curated instruction tuning dataset. MathInstruct is compiled from 13 math datasets with intermediate rationales, six of which have rationales newly curated by us. It presents a unique hybrid of chain-of-thought (CoT) and program-of-thought (PoT) rationales, and also ensures extensive coverage of diverse fields in math. The hybrid of CoT and PoT not only unleashes the potential of tool use but also allows different thought processes for different math problems. As a result, the MAmmoTH series substantially outperform existing open-source models on nine mathematical reasoning datasets across all scales with an average accuracy gain between 16% and 32%. Remarkably, our MAmmoTH-7B model reaches 33% on MATH (a competition-level dataset), which exceeds the best open-source 7B model (WizardMath) by 23%, and the MAmmoTH-34B model achieves 44% accuracy on MATH, even surpassing GPT-4's CoT result. Our work underscores the importance of diverse problem coverage and the use of hybrid rationales in developing superior math generalist models.
+     </details>
+
+31. **Toolformer: Language Models Can Teach Themselves to Use Tools** [[pdf]](http://arxiv.org/abs/2302.04761) `NeurIPS 2023 Oral` (1000 cite) (23 AI4Math cite) 
 
 
      <details>
@@ -410,7 +424,7 @@
           Language models (LMs) exhibit remarkable abilities to solve new tasks from just a few examples or textual instructions, especially at scale. They also, paradoxically, struggle with basic functionality, such as arithmetic or factual lookup, where much simpler and smaller specialized models excel. In this paper, we show that LMs can teach themselves to *use external tools* via simple APIs and achieve the best of both worlds. We introduce *Toolformer*, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring nothing more than a handful of demonstrations for each API. We incorporate a range of tools, including a calculator, a Q&A system, a search engine, a translation system, and a calendar. Toolformer achieves substantially improved zero-shot performance across a variety of downstream tasks, often competitive with much larger models, without sacrificing its core language modeling abilities.
      </details>
 
-31. **miniF2F: a cross-system benchmark for formal Olympiad-level mathematics** [[pdf]](https://arxiv.org/abs/2109.00110) `ICLR 2022` `Lean, Isabelle, HOL Light, MetaMath` (84 cite) (23 AI4Math cite) 
+32. **miniF2F: a cross-system benchmark for formal Olympiad-level mathematics** [[pdf]](https://arxiv.org/abs/2109.00110) `ICLR 2022` `Lean, Isabelle, HOL Light, MetaMath` (84 cite) (23 AI4Math cite) 
 
 
      <details>
@@ -424,7 +438,7 @@
           We present $\textsf{miniF2F}$, a dataset of formal Olympiad-level mathematics problems statements intended to provide a unified cross-system benchmark for neural theorem proving. The $\textsf{miniF2F}$ benchmark currently targets Metamath, Lean, Isabelle (partially) and HOL Light (partially) and consists of 488 problem statements drawn from the AIME, AMC, and the International Mathematical Olympiad (IMO), as well as material from high-school and undergraduate mathematics courses. We report baseline results using GPT-f, a neural theorem prover based on GPT-3 and provide an analysis of its performance. We intend for $\textsf{miniF2F}$ to be a community-driven effort and hope that our benchmark will help spur advances in neural theorem proving.
      </details>
 
-32. **Measuring Massive Multitask Language Understanding** [[pdf]](http://arxiv.org/abs/2009.03300) `ICLR 2021` (1000 cite) (23 AI4Math cite) 
+33. **Measuring Massive Multitask Language Understanding** [[pdf]](http://arxiv.org/abs/2009.03300) `ICLR 2021` (1000 cite) (23 AI4Math cite) 
 
 
      <details>
@@ -438,7 +452,7 @@
           We propose a new test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model's academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings.
      </details>
 
-33. **Deep Learning for Symbolic Mathematics** [[pdf]](http://arxiv.org/abs/1912.01412) `ICLR 2020 Spotlight` (357 cite) (23 AI4Math cite) 
+34. **Deep Learning for Symbolic Mathematics** [[pdf]](http://arxiv.org/abs/1912.01412) `ICLR 2020 Spotlight` (357 cite) (23 AI4Math cite) 
 
 
      <details>
@@ -450,20 +464,6 @@
      <details>
           <summary>Abstract</summary>
           Neural networks have a reputation for being better at solving statistical or approximate problems than at performing calculations or working with symbolic data. In this paper, we show that they can be surprisingly good at more elaborated tasks in mathematics, such as symbolic integration and solving differential equations. We propose a syntax for representing mathematical problems, and methods for generating large datasets that can be used to train sequence-to-sequence models. We achieve results that outperform commercial Computer Algebra Systems such as Matlab or Mathematica.
-     </details>
-
-34. **MAmmoTH: Building Math Generalist Models through Hybrid Instruction Tuning** [[pdf]](http://arxiv.org/abs/2309.05653) `ICLR 2024` (232 cite) (22 AI4Math cite) 
-
-
-     <details>
-          <summary>SemanticsScholar tldr</summary>
-          The MAmmoTH series substantially outperform existing open-source models on nine mathematical reasoning datasets across all scales with an average accuracy gain between 16% and 32%, and underscores the importance of diverse problem coverage and the use of hybrid rationales in developing superior math generalist models.
-     </details>
-
-
-     <details>
-          <summary>Abstract</summary>
-          We introduce MAmmoTH, a series of open-source large language models (LLMs) specifically tailored for general math problem-solving. The MAmmoTH models are trained on MathInstruct, our meticulously curated instruction tuning dataset. MathInstruct is compiled from 13 math datasets with intermediate rationales, six of which have rationales newly curated by us. It presents a unique hybrid of chain-of-thought (CoT) and program-of-thought (PoT) rationales, and also ensures extensive coverage of diverse fields in math. The hybrid of CoT and PoT not only unleashes the potential of tool use but also allows different thought processes for different math problems. As a result, the MAmmoTH series substantially outperform existing open-source models on nine mathematical reasoning datasets across all scales with an average accuracy gain between 16% and 32%. Remarkably, our MAmmoTH-7B model reaches 33% on MATH (a competition-level dataset), which exceeds the best open-source 7B model (WizardMath) by 23%, and the MAmmoTH-34B model achieves 44% accuracy on MATH, even surpassing GPT-4's CoT result. Our work underscores the importance of diverse problem coverage and the use of hybrid rationales in developing superior math generalist models.
      </details>
 
 35. **Template-Based Math Word Problem Solvers with Recursive Neural Networks** [[pdf]](https://ojs.aaai.org/index.php/AAAI/article/view/4697) `AAAI 2019 Natural Language Processing` (134 cite) (22 AI4Math cite) 
@@ -874,7 +874,21 @@
           Chain of thought prompting successfully improves the reasoning capabilities of large language models, achieving state of the art results on a range of datasets. However, these reasoning capabilities only appear to emerge in models with at least tens of billions of parameters. In this paper, we explore the transfer of such reasoning capabilities to smaller models via knowledge distillation, also investigating model and dataset size trade-off. Specifically, we finetune a student model on the chain of thought outputs generated by a larger teacher model. Our experiments show that the proposed method improves task performance across arithmetic, commonsense and symbolic reasoning datasets. For example, the accuracy of T5 XXL on GSM8K improves from 8.11% to 21.99% and 18.42% when finetuned on PaLM 540B and GPT-3 175B generated chains of thought, respectively.
      </details>
 
-65. **Thor: Wielding Hammers to Integrate Language Models and Automated Theorem Provers** [[pdf]](http://arxiv.org/abs/2205.10893) `NeurIPS 2022` `Isabelle` (65 cite) (15 AI4Math cite) 
+65. **Automatic Chain of Thought Prompting in Large Language Models** [[pdf]](http://arxiv.org/abs/2210.03493) `ICLR 2023 Poster` (403 cite) (15 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          An automatic CoT prompting method that samples questions with diversity and generates reasoning chains to construct demonstrations and consistently matches or exceeds the performance of the CoT paradigm that requires manual designs of demonstrations.
+     </details>
+
+
+     <details>
+          <summary>Abstract</summary>
+          Large Language Models (LLMs) can carry out complex reasoning tasks by generating intermediate reasoning steps. These steps are triggered by what is called chain-of-thought (CoT) prompting, which comes in two flavors: one leverages a simple prompt like "Let’s think step by step" to facilitate step-by-step reasoning before answering a question (Zero-Shot-CoT). The other uses manual demonstrations, each composed of a question and a reasoning chain that leads to an answer (Manual-CoT). Unfortunately, the superior performance of the latter strategy crucially hinges on manually generating task-specific demonstrations. This makes it far less scalable and more dependent on the talent of the CoT engineer. We show that such manual efforts may be eliminated by leveraging LLMs to generate the reasoning chains on its own. Since these generated chains often come with mistakes we propose a number of mitigation strategies. Our proposed Auto-CoT method automaticaly samples diverse questions and we perform post-processing quality control to generate usable reasoning chains from Zero-Shot-CoT. On ten public benchmark reasoning tasks, Auto-CoT performs on par with Manual-CoT without the need for human intervention. Code is available at https://github.com/amazon-research/auto-cot.
+     </details>
+
+66. **Thor: Wielding Hammers to Integrate Language Models and Automated Theorem Provers** [[pdf]](http://arxiv.org/abs/2205.10893) `NeurIPS 2022` `Isabelle` (65 cite) (15 AI4Math cite) 
 
 
      <details>
@@ -888,7 +902,7 @@
           In theorem proving, the task of selecting useful premises from a large library to unlock the proof of a given conjecture is crucially important. This presents a challenge for all theorem provers, especially the ones based on language models, due to their relative inability to reason over huge volumes of premises in text form. This paper introduces Thor, a framework integrating language models and automated theorem provers to overcome this difficulty. In Thor, a class of methods called hammers that leverage the power of automated theorem provers are used for premise selection, while all other tasks are designated to language models. Thor increases a language model's success rate on the PISA dataset from $39\%$ to $57\%$, while solving $8.2\%$ of problems neither language models nor automated theorem provers are able to solve on their own. Furthermore, with a significantly smaller computational budget, Thor can achieve a success rate on the MiniF2F dataset that is on par with the best existing methods. Thor can be instantiated for the majority of popular interactive theorem provers via a straightforward protocol we provide.
      </details>
 
-66. **Mathematical Reasoning via Self-supervised Skip-tree Training** [[pdf]](https://arxiv.org/abs/2006.04757) `ICLR 2021` (53 cite) (15 AI4Math cite) 
+67. **Mathematical Reasoning via Self-supervised Skip-tree Training** [[pdf]](https://arxiv.org/abs/2006.04757) `ICLR 2021` (53 cite) (15 AI4Math cite) 
 
 
      <details>
@@ -902,7 +916,7 @@
           We demonstrate that self-supervised language modeling applied to mathematical formulas enables logical reasoning. To measure the logical reasoning abilities of language models, we formulate several evaluation (downstream) tasks, such as inferring types, suggesting missing assumptions and completing equalities. For training language models for formal mathematics, we propose a novel skip-tree task. We find that models trained on the skip-tree task show surprisingly strong mathematical reasoning abilities, and outperform models trained on standard skip-sequence tasks. We also analyze the models' ability to formulate new conjectures by measuring how often the predictions are provable and useful in other proofs.
      </details>
 
-67. **Learning to Reason in Large Theories without Imitation** [[pdf]](https://arxiv.org/abs/1905.10501) `2019-01-01` (38 cite) (15 AI4Math cite) 
+68. **Learning to Reason in Large Theories without Imitation** [[pdf]](https://arxiv.org/abs/1905.10501) `2019-01-01` (38 cite) (15 AI4Math cite) 
 
 
      <details>
@@ -916,7 +930,7 @@
           In this paper, we demonstrate how to do automated theorem proving in the presence of a large knowledge base of potential premises without learning from human proofs. We suggest an exploration mechanism that mixes in additional premises selected by a tf-idf (term frequency-inverse document frequency) based lookup in a deep reinforcement learning scenario. This helps with exploring and learning which premises are relevant for proving a new theorem. Our experiments show that the theorem prover trained with this exploration mechanism outperforms provers that are trained only on human proofs. It approaches the performance of a prover trained by a combination of imitation and reinforcement learning. We perform multiple experiments to understand the importance of the underlying assumptions that make our exploration approach work, thus explaining our design choices.
      </details>
 
-68. **Holophrasm: a neural Automated Theorem Prover for higher-order logic** [[pdf]](http://arxiv.org/abs/1608.02644) `2016-08-09` (44 cite) (15 AI4Math cite) 
+69. **Holophrasm: a neural Automated Theorem Prover for higher-order logic** [[pdf]](http://arxiv.org/abs/1608.02644) `2016-08-09` (44 cite) (15 AI4Math cite) 
 
 
      <details>
@@ -930,7 +944,7 @@
           I propose a system for Automated Theorem Proving in higher order logic using deep learning and eschewing hand-constructed features. Holophrasm exploits the formalism of the Metamath language and explores partial proof trees using a neural-network-augmented bandit algorithm and a sequence-to-sequence model for action enumeration. The system proves 14% of its test theorems from Metamath's set.mm module.
      </details>
 
-69. **Graph of Thoughts: Solving Elaborate Problems with Large Language Models** [[pdf]](http://arxiv.org/abs/2308.09687) `AAAI 2024 Natural Language Processing` (335 cite) (14 AI4Math cite) 
+70. **Graph of Thoughts: Solving Elaborate Problems with Large Language Models** [[pdf]](http://arxiv.org/abs/2308.09687) `AAAI 2024 Natural Language Processing` (335 cite) (14 AI4Math cite) 
 
 
      <details>
@@ -944,7 +958,7 @@
           We introduce Graph of Thoughts (GoT): a framework that advances prompting capabilities in large language models (LLMs) beyond those offered by paradigms such as Chain-of-Thought or Tree of Thoughts (ToT). The key idea and primary advantage of GoT is the ability to model the information generated by an LLM as an arbitrary graph, where units of information ("LLM thoughts") are vertices, and edges correspond to dependencies between these vertices. This approach enables combining arbitrary LLM thoughts into synergistic outcomes, distilling the essence of whole networks of thoughts, or enhancing thoughts using feedback loops. We illustrate that GoT offers advantages over state of the art on different tasks, for example increasing the quality of sorting by 62% over ToT, while simultaneously reducing costs by >31%. We ensure that GoT is extensible with new thought transformations and thus can be used to spearhead new prompting schemes. This work brings the LLM reasoning closer to human thinking or brain mechanisms such as recurrence, both of which form complex networks
      </details>
 
-70. **Measuring and Narrowing the Compositionality Gap in Language Models** [[pdf]](https://aclanthology.org/2023.findings-emnlp.378) `EMNLP 2023 Findings` (407 cite) (14 AI4Math cite) 
+71. **Measuring and Narrowing the Compositionality Gap in Language Models** [[pdf]](https://aclanthology.org/2023.findings-emnlp.378) `EMNLP 2023 Findings` (407 cite) (14 AI4Math cite) 
 
 
      <details>
@@ -958,7 +972,7 @@
           We investigate the ability of language models to perform compositional reasoning tasks where the overall solution depends on correctly composing the answers to sub-problems. We measure how often models can correctly answer all sub-problems but not generate the overall solution, a ratio we call the compositionality gap. We evaluate this ratio by asking multi-hop questions with answers that require composing multiple facts unlikely to have been observed together during pretraining. In the GPT-3 family of models, as model size increases we show that the single-hop question answering performance improves faster than the multi-hop performance does, therefore the compositionality gap does not decrease. This surprising result suggests that while more powerful models memorize and recall more factual knowledge, they show no corresponding improvement in their ability to perform this kind of compositional reasoning. We then demonstrate how elicitive prompting (such as chain of thought) narrows the compositionality gap by reasoning explicitly instead of implicitly. We present a new method, self-ask, that further improves on chain of thought. In our method, the model explicitly asks itself (and then answers) follow-up questions before answering the initial question. We finally show that self-ask’s structured prompting lets us easily plug in a search engine to answer the follow-up questions, which additionally improves accuracy.
      </details>
 
-71. **Progressive-Hint Prompting Improves Reasoning in Large Language Models** [[pdf]](http://arxiv.org/abs/2304.09797) `2023-08-09` (86 cite) (14 AI4Math cite) 
+72. **Progressive-Hint Prompting Improves Reasoning in Large Language Models** [[pdf]](http://arxiv.org/abs/2304.09797) `2023-08-09` (86 cite) (14 AI4Math cite) 
 
 
      <details>
@@ -972,7 +986,7 @@
           The performance of Large Language Models (LLMs) in reasoning tasks depends heavily on prompt design, with Chain-of-Thought (CoT) and self-consistency being critical methods that enhance this ability. However, these methods do not fully exploit the answers generated by the LLM to guide subsequent responses. This paper proposes a new prompting method, named Progressive-Hint Prompting (PHP), that enables automatic multiple interactions between users and LLMs by using previously generated answers as hints to progressively guide toward the correct answers. PHP is orthogonal to CoT and self-consistency, making it easy to combine with state-of-the-art techniques to further improve performance. We conducted extensive and comprehensive experiments on seven benchmarks. The results show that PHP significantly improves accuracy while remaining highly efficient. For instance, with text-davinci-003, we observed a 4.2% improvement on GSM8K with greedy decoding compared to Complex CoT, and a 46.17% reduction in sample paths with self-consistency. With GPT-4 and PHP, we achieve state-of-the-art performances on SVAMP (89.1% -> 91.9%), GSM8K (92% -> 95.5%), AQuA (76.4% -> 79.9%) and MATH (50.3% -> 53.9%).
      </details>
 
-72. **Specializing Smaller Language Models towards Multi-Step Reasoning** [[pdf]](https://proceedings.mlr.press/v202/fu23d.html) `ICML 2023 Oral` (177 cite) (14 AI4Math cite) 
+73. **Specializing Smaller Language Models towards Multi-Step Reasoning** [[pdf]](https://proceedings.mlr.press/v202/fu23d.html) `ICML 2023 Oral` (177 cite) (14 AI4Math cite) 
 
 
      <details>
@@ -984,20 +998,6 @@
      <details>
           <summary>Abstract</summary>
           The surprising ability of Large Language Models (LLMs) to perform well on complex reasoning with only few-shot chain-of-thought prompts is believed to emerge only in very large-scale models. We show that such abilities can, in fact, be distilled down from GPT-3.5 (≥ 175B) to T5 variants (≤ 11B). We propose model specialization, to specialize the model’s ability towards a target task. The hypothesis is that large models (commonly viewed as larger than 100B) have strong modeling power such that they can perform a large spectrum of tasks. Small models (commonly viewed as smaller than 10B) have limited model capacity, but if we specialize their capacity towards a target task, the model can achieve decent performance improvements. We use multi-step math reasoning as our testbed because it is a very typical emergent ability. We show two important aspects of model abilities: (1) balancing language model’s performance on multiple tasks is a delicate matter, as improvements on one task may compromise other tasks; (2) yet by intentionally paying the price of decreased generic ability, we can clearly improve across different model scales smaller than 10B towards a specialized multi-step math reasoning ability. We further give comprehensive discussions about important design choices for better generalization, including the data format mixture and the start model checkpoint. We hope our practice and discoveries can serve as an important attempt towards specialized smaller models in the new research paradigm set by LLMs.
-     </details>
-
-73. **Automatic Chain of Thought Prompting in Large Language Models** [[pdf]](http://arxiv.org/abs/2210.03493) `ICLR 2023 Poster` (403 cite) (14 AI4Math cite) 
-
-
-     <details>
-          <summary>SemanticsScholar tldr</summary>
-          An automatic CoT prompting method that samples questions with diversity and generates reasoning chains to construct demonstrations and consistently matches or exceeds the performance of the CoT paradigm that requires manual designs of demonstrations.
-     </details>
-
-
-     <details>
-          <summary>Abstract</summary>
-          Large Language Models (LLMs) can carry out complex reasoning tasks by generating intermediate reasoning steps. These steps are triggered by what is called chain-of-thought (CoT) prompting, which comes in two flavors: one leverages a simple prompt like "Let’s think step by step" to facilitate step-by-step reasoning before answering a question (Zero-Shot-CoT). The other uses manual demonstrations, each composed of a question and a reasoning chain that leads to an answer (Manual-CoT). Unfortunately, the superior performance of the latter strategy crucially hinges on manually generating task-specific demonstrations. This makes it far less scalable and more dependent on the talent of the CoT engineer. We show that such manual efforts may be eliminated by leveraging LLMs to generate the reasoning chains on its own. Since these generated chains often come with mistakes we propose a number of mitigation strategies. Our proposed Auto-CoT method automaticaly samples diverse questions and we perform post-processing quality control to generate usable reasoning chains from Zero-Shot-CoT. On ten public benchmark reasoning tasks, Auto-CoT performs on par with Manual-CoT without the need for human intervention. Code is available at https://github.com/amazon-research/auto-cot.
      </details>
 
 74. **Selection-Inference: Exploiting Large Language Models for Interpretable Logical Reasoning** [[pdf]](http://arxiv.org/abs/2205.09712) `ICLR 2023 Notable-top-5%25` (275 cite) (14 AI4Math cite) 

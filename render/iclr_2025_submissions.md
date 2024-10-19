@@ -212,7 +212,21 @@
           As Large Language Models (LLMs) scale up and gain powerful Chain-of-Thoughts (CoTs) reasoning abilities, practical resource constraints drive efforts to distill these capabilities into more compact Smaller Language Models (SLMs). We find that CoTs consist mainly of simple reasoning forms, with a small proportion ($\approx 4.7\%$) of key reasoning steps that truly impact conclusions. However, previous distillation methods typically involve supervised fine-tuning student SLMs only on correct CoTs data produced by teacher LLMs, resulting in students struggling to learn the key reasoning steps, instead imitating the teacher's reasoning forms and making errors or omissions on these steps. To address these issues, drawing an analogy to human learning, where analyzing mistakes according to correct solutions often reveals the crucial steps leading to successes or failures, we propose mistak\textbf{E}-\textbf{D}riven key reason\textbf{I}ng step distilla\textbf{T}ion (\textbf{EDIT}), a novel method that further aids SLMs learning key reasoning steps rather than mere simple fine-tuning. Firstly, to expose these crucial steps in CoTs, we design specific prompts to generate dual CoTs data with similar reasoning paths but divergent conclusions. Then, we apply the minimum edit distance algorithm on the dual CoTs data to locate these key steps and optimize the likelihood of these steps. Extensive experiments validate the effectiveness of EDIT across both in-domain and out-of-domain benchmark reasoning datasets. Further analysis shows that EDIT can generate high-quality CoTs with more correct key reasoning steps. Notably, we also explore how different mistake patterns affect performance and find that EDIT benefits more from logical errors than from knowledge or mathematical calculation errors in dual CoTs\footnote{Code can be found at \url{https://github.com/C-W-D/EDIT}}.
      </details>
 
-16. **Prover-Verifier Games improve legibility of LLM outputs** [[pdf]](http://arxiv.org/abs/2407.13692) `ICLR 2025 Submission` (3 cite) (0 AI4Math cite) 
+16. **MR-GSM8K: A Meta-Reasoning Benchmark for Large Language Model Evaluation** [[pdf]](http://arxiv.org/abs/2312.17080) `ICLR 2025 Submission` (3 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          This work introduces a novel evaluation paradigm for Large Language Models (LLMs) that compels them to transition from a traditional question-answering role, akin to a student, to a solution-scoring role, akin to a teacher, and develops the MR-GSM8K benchmark.
+     </details>
+
+
+     <details>
+          <summary>Abstract</summary>
+          In this work, we introduce a novel evaluation paradigm for Large Language Models (LLMs) that compels them to transition from a traditional question-answering role, akin to a student, to a solution-scoring role, akin to a teacher. This paradigm, focusing on "reasoning about reasoning," hence termed meta-reasoning, shifts the emphasis from result-oriented assessments, which often neglect the reasoning process, to a more comprehensive evaluation that effectively distinguishes between the cognitive capabilities of different models. By applying this paradigm in the GSM8K dataset, we have developed the MR-GSM8K benchmark. Our extensive analysis includes several state-of-the-art models from both open-source and commercial domains, uncovering fundamental deficiencies in their training and evaluation methodologies. Notably, while models like Deepseek-v2 and Claude3-Sonnet closely competed with GPT-4 in GSM8K, their performance disparities expanded dramatically in MR-GSM8K, with differences widening to over 20 absolute points, underscoring the significant challenge posed by our meta-reasoning approach.
+     </details>
+
+17. **Prover-Verifier Games improve legibility of LLM outputs** [[pdf]](http://arxiv.org/abs/2407.13692) `ICLR 2025 Submission` (3 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -226,7 +240,21 @@
           One way to increase confidence in the outputs of Large Language Models (LLMs) is to support them with reasoning that is clear and easy to check -- a property we call legibility. We study legibility in the context of solving grade-school math problems and show that optimizing chain-of-thought solutions only for answer correctness can make them less legible. To mitigate the loss in legibility, we propose a training algorithm inspired by Prover-Verifier Game from Anil et al. (2021). Our algorithm iteratively trains small verifiers to predict solution correctness, "helpful" provers to produce correct solutions that the verifier accepts, and "sneaky" provers to produce incorrect solutions that fool the verifier. We find that the helpful prover's accuracy and the verifier's robustness to adversarial attacks increase over the course of training. Furthermore, we show that legibility training transfers to time-constrained humans tasked with verifying solution correctness. Over course of LLM training human accuracy increases when checking the helpful prover's solutions, and decreases when checking the sneaky prover's solutions. Hence, training for checkability by small verifiers is a plausible technique for increasing output legibility. Our results suggest legibility training against small verifiers as a practical avenue for increasing legibility of large LLMs to humans, and thus could help with alignment of superhuman models.
      </details>
 
-17. **Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs** [[pdf]](https://arxiv.org/abs/2408.00114v2) `ICLR 2025 Submission` (2 cite) (0 AI4Math cite) 
+18. **First-Step Advantage: Importance of Starting Right in Multi-Step Math Reasoning** [[pdf]](http://arxiv.org/abs/2311.07945) `ICLR 2025 Submission` (2 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          It is shown that getting the right start can lead to significant performance gains across all models, and proposed QuestCoT, where a smaller model first asks itself how to start, before proceeding with a chain of reasoning.
+     </details>
+
+
+     <details>
+          <summary>Abstract</summary>
+          Language models can solve complex reasoning tasks better by learning to generate rationales for their predictions. Often these models know how to solve a task but their auto-regressive decoding nature leads to incorrect results if they start incorrectly. We observe that smaller models in particular when corrected, can solve a task that they would have otherwise struggled with. We demonstrate this phenomenon by using a larger model to guide smaller models, which leads to significantly improved performance (up to +24 points on the GSM8K dataset by 7B models). To assist smaller models in initiating the starting step, we propose QuestCoT, where a smaller model first asks itself how to start, before proceeding with a chain of reasoning. On various multistep mathematical reasoning datasets over multiple smaller models, we show that getting the right start can lead to significant performance gains across all models (gains of up to +6 points on GSM8K, +9 on SVAMP, +5 on ASDiv, and +7 on MultiArith).
+     </details>
+
+19. **Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs** [[pdf]](https://arxiv.org/abs/2408.00114v2) `ICLR 2025 Submission` (2 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -240,7 +268,7 @@
           Reasoning encompasses two typical types: deductive reasoning and inductive reasoning. Despite extensive research into the reasoning capabilities of Large Language Models (LLMs), most studies have failed to rigorously differentiate between inductive and deductive reasoning, leading to a blending of the two. This raises an essential question: In LLM reasoning, which poses a greater challenge - deductive or inductive reasoning? While the deductive reasoning capabilities of LLMs, (i.e. their capacity to follow instructions in reasoning tasks), have received considerable attention, their abilities in true inductive reasoning remain largely unexplored. To investigate into the true inductive reasoning capabilities of LLMs, we propose a novel framework, SolverLearner. This framework enables LLMs to learn the underlying function (i.e., $y = f_w(x)$), that maps input data points $(x)$ to their corresponding output values $(y)$, using only in-context examples. By focusing on inductive reasoning and separating it from LLM-based deductive reasoning, we can isolate and investigate inductive reasoning of LLMs in its pure form via SolverLearner. Our observations reveal that LLMs demonstrate remarkable inductive reasoning capabilities through SolverLearner, achieving near-perfect performance with ACC of 1 in most cases. Surprisingly, despite their strong inductive reasoning abilities, LLMs tend to relatively lack deductive reasoning capabilities, particularly in tasks involving ``counterfactual'' reasoning.
      </details>
 
-18. **Progress or Regress? Self-Improvement Reversal in Post-training** [[pdf]](https://openreview.net/forum?id=MG18DR2dAN) `ICLR 2025 Submission` (2 cite) (0 AI4Math cite) 
+20. **Progress or Regress? Self-Improvement Reversal in Post-training** [[pdf]](https://openreview.net/forum?id=MG18DR2dAN) `ICLR 2025 Submission` (2 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -254,7 +282,7 @@
           Self-improvement through post-training methods such as iterative preference learning has been acclaimed for enhancing the problem-solving capabilities (e.g., mathematical reasoning) of Large Language Models (LLMs) without human intervention. However, as exploration deepens, it becomes crucial to assess whether these improvements genuinely signify progress in solving more challenging problems or if they could lead to unintended regressions. To address this, we propose a comprehensive evaluative framework that goes beyond the superficial pass@1 metric to scrutinize the underlying enhancements of post-training paradigms for self-improvement. Through rigorous experimentation and analysis across diverse problem-solving tasks, the empirical results point out the phenomenon of \emph{self-improvement reversal}, where models showing improved performance across benchmarks will paradoxically exhibit declines in broader, essential capabilities, like output diversity and out-of-distribution (OOD) generalization. These findings indicate that current self-improvement practices through post-training are inadequate for equipping models to tackle more complex problems. Furthermore, they underscore the necessity of our critical evaluation metrics in discerning the \emph{progress or regress} dichotomy for self-improving LLMs.
      </details>
 
-19. **MathOdyssey: Benchmarking Mathematical Problem-Solving Skills in Large Language Models Using Odyssey Math Data** [[pdf]](http://arxiv.org/abs/2406.18321) `ICLR 2025 Submission` (1 cite) (0 AI4Math cite) 
+21. **MathOdyssey: Benchmarking Mathematical Problem-Solving Skills in Large Language Models Using Odyssey Math Data** [[pdf]](http://arxiv.org/abs/2406.18321) `ICLR 2025 Submission` (1 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -268,7 +296,7 @@
           Large language models (LLMs) have significantly advanced natural language understanding and demonstrated strong problem-solving abilities. Despite these successes, most LLMs still struggle with solving mathematical problems due to the intricate reasoning required. This paper investigates the mathematical problem-solving capabilities of LLMs using the newly developed "MathOdyssey" dataset. The dataset includes diverse mathematical problems at high school and university levels, created by experts from notable institutions to rigorously test LLMs in advanced problem-solving scenarios and cover a wider range of subject areas. By providing the MathOdyssey dataset as a resource to the AI community, we aim to contribute to the understanding and improvement of AI capabilities in complex mathematical problem-solving. We conduct benchmarking on open-source models, such as Llama-3 and DBRX-Instruct, and closed-source models from the GPT series and Gemini models. Our results indicate that while LLMs perform well on routine and moderately difficult tasks, they face significant challenges with Olympiad-level problems and complex university-level questions. Our analysis shows a narrowing performance gap between open-source and closed-source models, yet substantial challenges remain, particularly with the most demanding problems. This study highlights the ongoing need for research to enhance the mathematical reasoning of LLMs. The dataset, results, and code are publicly available.
      </details>
 
-20. **$Staple$: Towards Reliable Problem Solving with Large Language Models via Plan Optimization and Tree Search** [[pdf]](https://openreview.net/forum?id=P8FS9byr1c) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+22. **$Staple$: Towards Reliable Problem Solving with Large Language Models via Plan Optimization and Tree Search** [[pdf]](https://openreview.net/forum?id=P8FS9byr1c) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -276,7 +304,7 @@
           Large language models (LLMs) exhibit the ability to perform step-by-step reasoning when tackling complex problems across various tasks. To improve the reliability of multi-step reasoning and mitigate potential hallucinations, sophisticated prompting techniques have been developed to provide instructions on $what$ $to$ $do$ at each step, offering reasoning guidance before addressing specific questions. However, this additional prompting can increase time and token consumption without guaranteeing effectiveness. In response, this paper proposes $Staple$, a novel plan retrieval augmented reasoning framework that utilizes offline plan optimization. This approach involves constructing a plan database of general-purpose reasoning instructions. Subsequently, online plan searching facilitates the direct retrieval of optimal and effective step-by-step plans from the database when addressing new questions, serving as guidance for LLMs to derive correct answers. The offline stage uses LLMs to self-generate and optimize plans, storing them as tree structures via Monte Carlo Tree Search (MCTS) to form the plan database. Extensive experiments on mathematical and multi-task problems show that $Staple$ achieves competitive problem-solving rates while minimizing token usage and interactions. Importantly, the plan trees in the database are human-interpretable, revealing the prioritization of various plan combinations for a given task. In addition, the plan database can be reused, updated, and expanded by users for a wider range of applications.
      </details>
 
-21. **$\texttt{CLR-Bench}$: Evaluating Large Language Models in College-Level Reasoning** [[pdf]](https://openreview.net/forum?id=ToVvoHpk4L) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+23. **$\texttt{CLR-Bench}$: Evaluating Large Language Models in College-Level Reasoning** [[pdf]](https://openreview.net/forum?id=ToVvoHpk4L) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -284,7 +312,7 @@
           Large language models (LLMs) have demonstrated their remarkable performance across various language understanding tasks. While emerging benchmarks have been proposed to evaluate LLMs in various domains such as mathematics and computer science, they merely measure the accuracy in terms of the final prediction on multi-choice questions. However, it remains insufficient to verify the essential understanding of LLMs given a chosen choice. To fill this gap, we present $\texttt{CLR-Bench}$ to comprehensively evaluate the LLMs in complex college-level reasoning. Specifically, $(i)$ we prioritize 16 challenging college disciplines in computer science and artificial intelligence. The dataset contains 5 types of questions, while each question is associated with detailed explanations from experts. $(ii)$ To quantify a fair evaluation of LLMs' reasoning ability, we formalize the criteria with two novel metrics. Q$\rightarrow$A is utilized to measure the performance of direct **a**nswer prediction, and Q$\rightarrow$AR effectively considers the joint ability to **a**nswer the question and provide **r**ationale simultaneously. Extensive experiments are conducted with 40 LLMs over 1,018 discipline-specific questions. The results demonstrate the key insights that LLMs, even the best closed-source LLM, i.e., GPT-4 turbo, tends to '***guess***' the college-level answers. It shows a dramatic decrease in accuracy from 63.31\% Q$\rightarrow$A to 39.00\% Q$\rightarrow$AR, indicating an unsatisfactory reasoning ability.
      </details>
 
-22. **3D-Prover: Diversity Driven Theorem Proving With Determinantal Point Processes** [[pdf]](http://arxiv.org/abs/2410.11133) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
+24. **3D-Prover: Diversity Driven Theorem Proving With Determinantal Point Processes** [[pdf]](http://arxiv.org/abs/2410.11133) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -292,7 +320,7 @@
           A key challenge in automated formal reasoning is the intractable search space, which grows exponentially with the depth of the proof. This branching is caused by the large number of candidate proof tactics which can be applied to a given goal. Nonetheless, many of these tactics are semantically similar or lead to an execution error, wasting valuable resources in both cases. We address the problem of effectively pruning this search, using only synthetic data generated from previous proof attempts. We first demonstrate that it is possible to generate semantically aware tactic representations which capture the effect on the proving environment, likelihood of success and execution time. We then propose a novel filtering mechanism which leverages these representations to select semantically diverse and high quality tactics, using Determinantal Point Processes. Our approach, 3D-Prover, is designed to be general, and to augment any underlying tactic generator. We demonstrate the effectiveness of 3D-Prover on the miniF2F-valid and miniF2F-test benchmarks by augmenting the ReProver LLM. We show that our approach leads to an increase in the overall proof rate, as well as a significant improvement in the tactic success rate, execution time and diversity.
      </details>
 
-23. **A Graph-Based Synthetic Data Pipeline for Scaling High-Quality Data** [[pdf]](https://openreview.net/forum?id=CEE9cAQJ10) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+25. **A Graph-Based Synthetic Data Pipeline for Scaling High-Quality Data** [[pdf]](https://openreview.net/forum?id=CEE9cAQJ10) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -300,7 +328,7 @@
           Synthesizing high-quality data for continual training has been proven to be effective for boosting the performance of Large Language Models (LLMs). However, previous approaches struggle to easily scale up synthetic data and incur high costs in creating high-quality data. In this paper, we propose the Graph-based Synthetic Data Pipeline (GSDP), an economical and scalable framework for high-quality data synthesis. Inspired by knowledge graphs, we extracted knowledge points from seed data and constructed a knowledge points relationships graph to explore their interconnections. By exploring the implicit relationships among knowledge, our method achieves $\times$255 data expansion. Furthermore, GSDP led by open-source models, achieves synthesis quality comparable to GPT-4-0613 while maintaining $\times$100 lower costs. To tackle the most challenging mathematical reasoning task, we present the GSDP-MATH dataset comprising over 1.91 million pairs of math problems and answers. After fine-tuning on GSDP-MATH, GSDP-7B achieves 37.7\% accuracy on MATH and 78.4\% on GSM8K, demonstrating the effectiveness of our method. The dataset and models trained in this paper will be available.
      </details>
 
-24. **Adaptive Inference-Time Compute: LLMs Can Predict if They Can Do Better, Even Mid-Generation** [[pdf]](https://arxiv.org/abs/2410.02725v1) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+26. **Adaptive Inference-Time Compute: LLMs Can Predict if They Can Do Better, Even Mid-Generation** [[pdf]](https://arxiv.org/abs/2410.02725v1) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -314,7 +342,7 @@
           Inference-time computation is a powerful paradigm to enhance the performance of large language models (LLMs), with Best-of-N sampling being a widely used technique. However, this method is computationally expensive, requiring both (1) an external reward model and (2) the generation of multiple samples. In this work, we introduce a new generative self-evaluation scheme designed to adaptively reduce the number of generated samples while maintaining or even improving performance. We use a generative reward model formulation, allowing the LLM to predict mid-generation the probability that restarting the generation will yield a better response. These predictions are obtained without an external reward model and can be used to decide whether or not to generate more samples, prune unpromising samples early on, or to pick the best sample. This capability is very inexpensive as it involves generating a single predefined token. Trained using a dataset constructed with real unfiltered LMSYS user prompts, Llama 3.1 8B's win rate against GPT-4 on AlpacaEval increases from 21% to 34% with 16 samples and math performance on GSM8K improves from 84% to 91%. By sampling only when the LLM determines that it is beneficial to do so and adaptively adjusting temperature annealing, we demonstrate that 74% of the improvement from using 16 samples can be achieved with only 1.2 samples on average. We further demonstrate that 50-75% of samples can be pruned early in generation with minimal degradation in performance. Overall, our methods enable more efficient and scalable compute utilization during inference for LLMs.
      </details>
 
-25. **Advancing Mathematical Reasoning in Language Models: The Impact of Problem-Solving Data, Data Synthesis Methods, and Training Stages** [[pdf]](https://openreview.net/forum?id=GtpubstM1D) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+27. **Advancing Mathematical Reasoning in Language Models: The Impact of Problem-Solving Data, Data Synthesis Methods, and Training Stages** [[pdf]](https://openreview.net/forum?id=GtpubstM1D) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -322,7 +350,7 @@
           Advancements in large language models (LLMs) have significantly expanded their capabilities across various domains. However, mathematical reasoning remains a challenging area, prompting the development of math-specific LLMs such as LLEMMA, DeepSeekMath, and Qwen2-Math, among others. These models typically follow a two-stage training paradigm: pre-training with math-related corpora and post-training with problem datasets for supervised fine-tuning (SFT). Despite these efforts, the improvements in mathematical reasoning achieved through continued pre-training (CPT) are often less significant compared to those obtained via SFT. This study addresses this discrepancy by exploring alternative strategies during the pre-training phase, focusing on the use of problem-solving data over general mathematical corpora. We investigate three primary research questions: (1) Can problem-solving data enhance the model's mathematical reasoning capabilities more effectively than general mathematical corpora during CPT? (2) Are synthetic data from the same source equally effective, and which synthesis methods are most efficient? (3) How do the capabilities developed from the same problem-solving data differ between the CPT and SFT stages, and what factors contribute to these differences? Our findings indicate that problem-solving data significantly enhances the model's mathematical capabilities compared to general mathematical corpora. We also identify effective data synthesis methods, demonstrating that the tutorship amplification synthesis method achieves the best performance. Furthermore, while SFT facilitates instruction-following abilities, it underperforms compared to CPT with the same data, which can be partially attributed to its poor learning capacity for hard multi-step problem-solving data. These insights provide valuable guidance for optimizing the mathematical reasoning capabilities of LLMs, culminating in our development of a powerful mathematical base model called JiuZhang-8B.
      </details>
 
-26. **Alchemy: Amplifying Theorem-Proving Capability Through Symbolic Mutation** [[pdf]](https://openreview.net/forum?id=7NL74jUiMg) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
+28. **Alchemy: Amplifying Theorem-Proving Capability Through Symbolic Mutation** [[pdf]](https://openreview.net/forum?id=7NL74jUiMg) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -330,7 +358,7 @@
           Formal proofs are challenging to write even for experienced experts. Recent progress in Neural Theorem Proving (NTP) shows promise in expediting this process. However, the formal corpora available on the Internet are limited compared to the general text, posing a significant data scarcity challenge for NTP. To address this issue, this work proposes Alchemy, a general framework for data synthesis that constructs formal theorems through symbolic mutation. Specifically, for each candidate theorem in Mathlib, we identify all invocable theorems that can be used to rewrite or apply to it. Subsequently, we mutate the candidate theorem by replacing the corresponding term in the statement with its equivalent form or antecedent. As a result, our method increases the number of theorems in Mathlib by an order of magnitude, from 110k to 6M. Furthermore, we perform continual pretraining and supervised finetuning on this augmented corpus for large language models. Experimental results demonstrate the effectiveness of our approach, achieving a 5% absolute performance improvement on Leandojo benchmark. Additionally, our synthetic data achieve a 2.5% absolute performance gain on the out-of-distribution miniF2F benchmark. To provide further insights, we conduct a comprehensive analysis of synthetic data composition and the training paradigm, offering valuable guidance for developing a strong theorem prover.
      </details>
 
-27. **AoPS Dataset: Leveraging Online Olympiad-Level Math Problems for LLMs Training and Contamination-Resistant Evaluation** [[pdf]](https://openreview.net/forum?id=Bgz3okeZ7H) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+29. **AoPS Dataset: Leveraging Online Olympiad-Level Math Problems for LLMs Training and Contamination-Resistant Evaluation** [[pdf]](https://openreview.net/forum?id=Bgz3okeZ7H) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -338,7 +366,7 @@
           Advances in Large Language Models (LLMs) have sparked interest in their ability to solve Olympiad-level math problems.  However, the training and evaluation of these models are constrained by the limited size and quality of available datasets, as creating large-scale data for such advanced problems requires extensive effort from human experts. In addition, current benchmarks are prone to contamination, leading to unreliable evaluations. In this paper, we present an automated pipeline that leverages the rich resources of the Art of Problem Solving (AoPS) forum, which predominantly features Olympiad-level problems and community-driven solutions. Using open-source LLMs, we develop a method to extract question-answer pairs from the forum, resulting in **AoPS-Instruct**, a dataset of more than 650,000 high-quality QA pairs. Our experiments demonstrate that fine-tuning LLMs on AoPS-Instruct improves their reasoning abilities across various benchmarks.  Moreover, we build an automatic pipeline that introduces **LiveAoPSBench**, an evolving evaluation set with timestamps, derived from the latest forum data, providing a contamination-resistant benchmark for assessing LLM performance. Notably, we observe a significant decline in LLM performance over time, suggesting their success on older examples may stem from pre-training exposure rather than true reasoning ability.  Our work presents a scalable approach to creating and maintaining large-scale, high-quality datasets for advanced math reasoning, offering valuable insights into the capabilities and limitations of LLMs in this domain.  Our benchmark is available at [livemathbench.github.io/leaderboard](https://livemathbench.github.io/leaderboard).
      </details>
 
-28. **Arithmetic Transformers Can Length-Generalize in Both Operand Length and Count** [[pdf]](https://openreview.net/forum?id=eIgGesYKLG) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+30. **Arithmetic Transformers Can Length-Generalize in Both Operand Length and Count** [[pdf]](https://openreview.net/forum?id=eIgGesYKLG) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -346,7 +374,7 @@
           Transformer-based language models often struggle with length generalization, meaning they fail to generalize to sequences longer than those encountered during training. While arithmetic tasks are commonly used to study length generalization, certain tasks are considered notoriously difficult, e.g., multi-operand addition (which requires generalization over both the number of operands and their lengths) and multiplication (which requires generalization over both operand lengths). In this paper, we achieve approximately 2--3$\times$ length generalization on both tasks, which is the first such achievement in arithmetic Transformers. To this end, we design task-specific scratchpads enabling the model to focus on a fixed number of tokens per each next-token prediction step, and then apply multi-level versions of Position Coupling (Cho et al., 2024; McLeish et al., 2024) to offer Transformers information about the right position to attend to. On the theory side, we prove that a 1-layer Transformer using our method can solve multi-operand addition, up to operand length and operand count that are exponential in embedding dimension.
      </details>
 
-29. **Arithmetic Without Algorithms: Language Models Solve Math with a Bag of Heuristics** [[pdf]](https://openreview.net/forum?id=O9YTt26r2P) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+31. **Arithmetic Without Algorithms: Language Models Solve Math with a Bag of Heuristics** [[pdf]](https://openreview.net/forum?id=O9YTt26r2P) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -354,7 +382,7 @@
           Do large language models (LLMs) solve reasoning tasks by learning robust generalizable algorithms, or do they memorize training data? To investigate this question, we use arithmetic reasoning as a representative task. Using causal analysis, we identify a subset of the model (a circuit) that explains most of the model's behavior for basic arithmetic logic and examine its functionality. By zooming in on the level of individual circuit neurons, we discover a sparse set of important neurons that implement simple heuristics. Each heuristic identifies a numerical input pattern and outputs corresponding answers. We hypothesize that the combination of these heuristic neurons is the mechanism used to produce correct arithmetic answers. To test this, we categorize each neuron into several heuristic types---such as neurons that activate when an operand falls within a certain range---and find that the unordered combination of these heuristic types is the mechanism that explains most of the model's accuracy on arithmetic prompts. Finally, we demonstrate that this mechanism appears as the main source of arithmetic accuracy early in training. Overall, our experimental results across several LLMs show that LLMs perform arithmetic using neither robust algorithms nor memorization; rather, they rely on a ``bag of heuristics''.
      </details>
 
-30. **AutoCode4Math: Learning Autonomous Code Integration for Math LLMs** [[pdf]](https://openreview.net/forum?id=QhjosARfay) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+32. **AutoCode4Math: Learning Autonomous Code Integration for Math LLMs** [[pdf]](https://openreview.net/forum?id=QhjosARfay) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -362,7 +390,13 @@
           Recent research on tool integration for math Large Language Models (LLMs)  aims to combine complementary strengths of chain-of-thought (CoT) reasoning and code execution. However, we discover a critical limitation: current tool-integrated math LLMs rely on externally dictated instructions to decide whether to use CoT or code, lacking the autonomy to choose the most appropriate method independently. This prompts us to study \emph{Autonomous Code integration } (AutoCode) for math LLMs, which enables models to \emph{independently} develop their own methodology-selection strategy in the absence of reliable supervision. To address this challenge, we propose an innovative Expectation-Maximization (EM) formulation that refines the model's decision-making through the exploration of its capabilities. This framework alternates between (a) computing a reference strategy that improves the model's belief over its capabilities through self-exploration, and (b) updating the model based on the refined belief. We further enhance this framework with an efficient implementation, incorporating a novel data synthesis strategy and off-policy reinforcement learning. Extensive experiments demonstrate that our approach, using only a public query set, significantly boosts the performance of existing math LLMs, raising accuracy by nearly 20% to 65.28%  on the challenging MATH benchmark on the MATH benchmark, while reducing code executions by up to 65% .
      </details>
 
-31. **Automatic Curriculum Expert Iteration for Reliable LLM Reasoning** [[pdf]](http://arxiv.org/abs/2410.07627) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+33. **Automatic Curriculum Expert Iteration for Reliable LLM Reasoning** [[pdf]](http://arxiv.org/abs/2410.07627) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          Automatic Curriculum Expert Iteration is proposed to enhance LLM reasoning and align responses to the model's capabilities--assertively answering within its limits and declining when tasks exceed them--and SOTA baselines are compared, where Auto-CEI achieves superior alignment by effectively balancing assertiveness and conservativeness.
+     </details>
 
 
      <details>
@@ -370,7 +404,7 @@
           Hallucinations (i.e., generating plausible but inaccurate content) and laziness (i.e. excessive refusals or defaulting to "I don't know") persist as major challenges in LLM reasoning. Current efforts to reduce hallucinations primarily focus on factual errors in knowledge-grounded tasks, often neglecting hallucinations related to faulty reasoning. Meanwhile, some approaches render LLMs overly conservative, limiting their problem-solving capabilities. To mitigate hallucination and laziness in reasoning tasks, we propose Automatic Curriculum Expert Iteration (Auto-CEI) to enhance LLM reasoning and align responses to the model's capabilities--assertively answering within its limits and declining when tasks exceed them. In our method, Expert Iteration explores the reasoning trajectories near the LLM policy, guiding incorrect paths back on track to reduce compounding errors and improve robustness; it also promotes appropriate "I don't know" responses after sufficient reasoning attempts. The curriculum automatically adjusts rewards, incentivizing extended reasoning before acknowledging incapability, thereby pushing the limits of LLM reasoning and aligning its behaviour with these limits. We compare Auto-CEI with various SOTA baselines across logical reasoning, mathematics, and planning tasks, where Auto-CEI achieves superior alignment by effectively balancing assertiveness and conservativeness.
      </details>
 
-32. **B-STaR: Monitoring and Balancing Exploration and Exploitation in Self-Taught Reasoners** [[pdf]](https://openreview.net/forum?id=P6dwZJpJ4m) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+34. **B-STaR: Monitoring and Balancing Exploration and Exploitation in Self-Taught Reasoners** [[pdf]](https://openreview.net/forum?id=P6dwZJpJ4m) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -378,7 +412,7 @@
           In the absence of extensive human-annotated data for complex reasoning tasks, self-improvement -- where models are trained on their own outputs -- has emerged as a primary method for enhancing performance. Recently, the approach to self-improvement has shifted toward a more dynamic, online fashion through iterative training processes. However, the critical factors underlying the mechanism of these self-improving methods remain poorly understood, such as under what conditions self-improvement is effective, and what are the bottlenecks in the current iterations. In this work, we identify and propose methods to monitor two pivotal factors in this iterative process: (1) the model's ability to explore and generate high-quality responses among multiple candidates (exploration); and (2) the reliability of external rewards in selecting the best responses from the generated outputs (exploitation). These factors are inherently moving targets throughout the self-improvement cycles, yet their dynamics are rarely discussed in prior research -- It remains unclear what impedes continual model enhancement after only a few iterations.  Using mathematical reasoning as a case study, we begin with a quantitative analysis to track the dynamics of exploration and exploitation, discovering that a model's exploratory capabilities rapidly deteriorate over iterations, and the effectiveness of exploiting external rewards diminishes as well due to shifts in distribution from the original policy. Motivated by these findings, we introduce B-STaR, a Self-Taught Reasoning framework that autonomously adjusts configurations across iterations to Balance exploration and exploitation, thereby optimizing the self-teaching effectiveness based on the current policy model and available rewards. Our experiments in mathematical reasoning demonstrate that B-STaR not only enhances the model's exploratory capabilities throughout training but also achieves a more effective balance between exploration and exploitation, leading to superior performance. Crucially, this work deconstructs the opaque nature of self-training algorithms, elucidating the interpretable dynamics throughout the process and highlighting current limitations for future research to address.
      </details>
 
-33. **BEATS: Optimizing LLM Mathematical Capabilities with BackVerify and Adaptive Disambiguate based Efficient Tree Search** [[pdf]](http://arxiv.org/abs/2409.17972) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+35. **BEATS: Optimizing LLM Mathematical Capabilities with BackVerify and Adaptive Disambiguate based Efficient Tree Search** [[pdf]](http://arxiv.org/abs/2409.17972) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -392,7 +426,7 @@
           Large Language Models (LLMs) have exhibited exceptional performance across a broad range of tasks and domains. However, they still encounter difficulties in solving mathematical problems due to the rigorous and logical nature of mathematics. Previous studies have employed techniques such as supervised fine-tuning (SFT), prompt engineering, and search-based methods to improve the mathematical problem-solving abilities of LLMs. Despite these efforts, their performance remains suboptimal and demands substantial computational resources. To address this issue, we propose a novel approach, BEATS, to enhance mathematical problem-solving abilities. Our method leverages newly designed prompts that guide the model to iteratively rewrite, advance by one step, and generate answers based on previous steps. Additionally, we introduce a new back-verification technique that uses LLMs to validate the correctness of the generated answers. Furthermore, we employ a pruning tree search to optimize search time while achieving strong performance. Notably, our method improves Qwen2-7b-Instruct's score from 36.94 to 61.52, outperforming GPT4's 42.5 on the MATH benchmark.
      </details>
 
-34. **CARTS: Advancing Neural Theorem Proving with Diversified Tactic Calibration and Bias-Resistant Tree Search** [[pdf]](https://openreview.net/forum?id=VQwI055flA) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
+36. **CARTS: Advancing Neural Theorem Proving with Diversified Tactic Calibration and Bias-Resistant Tree Search** [[pdf]](https://openreview.net/forum?id=VQwI055flA) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -400,7 +434,7 @@
           Recent advancements in neural theorem proving integrate large language models with tree search algorithms like Monte Carlo Tree Search (MCTS), where the language model suggests tactics and the tree search finds the complete proof path. However, many tactics proposed by the language model converge to semantically or strategically similar, reducing diversity and increasing search costs by expanding redundant proof paths. This issue exacerbates as computation scales and more tactics are explored per state. Furthermore, the trained value function suffers from false negatives, label imbalance, and domain gaps due to biased data construction.  To address these challenges, we propose CARTS (diversified tactic CAlibration and bias-Resistant Tree Search), which balances tactic diversity and importance while calibrating model confidence. CARTS also introduce preference modeling and an adjustment term related to the ratio of valid tactics to improve the bias-resistance of the value function. Experimental results demonstrate that CARTS consistently outperforms previous methods achieving a pass@l rate of 49.6\% on the miniF2F-test benchmark. Further analysis confirms that CARTS improves tactic diversity and leads to a more balanced tree search.
      </details>
 
-35. **CPL: Critical Planning Step Learning Boosts LLM Generalization in Reasoning Tasks** [[pdf]](http://arxiv.org/abs/2409.08642) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+37. **CPL: Critical Planning Step Learning Boosts LLM Generalization in Reasoning Tasks** [[pdf]](http://arxiv.org/abs/2409.08642) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -414,7 +448,7 @@
           Post-training large language models (LLMs) to develop reasoning capabilities has proven effective across diverse domains, such as mathematical reasoning and code generation. However, existing methods primarily focus on improving task-specific reasoning but have not adequately addressed the model's generalization capabilities across a broader range of reasoning tasks. To tackle this challenge, we introduce Critical Planning Step Learning (CPL), which leverages Monte Carlo Tree Search (MCTS) to explore diverse planning steps in multi-step reasoning tasks. Based on long-term outcomes, CPL learns step-level planning preferences to improve the model's planning capabilities and, consequently, its general reasoning capabilities. Furthermore, while effective in many scenarios for aligning LLMs, existing preference learning approaches like Direct Preference Optimization (DPO) struggle with complex multi-step reasoning tasks due to their inability to capture fine-grained supervision at each step. We propose Step-level Advantage Preference Optimization (Step-APO), which integrates an advantage estimate for step-level preference pairs obtained via MCTS into the DPO. This enables the model to more effectively learn critical intermediate planning steps, thereby further improving its generalization in reasoning tasks. Experimental results demonstrate that our method, trained exclusively on GSM8K and MATH, not only significantly improves performance on GSM8K (+10.5%) and MATH (+6.5%), but also enhances out-of-domain reasoning benchmarks, such as ARC-C (+4.0%), BBH (+1.8%), MMLU-STEM (+2.2%), and MMLU (+0.9%).
      </details>
 
-36. **Can LLMs Solve Long Math Word Problems Better?** [[pdf]](https://openreview.net/forum?id=C9ju8QQSCv) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+38. **Can LLMs Solve Long Math Word Problems Better?** [[pdf]](https://openreview.net/forum?id=C9ju8QQSCv) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -422,7 +456,7 @@
           Math Word Problems (MWPs) play a vital role in assessing the capabilities of Large Language Models (LLMs), yet current research primarily focuses on questions with concise contexts. The impact of longer contexts on mathematical reasoning remains under-explored. This study pioneers the investigation of Context Length Generalizability (CoLeG), which refers to the ability of LLMs to solve MWPs with extended narratives. We introduce Extended Grade-School Math (E-GSM), a collection of MWPs featuring lengthy narratives, and propose two novel metrics to evaluate the efficacy and resilience of LLMs in tackling these problems. Our analysis of existing zero-shot prompting techniques with proprietary LLMs along with open-source LLMs reveals a general deficiency in CoLeG. To alleviate these issues, we propose tailored approaches for different categories of LLMs. For proprietary LLMs, we introduce a new instructional prompt designed to mitigate the impact of long contexts. For open-source LLMs, we develop a novel auxiliary task for fine-tuning to enhance CoLeG. Our comprehensive results demonstrate the effectiveness of our proposed methods, showing improved performance on E-GSM. Additionally, we conduct an in-depth analysis to differentiate the effects of semantic understanding and reasoning efficacy, showing that our methods improves the latter. We also establish the generalizability of our methods across several other MWP benchmarks. Our findings highlight the limitations of current LLMs and offer practical solutions correspondingly, paving the way for further exploration of model generalizability and training methodologies.
      </details>
 
-37. **Can We Further Elicit Reasoning in LLMs? Critic-Guided Planning with Retrieval-Augmentation for Solving Challenging Tasks** [[pdf]](http://arxiv.org/abs/2410.01428) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+39. **Can We Further Elicit Reasoning in LLMs? Critic-Guided Planning with Retrieval-Augmentation for Solving Challenging Tasks** [[pdf]](http://arxiv.org/abs/2410.01428) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -436,7 +470,7 @@
           State-of-the-art large language models (LLMs) exhibit impressive problem-solving capabilities but may struggle with complex reasoning and factual correctness. Existing methods harness the strengths of chain-of-thought and retrieval-augmented generation (RAG) to decompose a complex problem into simpler steps and apply retrieval to improve factual correctness. These methods work well on straightforward reasoning tasks but often falter on challenging tasks such as competitive programming and mathematics, due to frequent reasoning errors and irrelevant knowledge retrieval. To address this, we introduce Critic-guided planning with Retrieval-augmentation, CR-Planner, a novel framework that leverages fine-tuned critic models to guide both reasoning and retrieval processes through planning. CR-Planner solves a problem by iteratively selecting and executing sub-goals. Initially, it identifies the most promising sub-goal from reasoning, query generation, and retrieval, guided by rewards given by a critic model named sub-goal critic. It then executes this sub-goal through sampling and selecting the optimal output based on evaluations from another critic model named execution critic. This iterative process, informed by retrieved information and critic models, enables CR-Planner to effectively navigate the solution space towards the final answer. We employ Monte Carlo Tree Search to collect the data for training the critic models, allowing for a systematic exploration of action sequences and their long-term impacts. We validate CR-Planner on challenging domain-knowledge-intensive and reasoning-heavy tasks, including competitive programming, theorem-driven math reasoning, and complex domain retrieval problems. Our experiments demonstrate that CR-Planner significantly outperforms baselines, highlighting its effectiveness in addressing challenging problems by improving both reasoning and retrieval.
      </details>
 
-38. **CodePMP: Scalable Preference Model Pretraining for Large Language Model Reasoning** [[pdf]](http://arxiv.org/abs/2410.02229) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+40. **CodePMP: Scalable Preference Model Pretraining for Large Language Model Reasoning** [[pdf]](http://arxiv.org/abs/2410.02229) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -450,7 +484,7 @@
           Large language models (LLMs) have made significant progress in natural language understanding and generation, driven by scalable pretraining and advanced finetuning. However, enhancing reasoning abilities in LLMs, particularly via reinforcement learning from human feedback (RLHF), remains challenging due to the scarcity of high-quality preference data, which is labor-intensive to annotate and crucial for reward model (RM) finetuning. To alleviate this issue, we introduce CodePMP, a scalable preference model pretraining (PMP) pipeline that utilizes a large corpus of synthesized code-preference pairs from publicly available high-quality source code. CodePMP improves RM finetuning efficiency by pretraining preference models on large-scale synthesized code-preference pairs. We evaluate CodePMP on mathematical reasoning tasks (GSM8K, MATH) and logical reasoning tasks (ReClor, LogiQA2.0), consistently showing significant improvements in reasoning performance of LLMs and highlighting the importance of scalable preference model pretraining for efficient reward modeling.
      </details>
 
-39. **CogMath: Evaluating LLMs' Authentic Mathematical Ability from a Cognitive Perspective** [[pdf]](https://openreview.net/forum?id=x1nlO1d1iG) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+41. **CogMath: Evaluating LLMs' Authentic Mathematical Ability from a Cognitive Perspective** [[pdf]](https://openreview.net/forum?id=x1nlO1d1iG) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -458,7 +492,7 @@
           As large language models (LLMs) exhibit potential in solving complex mathematical tasks, increasing attention has been directed toward constructing benchmarks to evaluate their mathematical capabilities. However, existing benchmarks are either limited to specific task types (e.g., long-text problem understanding) or rely solely on a coarse measure of answer accuracy, making them insufficient for assessing a model's authentic mathematical proficiency. In this paper, we propose CogMath, which provides a comprehensive assessment of LLMs' mathematical abilities based on human cognitive processes. Specifically, inspired by cognitive theories, CogMath formalizes the reasoning process into 3 stages that align with human cognition: problem comprehension, problem solving, and solution summarization, and encompasses 9 fine-grained evaluation dimensions from perspectives such as numerical calculation, knowledge, and counterfactuals. In each dimension, to carry out a scientific evaluation, we develop an ``Inquiry-Judge-Reference'' multi-agent system, where the Inquiry agent generates inquiries that assess LLMs' mastery from this dimension, the Judge agent ensures the inquiry quality, and the Reference agent provides correct responses for comparison with the LLMs' actual performances. A LLM is considered to truly master a problem only when excelling in all inquiries from the 9 dimensions. In experiments, we evaluate 7 mainstream LLMs by applying CogMath to three benchmarks, which cover the full K-12 mathematical curriculum. The results reveal that the authentic mathematical capabilities of current LLMs are overestimated by 30-40%. Moreover, we locate their strengths and weaknesses across different stages/dimensions, offering constructive insights to further enhance their reasoning abilities.
      </details>
 
-40. **Collaborative Theorem Proving with Large Language Models: Enhancing Formal Proofs with ProofRefiner** [[pdf]](https://openreview.net/forum?id=y9xNQZjUJM) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
+42. **Collaborative Theorem Proving with Large Language Models: Enhancing Formal Proofs with ProofRefiner** [[pdf]](https://openreview.net/forum?id=y9xNQZjUJM) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -466,7 +500,7 @@
           Abstract： Theorem proving presents a significant challenge for large language models (LLMs) because formal proofs can be rigorously verified by proof assistants like Lean, leaving no room for errors. Existing LLM-based provers typically operate autonomously, but they often struggle with complex and novel theorems where human insights are crucial. We propose a new framework that positions LLMs as collaborative assistants in theorem proving to address this. This framework enables the seamless integration of LLM inference into the Lean environment, allowing developers to build various proof automation tools. These tools offer features such as suggesting proof steps, completing intermediate goals, and selecting relevant premises, thereby enhancing the theorem-proving process. Users can leverage our pretrained models or integrate their own, supporting local and cloud-based execution. Experimental results demonstrate that our approach is more effective in aiding humans and automating the theorem-proving process than existing rule-based systems. Additionally, we introduce a system called ProofRefiner, which refines questions and answers through dynamic dialogue adjustments to ensure relevance and precision.
      </details>
 
-41. **Conformal Language Model Reasoning with Coherent Factuality** [[pdf]](https://openreview.net/forum?id=AJpUZd8Clb) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+43. **Conformal Language Model Reasoning with Coherent Factuality** [[pdf]](https://openreview.net/forum?id=AJpUZd8Clb) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -474,7 +508,7 @@
           Language models are increasingly being used in important decision pipelines, so ensuring the correctness of their outputs is crucial. Recent work has proposed evaluating the “factuality” of claims decomposed from a language model generation and applying conformal prediction techniques to filter out those claims that are not factual. This can be effective for tasks such as information retrieval, where constituent claims may be evaluated in isolation for factuality, but is not appropriate for reasoning tasks, as steps of a logical argument can be evaluated for correctness only within the context of the claims that have preceded them. To capture this, we define “coherent factuality” and develop a conformal-prediction-based method to guarantee coherent factuality of language model outputs. Our approach applies split conformal prediction to subgraphs within a ``deducibility" graph that we construct to represent the steps of a reasoning problem. We evaluate our method on mathematical reasoning problems from the MATH and FELM datasets, and find that our algorithm achieves coherent factuality across target coverage levels, consistently producing orderings of correct claims that are substantiated by previous ones. Moreover, we achieve 90\% factuality on our stricter definition while retaining 80\% or more of the original claims, highlighting the utility of our deducibility-graph-guided approach.
      </details>
 
-42. **CreDes: Causal Reasoning Enhancement and Dual-End Searching for Solving Long-Range Reasoning Problems using LLMs** [[pdf]](http://arxiv.org/abs/2410.01696) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+44. **CreDes: Causal Reasoning Enhancement and Dual-End Searching for Solving Long-Range Reasoning Problems using LLMs** [[pdf]](http://arxiv.org/abs/2410.01696) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -488,7 +522,7 @@
           Large language models (LLMs) have demonstrated limitations in handling combinatorial optimization problems involving long-range reasoning, partially due to causal hallucinations and huge search space. As for causal hallucinations, i.e., the inconsistency between reasoning and corresponding state transition, this paper introduces the Causal Relationship Enhancement (CRE) mechanism combining cause-effect interventions and the Individual Treatment Effect (ITE) to guarantee the solid causal rightness between each step of reasoning and state transition. As for the long causal range and huge search space limiting the performances of existing models featuring single-direction search, a Dual-End Searching (DES) approach is proposed to seek solutions by simultaneously starting from both the initial and goal states on the causal probability tree. By integrating CRE and DES (CreDes), our model has realized simultaneous multi-step reasoning, circumventing the inefficiencies from cascading multiple one-step reasoning like the Chain-of-Thought (CoT). Experiments demonstrate that CreDes significantly outperforms existing State-Of-The-Art (SOTA) solutions in long-range reasoning tasks in terms of both accuracy and time efficiency.
      </details>
 
-43. **Critic-CoT: Boosting the reasoning abilities of large language model via Chain-of-Thought Critic** [[pdf]](https://openreview.net/forum?id=JEehcb48Vp) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+45. **Critic-CoT: Boosting the reasoning abilities of large language model via Chain-of-Thought Critic** [[pdf]](https://openreview.net/forum?id=JEehcb48Vp) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -496,7 +530,7 @@
           Self-critic has become a crucial mechanism for enhancing the reasoning performance of LLMs. However, current approaches mainly involve basic prompts for intuitive instance-level feedback, which resembles System-1 processes and limits the reasoning capabilities. Moreover, there is a lack of in-depth investigations into the relationship between LLM's ability to criticize and its task-solving performance. To address these issues, we propose Critic-CoT, a novel framework that pushes LLMs toward System-2-like critic capability. Through a step-wise CoT reasoning paradigm and the automatic construction of distant-supervision data without human annotation, Critic-CoT enables LLMs to engage in slow, analytic self-critique and refinement, thereby improving their reasoning abilities. Experiments on GSM8K and MATH demonstrate that our enhanced model significantly boosts task-solving performance by filtering out invalid solutions or iterative refinement. Furthermore, we investigate the intrinsic correlation between critique and task-solving abilities within LLMs, discovering that these abilities can mutually reinforce each other rather than conflict.
      </details>
 
-44. **DOTS: Learning to Reason Dynamically in LLMs via Optimal Reasoning Trajectories Search** [[pdf]](http://arxiv.org/abs/2410.03864) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+46. **DOTS: Learning to Reason Dynamically in LLMs via Optimal Reasoning Trajectories Search** [[pdf]](http://arxiv.org/abs/2410.03864) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -510,7 +544,7 @@
           Enhancing the capability of large language models (LLMs) in reasoning has gained significant attention in recent years. Previous studies have demonstrated the effectiveness of various prompting strategies in aiding LLMs in reasoning (called "reasoning actions"), such as step-by-step thinking, reflecting before answering, solving with programs, and their combinations. However, these approaches often applied static, predefined reasoning actions uniformly to all questions, without considering the specific characteristics of each question or the capability of the task-solving LLM. In this paper, we propose DOTS, an approach enabling LLMs to reason dynamically via optimal reasoning trajectory search, tailored to the specific characteristics of each question and the inherent capability of the task-solving LLM. Our approach involves three key steps: i) defining atomic reasoning action modules that can be composed into various reasoning action trajectories; ii) searching for the optimal action trajectory for each training question through iterative exploration and evaluation for the specific task-solving LLM; and iii) using the collected optimal trajectories to train an LLM to plan for the reasoning trajectories of unseen questions. In particular, we propose two learning paradigms, i.e., fine-tuning an external LLM as a planner to guide the task-solving LLM, or directly fine-tuning the task-solving LLM with an internalized capability for reasoning actions planning. Our experiments across eight reasoning tasks show that our method consistently outperforms static reasoning techniques and the vanilla instruction tuning approach. Further analysis reveals that our method enables LLMs to adjust their computation based on problem complexity, allocating deeper thinking and reasoning to harder problems.
      </details>
 
-45. **Deliberate Reasoning for LLMs as Structure-aware Planning with Accurate World Model** [[pdf]](https://arxiv.org/abs/2410.03136v1) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+47. **Deliberate Reasoning for LLMs as Structure-aware Planning with Accurate World Model** [[pdf]](https://arxiv.org/abs/2410.03136v1) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -524,7 +558,7 @@
           Enhancing the reasoning capabilities of large language models (LLMs) remains a key challenge, especially for tasks that require complex, multi-step decision-making. Humans excel at these tasks by leveraging deliberate planning with an internal world model to simulate the potential outcomes of various actions. Inspired by this, we propose a novel multi-step reasoning framework for LLMs, referred to as Structure-aware Planning with Accurate World Model (SWAP). Unlike previous approaches that rely solely on Chain-of-Thought (CoT) reasoning in natural language, SWAP incorporates structural information to guide the reasoning process via a world model and provides a soft verification mechanism over the steps. Moreover, SWAP overcomes the challenge of accurate world state predictions in complex reasoning tasks by introducing a Generator-Discriminator architecture, which enables more reliable world modeling. Specifically, the generator predicts the next state, and the discriminator ensures alignment with the logical consistency required by the problem context. SWAP also encourages the policy model to explore a broad range of potential actions to prevent premature convergence. By resolving the bottlenecks of generation diversity for both actions and states using diversity-based modeling (DBM) and improving discrimination accuracy through contrastive ranking (CR), SWAP significantly enhances the reasoning performance of LLMs. We evaluate SWAP across diverse reasoning-intensive benchmarks including math reasoning, logical reasoning, and coding tasks. Extensive experiments demonstrate that SWAP achieves substantial improvements over the baselines and consistently outperforms existing LLMs of similar sizes.
      </details>
 
-46. **Detecting Problematic Questions to Support Math Word Problem Design** [[pdf]](https://openreview.net/forum?id=ma4SUzeCLR) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+48. **Detecting Problematic Questions to Support Math Word Problem Design** [[pdf]](https://openreview.net/forum?id=ma4SUzeCLR) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -532,7 +566,13 @@
           When designing math word problems, teachers must ensure the clarity and precision of the question to avoid multiple interpretations and unanswerable situations, thereby maintaining consistent grading standards and effectiveness. We address these issues to provide comprehensive support to teachers in creating clear, solvable, and formal math word problems. In this paper, we present MathError, a dataset of real-world math word problems annotated with error types to investigate the need for question correction. Our work explores how large language models (LLMs) can assist teachers in detecting problematic questions to support math word problem design in scenarios with limited data, simulating real-world conditions with minimal training samples. Preliminary results demonstrate the models' capabilities in detecting problematic questions and identify areas for further research and development in educational applications.
      </details>
 
-47. **Dualformer: Controllable Fast and Slow Thinking by Learning with Randomized Reasoning Traces** [[pdf]](http://arxiv.org/abs/2410.09918) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+49. **Dualformer: Controllable Fast and Slow Thinking by Learning with Randomized Reasoning Traces** [[pdf]](http://arxiv.org/abs/2410.09918) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          Dualformer is a single Transformer model that seamlessly integrates both the fast and slow reasoning modes, and achieves improved performance with LLM fine-tuning, showing its generalization beyond task-specific models.
+     </details>
 
 
      <details>
@@ -540,7 +580,7 @@
           In human cognition theory, human thinking is governed by two systems: the fast and intuitive System 1 and the slower but more deliberative System 2. Recent studies have shown that incorporating System 2 process into Transformers including large language models (LLMs), significantly enhances their reasoning capabilities. Nevertheless, models that purely resemble System 2 thinking require substantially higher computational costs and are much slower to respond. To address this challenge, we present Dualformer, a single Transformer model that seamlessly integrates both the fast and slow reasoning modes. Dualformer is obtained by training on data with randomized reasoning traces, where different parts of the traces are dropped during training. The dropping strategies are specifically tailored according to the trace structure, analogous to analyzing our thinking process and creating shortcuts with patterns. At inference time, our model can be configured to output only the solutions (fast mode) or both the reasoning chain and the final solution (slow mode), or automatically decide which mode to engage (auto mode). In all cases, Dualformer outperforms the corresponding baseline models in both performance and computational efficiency: (1) in slow mode, Dualformer optimally solves unseen 30 x 30 maze navigation tasks 97.6% of the time, surpassing the Searchformer (trained on data with complete reasoning traces) baseline performance of 93.3%, while only using 45.5% fewer reasoning steps; (2) in fast mode, Dualformer completes those tasks with an 80% optimal rate, significantly outperforming the Solution-Only model (trained on solution-only data), which has an optimal rate of only 30%. For math problems, our techniques have also achieved improved performance with LLM fine-tuning, showing its generalization beyond task-specific models.
      </details>
 
-48. **DynaMath: A Dynamic Visual Benchmark for Evaluating Mathematical Reasoning Robustness of Vision Language Models** [[pdf]](https://openreview.net/forum?id=VOAMTA8jKu) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+50. **DynaMath: A Dynamic Visual Benchmark for Evaluating Mathematical Reasoning Robustness of Vision Language Models** [[pdf]](https://openreview.net/forum?id=VOAMTA8jKu) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -548,7 +588,7 @@
           The rapid advancements in Vision-Language Models (VLMs) have shown great potential in tackling mathematical reasoning tasks that involve visual context. Unlike humans who can reliably apply solution steps to similar problems with minor modifications, we found that state-of-the-art VLMs like GPT-4o can consistently fail in these scenarios, revealing limitations in their mathematical reasoning capabilities. In this paper, we investigate the **mathematical reasoning robustness** in VLMs and evaluate how well these models perform under different variants of the same question, such as changes in visual numerical values or function graphs. While several vision-based math benchmarks have been developed to assess VLMs' problem-solving capabilities, these benchmarks contain only static sets of problems and cannot easily evaluate mathematical reasoning robustness. To fill this gap, we introduce **DynaMath**, a dynamic visual math benchmark designed for in-depth assessment of VLMs. **DynaMath** includes 501 high-quality, multi-topic *seed* questions, *each represented as a Python program*. Those programs are carefully designed and annotated to enable the automatic generation of a much larger set of *concrete* questions, including many different types of visual and textual variations.  **DynaMath** allows us to evaluate the generalization ability of VLMs, by assessing their performance under varying input conditions of a seed question. We evaluated 14 state-of-the-art VLMs with 5,010 generated concrete questions (10 per seed question). Our results show that the worst-case model accuracy, defined as the percentage of correctly answered seed questions in all 10 variants, is significantly lower than the average-case accuracy. In addition, many models show high consistency in answering these questions -- the incorrectness of a certain variant of a seed question is not only due to inherent randomness. Our analysis emphasizes the need to study the robustness of VLMs' reasoning abilities, and **DynaMath** provides valuable insights to guide the development of more reliable models for mathematical reasoning.
      </details>
 
-49. **Dynamic Alignment of Representations for Enhanced Chain-of-Thought Reasoning in Large Language Models** [[pdf]](https://openreview.net/forum?id=7hRuaiRlgZ) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+51. **Dynamic Alignment of Representations for Enhanced Chain-of-Thought Reasoning in Large Language Models** [[pdf]](https://openreview.net/forum?id=7hRuaiRlgZ) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -556,7 +596,13 @@
           Representations encode rich semantic information, implying that editing them could serve as a effective tool (i.e., DAS, REFT) for parameter-efficient finetuning (PEFT). However, existing approaches typically focus on general categories of representations or selecting an appropriate number of continuous representations for each datasets, which limits their adaptability and performance. In contrast, our method dynamically selects representations requiring intervention at the instance level, referred to as misaligned representations, which are characterized by a lack of semantic information or appropriate attention. Identifying these misaligned representations poses challenging, as they serve different roles in varying contexts. It is evident that crucial representations, which are those that primarily receive information flow from themselves or significantly influence other representations, are likely to encompass misaligned representations. Consequently, we simplify the task by pivot our focus to crucial representations and aim to accurately locate them. We adaptively update crucial representation amidst uncertainty, freezing the base model while learning an updated direction for each layer. Involving both identification and updating of representations, we present a PEFT method, termed Dynamic Alignment of Representations (DAR). We validate the effectiveness of our method on eight diverse datasets across two scenarios, arithmetic and commonsense, and three base models: LLaMA-2-7B, LLaMA-2-13B, and LLaMA-3-8B. Notably, our method yields improvements of 17.47% and 3.11% over LLaMA-2-7B and ReFT on the GSM8K dataset, respectively. Additionally, it requires only 51 times fewer parameters than LoRA, demonstrating significant parameter efficiency. Furthermore, our method can be easily extended to few-shot learning.
      </details>
 
-50. **Embedding Self-Correction as an Inherent Ability in Large Language Models for Enhanced Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2410.10735) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+52. **Embedding Self-Correction as an Inherent Ability in Large Language Models for Enhanced Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2410.10735) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          This work introduces a novel mechanism, the Chain of Self-Correction (CoSC), specifically designed to embed self-correction as an inherent ability in LLMs, enabling them to validate and rectify their own results.
+     </details>
 
 
      <details>
@@ -564,7 +610,7 @@
           Accurate mathematical reasoning with Large Language Models (LLMs) is crucial in revolutionizing domains that heavily rely on such reasoning. However, LLMs often encounter difficulties in certain aspects of mathematical reasoning, leading to flawed reasoning and erroneous results. To mitigate these issues, we introduce a novel mechanism, the Chain of Self-Correction (CoSC), specifically designed to embed self-correction as an inherent ability in LLMs, enabling them to validate and rectify their own results. The CoSC mechanism operates through a sequence of self-correction stages. In each stage, the LLMs generate a program to address a given problem, execute this program using program-based tools to obtain an output, subsequently verify this output. Based on the verification, the LLMs either proceed to the next correction stage or finalize the answer. This iterative self-correction process allows the LLMs to refine their reasoning steps and improve the accuracy of their mathematical reasoning. To enable the CoSC mechanism at a low cost, we employ a two-phase finetuning approach. In the first phase, the LLMs are trained with a relatively small volume of seeding data generated from GPT-4, establishing an initial CoSC capability. In the second phase, the CoSC capability is further enhanced by training with a larger volume of self-generated data using the trained model in the first phase, without relying on the paid GPT-4. Our comprehensive experiments demonstrate that CoSC significantly improves performance on traditional mathematical datasets among existing open-source LLMs. Notably, our CoSC-Code-34B model achieved a 53.5% score on MATH, the most challenging mathematical reasoning dataset in the public domain, surpassing the performance of well-established models such as ChatGPT, GPT-4, and even multi-modal LLMs like GPT-4V, Gemini-1.0 Pro, and Gemini-1.0 Ultra.
      </details>
 
-51. **Enhancing Mathematical Reasoning in Language Models Through Focused Differentiation Training** [[pdf]](https://openreview.net/forum?id=vuuYbA1vB2) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+53. **Enhancing Mathematical Reasoning in Language Models Through Focused Differentiation Training** [[pdf]](https://openreview.net/forum?id=vuuYbA1vB2) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -572,7 +618,13 @@
           Enhancing the mathematical capabilities of large language models (LLMs) is crucial for applications requiring precise and rigorous mathematical reasoning. Current models, even when trained with methods like Direct Preference Optimization (DPO), often struggle to effectively differentiate between correct and erroneous mathematical responses, especially when errors occur in multi-step solutions. Traditional approaches focusing on token or logit-level analysis fail to capture the nuanced semantic differences in mathematical reasoning. To address this challenge, we propose leveraging the rich semantic information embedded in the hidden state space of LLMs. Our novel approach, Focused Differentiation Training (FDT), fine-tunes the model by emphasizing the differences between the hidden states of correct and incorrect responses, rather than their common features. Unlike other methods that detect errors at the token or logits level and often rely on human input or more powerful models, our approach enhances mathematical reasoning capabilities using only the model's inherent abilities. This methodology promotes a more accurate alignment with mathematical correctness, thereby improving the model's ability to evaluate and generate precise mathematical responses. Experimental results demonstrate that our algorithm substantially outperforms traditional alignment methods in mathematical tasks, offering a robust solution for enhancing the mathematical reasoning capabilities of language models.
      </details>
 
-52. **Enhancing Multi-Step Reasoning Abilities of Language Models through Direct Q-Function Optimization** [[pdf]](http://arxiv.org/abs/2410.09302) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+54. **Enhancing Multi-Step Reasoning Abilities of Language Models through Direct Q-Function Optimization** [[pdf]](http://arxiv.org/abs/2410.09302) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          Direct Q-function Optimization (DQO), which formulates the response generation process as a Markov Decision Process (MDP) and utilizes the soft actor-critic (SAC) framework to optimize a Q-function directly parameterized by the language model.
+     </details>
 
 
      <details>
@@ -580,7 +632,7 @@
           Reinforcement Learning (RL) plays a crucial role in aligning large language models (LLMs) with human preferences and improving their ability to perform complex tasks. However, current approaches either require significant computational resources due to the use of multiple models and extensive online sampling for training (e.g., PPO) or are framed as bandit problems (e.g., DPO, DRO), which often struggle with multi-step reasoning tasks, such as math problem-solving and complex reasoning that involve long chains of thought. To overcome these limitations, we introduce Direct Q-function Optimization (DQO), which formulates the response generation process as a Markov Decision Process (MDP) and utilizes the soft actor-critic (SAC) framework to optimize a Q-function directly parameterized by the language model. The MDP formulation of DQO offers structural advantages over bandit-based methods, enabling more effective process supervision. Experimental results on two math problem-solving datasets, GSM8K and MATH, demonstrate that DQO outperforms previous methods, establishing it as a promising offline reinforcement learning approach for aligning language models.
      </details>
 
-53. **ErrorRadar: Benchmarking Complex Mathematical Reasoning of Multimodal Large Language Models Via Error Detection** [[pdf]](https://arxiv.org/abs/2410.04509v1) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+55. **ErrorRadar: Benchmarking Complex Mathematical Reasoning of Multimodal Large Language Models Via Error Detection** [[pdf]](https://arxiv.org/abs/2410.04509v1) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -594,7 +646,7 @@
           As the field of Multimodal Large Language Models (MLLMs) continues to evolve, their potential to revolutionize artificial intelligence is particularly promising, especially in addressing mathematical reasoning tasks. Current mathematical benchmarks predominantly focus on evaluating MLLMs' problem-solving ability, yet there is a crucial gap in addressing more complex scenarios such as error detection, for enhancing reasoning capability in complicated settings. To fill this gap, we formally formulate the new task: multimodal error detection, and introduce ErrorRadar, the first benchmark designed to assess MLLMs' capabilities in such a task. ErrorRadar evaluates two sub-tasks: error step identification and error categorization, providing a comprehensive framework for evaluating MLLMs' complex mathematical reasoning ability. It consists of 2,500 high-quality multimodal K-12 mathematical problems, collected from real-world student interactions in an educational organization, with rigorous annotation and rich metadata such as problem type and error category. Through extensive experiments, we evaluated both open-source and closed-source representative MLLMs, benchmarking their performance against educational expert evaluators. Results indicate significant challenges still remain, as GPT-4o with best performance is still around 10% behind human evaluation. The dataset will be available upon acceptance.
      </details>
 
-54. **Evaluating Robustness of Reward Models for Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2410.01729) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+56. **Evaluating Robustness of Reward Models for Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2410.01729) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -602,7 +654,7 @@
           Reward models are key in reinforcement learning from human feedback (RLHF) systems, aligning the model behavior with human preferences. Particularly in the math domain, there have been plenty of studies using reward models to align policies for improving reasoning capabilities. Recently, as the importance of reward models has been emphasized, RewardBench is proposed to understand their behavior. However, we figure out that the math subset of RewardBench has different representations between chosen and rejected completions, and relies on a single comparison, which may lead to unreliable results as it only see an isolated case. Therefore, it fails to accurately present the robustness of reward models, leading to a misunderstanding of its performance and potentially resulting in reward hacking. In this work, we introduce a new design for reliable evaluation of reward models, and to validate this, we construct RewardMATH, a benchmark that effectively represents the robustness of reward models in mathematical reasoning tasks. We demonstrate that the scores on RewardMATH strongly correlate with the results of optimized policy and effectively estimate reward overoptimization, whereas the existing benchmark shows almost no correlation. The results underscore the potential of our design to enhance the reliability of evaluation, and represent the robustness of reward model. We make our code and data publicly available.
      </details>
 
-55. **Exchange of Perspective Prompting Enhances Reasoning in Large Language Models** [[pdf]](https://openreview.net/forum?id=jBBjZp0EVs) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+57. **Exchange of Perspective Prompting Enhances Reasoning in Large Language Models** [[pdf]](https://openreview.net/forum?id=jBBjZp0EVs) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -610,7 +662,13 @@
           Large language models (LLMs) have made significant advancements in addressing diverse natural language processing (NLP) tasks. However, their performance is often limited by inherent comprehension of problems. To address this limitation, we propose Exchange-of-Perspective (EoP), a novel framework designed to incorporate external perspectives by swapping answers for the same question presented with different definitions. We conducted extensive and comprehensive experiments on seven benchmarks. The results show that EoP can significantly improve performance. For instance, compared to the non-commutative baseline PHP, with GPT-3.5-Turbo and EoP, we observe a 3.6% improvement on AQuA (60.6% → 64.2%), while GPT-4-powered EoP achieves a 7.7% overall accuracy improvement on Math (53.9% → 61.6%).
      </details>
 
-56. **Executing Arithmetic: Fine-Tuning Large Language Models as Turing Machines** [[pdf]](http://arxiv.org/abs/2410.07896) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+58. **Executing Arithmetic: Fine-Tuning Large Language Models as Turing Machines** [[pdf]](http://arxiv.org/abs/2410.07896) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          A Composable Arithmetic Execution Framework (CAEF) is proposed that enables LLMs to learn to execute step-by-step computations by emulating Turing Machines, thereby gaining a genuine understanding of computational logic.
+     </details>
 
 
      <details>
@@ -618,7 +676,7 @@
           Large Language Models (LLMs) have demonstrated remarkable capabilities across a wide range of natural language processing and reasoning tasks. However, their performance in the foundational domain of arithmetic remains unsatisfactory. When dealing with arithmetic tasks, LLMs often memorize specific examples rather than learning the underlying computational logic, limiting their ability to generalize to new problems. In this paper, we propose a Composable Arithmetic Execution Framework (CAEF) that enables LLMs to learn to execute step-by-step computations by emulating Turing Machines, thereby gaining a genuine understanding of computational logic. Moreover, the proposed framework is highly scalable, allowing composing learned operators to significantly reduce the difficulty of learning complex operators. In our evaluation, CAEF achieves nearly 100% accuracy across seven common mathematical operations on the LLaMA 3.1-8B model, effectively supporting computations involving operands with up to 100 digits, a level where GPT-4o falls short noticeably in some settings.
      </details>
 
-57. **Exposing the Achilles' Heel: Evaluating LLMs Ability to Handle Mistakes in Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2406.10834) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+59. **Exposing the Achilles' Heel: Evaluating LLMs Ability to Handle Mistakes in Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2406.10834) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -632,7 +690,13 @@
           Large Language Models (LLMs) have been applied to Math Word Problems (MWPs) with transformative impacts, revolutionizing how these complex problems are approached and solved in various domains including educational settings. However, the evaluation of these models often prioritizes final accuracy, overlooking the crucial aspect of reasoning capabilities. This work addresses this gap by focusing on the ability of LLMs to detect and correct reasoning mistakes. We introduce a novel dataset MWP-MISTAKE, incorporating MWPs with both correct and incorrect reasoning steps generated through rule-based methods and smaller language models. Our comprehensive benchmarking reveals significant insights into the strengths and weaknesses of state-of-the-art models, such as GPT-4o, GPT-4, GPT-3.5Turbo, and others. We highlight GPT-$o's superior performance in mistake detection and rectification and the persistent challenges faced by smaller models. Additionally, we identify issues related to data contamination and memorization, impacting the reliability of LLMs in real-world applications. Our findings emphasize the importance of rigorous evaluation of reasoning processes and propose future directions to enhance the generalization and robustness of LLMs in mathematical problem-solving.
      </details>
 
-58. **FLARE: Faithful Logic-Aided Reasoning and Exploration** [[pdf]](http://arxiv.org/abs/2410.11900) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+60. **FLARE: Faithful Logic-Aided Reasoning and Exploration** [[pdf]](http://arxiv.org/abs/2410.11900) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          Faithful CoT (F-CoT) is introduced, a novel interpretable approach for traversing the problem space using task decompositions and it is demonstrated that model faithfulness positively correlates with overall performance and allows pinpointing the decisive factors sufficient for and leading to the correct answer with optimal reasoning during the multi-hop search.
+     </details>
 
 
      <details>
@@ -640,7 +704,13 @@
           Modern Question Answering (QA) and Reasoning approaches based on Large Language Models (LLMs) commonly use prompting techniques, such as Chain-of-Thought (CoT), assuming the resulting generation will have a more granular exploration and reasoning over the question space and scope. However, such methods struggle with generating outputs that are faithful to the intermediate chain of reasoning produced by the model. On the other end of the spectrum, neuro-symbolic methods such as Faithful CoT (F-CoT) propose to combine LLMs with external symbolic solvers. While such approaches boast a high degree of faithfulness, they usually require a model trained for code generation and struggle with tasks that are ambiguous or hard to formalise strictly. We introduce **F**aithful **L**ogic-**A**ided **R**easoning and **E**xploration (**FLARE**), a novel interpretable approach for traversing the problem space using task decompositions. We use the LLM to plan a solution, soft-formalise the query into facts and predicates using a logic programming code and simulate that code execution using an exhaustive multi-hop search over the defined space. Our method allows us to compute the faithfulness of the reasoning process w.r.t. the generated code and analyse the steps of the multi-hop search without relying on external solvers. Our methods achieve SOTA results on **7** out of **9** diverse reasoning benchmarks. We also show that model faithfulness positively correlates with overall performance and further demonstrate that **FLARE** allows pinpointing the decisive factors sufficient for and leading to the correct answer with optimal reasoning during the multi-hop search.
      </details>
 
-59. **Fine-grained Hallucination Detection and Mitigation in Language Model Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2410.06304) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+61. **Fine-grained Hallucination Detection and Mitigation in Language Model Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2410.06304) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          This paper introduces a comprehensive taxonomy that categorizes the common hallucinations in mathematical reasoning task into six types: fabrication, factual inconsistency, context inconsistency, instruction inconsistency, logical inconsistency, and logical error and proposes FG-PRM (Fine-Grained Process Reward Model), an augmented model designed to detect and mitigate hallucinations in a fine-grained, step-level manner.
+     </details>
 
 
      <details>
@@ -648,15 +718,13 @@
           Hallucinations in large language models (LLMs) pose significant challenges in tasks requiring complex multi-step reasoning, such as mathematical problem-solving. Existing approaches primarily detect the presence of hallucinations but lack a nuanced understanding of their types and manifestations. In this paper, we first introduce a comprehensive taxonomy that categorizes the common hallucinations in mathematical reasoning task into six types: fabrication, factual inconsistency, context inconsistency, instruction inconsistency, logical inconsistency, and logical error. We then propose FG-PRM (Fine-Grained Process Reward Model), an augmented model designed to detect and mitigate hallucinations in a fine-grained, step-level manner. To address the limitations of manually labeling training data, we propose an automated method for generating fine-grained hallucination data using LLMs. By injecting hallucinations into reasoning steps of correct solutions, we create a diverse and balanced synthetic dataset for training FG-PRM, which consists of six specialized Process Reward Models (PRMs), each tailored to detect a specific hallucination type. Our FG-PRM demonstrates superior performance across two key tasks: 1) Fine-grained hallucination detection: classifying hallucination types for each reasoning step; and 2) Verification: ranking multiple LLM-generated outputs to select the most accurate solution, mitigating reasoning hallucinations. Our experiments show that FG-PRM outperforms ChatGPT-3.5 and Claude-3 on fine-grained hallucination detection and substantially boosts the performance of LLMs on GSM8K and MATH benchmarks.
      </details>
 
-60. **First-Step Advantage: Importance of Starting Right in Multi-Step Math Reasoning** [[pdf]](http://arxiv.org/abs/2311.07945) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+62. **FormalAlign: Automated Alignment Evaluation for Autoformalization** [[pdf]](https://openreview.net/forum?id=B5RrIFMqbe) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
 
 
      <details>
-          <summary>Abstract</summary>
-          Language models can solve complex reasoning tasks better by learning to generate rationales for their predictions. Often these models know how to solve a task but their auto-regressive decoding nature leads to incorrect results if they start incorrectly. We observe that smaller models in particular when corrected, can solve a task that they would have otherwise struggled with. We demonstrate this phenomenon by using a larger model to guide smaller models, which leads to significantly improved performance (up to +24 points on the GSM8K dataset by 7B models). To assist smaller models in initiating the starting step, we propose QuestCoT, where a smaller model first asks itself how to start, before proceeding with a chain of reasoning. On various multistep mathematical reasoning datasets over multiple smaller models, we show that getting the right start can lead to significant performance gains across all models (gains of up to +6 points on GSM8K, +9 on SVAMP, +5 on ASDiv, and +7 on MultiArith).
+          <summary>SemanticsScholar tldr</summary>
+          This work introduces \textsc{FormalAlign], the first automated framework designed for evaluating the alignment between natural and formal languages in autoformalization, and significantly reduces the need for manual verification.
      </details>
-
-61. **FormalAlign: Automated Alignment Evaluation for Autoformalization** [[pdf]](https://openreview.net/forum?id=B5RrIFMqbe) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -664,7 +732,7 @@
           Autoformalization aims to convert informal mathematical proofs into machine-verifiable formats, bridging the gap between natural and formal languages. However, ensuring semantic alignment between the informal and formalized statements remains challenging. Existing approaches heavily rely on manual verification, hindering scalability. To address this, we introduce \textsc{FormalAlign}, the first automated framework designed for evaluating the alignment between natural and formal languages in autoformalization. \textsc{FormalAlign} trains on both the autoformalization sequence generation task and the representational alignment between input and output, employing a dual loss that combines a pair of mutually enhancing autoformalization and alignment tasks. Evaluated across four benchmarks augmented by our proposed misalignment strategies, \textsc{FormalAlign} demonstrates superior performance. In our experiments, \textsc{FormalAlign} outperforms GPT-4, achieving an Alignment-Selection Score 11.58\% higher on \forml-Basic (99.21\% vs. 88.91\%) and 3.19\% higher on MiniF2F-Valid (66.39\% vs. 64.34\%). This effective alignment evaluation significantly reduces the need for manual verification. Both the dataset and code can be accessed via~\url{https://github.com/rookie-joe/FormalAlign}.
      </details>
 
-62. **GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models** [[pdf]](https://arxiv.org/abs/2410.05229v1) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+63. **GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models** [[pdf]](https://arxiv.org/abs/2410.05229v1) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -678,7 +746,7 @@
           Recent advancements in Large Language Models (LLMs) have sparked interest in their formal reasoning capabilities, particularly in mathematics. The GSM8K benchmark is widely used to assess the mathematical reasoning of models on grade-school-level questions. While the performance of LLMs on GSM8K has significantly improved in recent years, it remains unclear whether their mathematical reasoning capabilities have genuinely advanced, raising questions about the reliability of the reported metrics. To address these concerns, we conduct a large-scale study on several SOTA open and closed models. To overcome the limitations of existing evaluations, we introduce GSM-Symbolic, an improved benchmark created from symbolic templates that allow for the generation of a diverse set of questions. GSM-Symbolic enables more controllable evaluations, providing key insights and more reliable metrics for measuring the reasoning capabilities of models.Our findings reveal that LLMs exhibit noticeable variance when responding to different instantiations of the same question. Specifically, the performance of all models declines when only the numerical values in the question are altered in the GSM-Symbolic benchmark. Furthermore, we investigate the fragility of mathematical reasoning in these models and show that their performance significantly deteriorates as the number of clauses in a question increases. We hypothesize that this decline is because current LLMs cannot perform genuine logical reasoning; they replicate reasoning steps from their training data. Adding a single clause that seems relevant to the question causes significant performance drops (up to 65%) across all state-of-the-art models, even though the clause doesn't contribute to the reasoning chain needed for the final answer. Overall, our work offers a more nuanced understanding of LLMs' capabilities and limitations in mathematical reasoning.
      </details>
 
-63. **GeoILP: A Synthetic Dataset to Guide Large-Scale Rule Induction** [[pdf]](https://openreview.net/forum?id=cfGpIcOIa5) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+64. **GeoILP: A Synthetic Dataset to Guide Large-Scale Rule Induction** [[pdf]](https://openreview.net/forum?id=cfGpIcOIa5) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -686,7 +754,7 @@
           Inductive logic programming (ILP) is a machine learning approach aiming to learn explanatory rules from data.     While existing ILP systems can successfully solve small-scale tasks, large-scale applications with various language biases are rarely explored.     Besides, it is crucial for a large majority of current ILP systems to require expert-defined language bias, which hampers the development of ILP towards broader utilizations.     In this paper, we introduce GeoILP, a large-scale synthetic dataset of diverse ILP tasks involving numerous aspects of language bias.     % including complex rule forms, high deduction complexity, and more realistic assumptions.     The ILP tasks are built from geometry problems, at the level from textbook exercise to regional International Mathematical Olympiad (IMO), with the help of a deduction engine.     These problems are elaborately selected to cover all challenging language biases, such as recursion, predicate invention, and high arity.     Experimental results show that no existing method can solve GeoILP tasks.     In addition, along with classic symbolic-form data, we provide image-form data to boost the development of the joint learning of neural perception and symbolic rule induction.
      </details>
 
-64. **GeoMath: A Benchmark for Multimodal Mathematical Reasoning in Remote Sensing** [[pdf]](https://openreview.net/forum?id=i3aFjkfnXO) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+65. **GeoMath: A Benchmark for Multimodal Mathematical Reasoning in Remote Sensing** [[pdf]](https://openreview.net/forum?id=i3aFjkfnXO) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -694,7 +762,7 @@
           Vision-language models (VLMs) have demonstrated impressive performance in various Earth observation tasks, particularly in zero-shot capabilities. However, their mathematical reasoning skills in remote sensing (RS) remain unexplored due to the lack of relevant data. To close this gap, we introduce \dataset, a multimodal mathematical reasoning benchmark meticulously designed for the RS domain. It comprises 3773 high-quality vehicle-related questions from aerial perspectives, spanning 6 mathematical subjects and 20 topics. All data used in this benchmark were collected by our drones from various altitudes and perspectives. Despite the limited geographical coverage, full access to all parameters of the RS images and detailed vehicle information ensures that the constructed mathematical problems are rigorous and diverse. With GeoMath, we have conducted a comprehensive and quantitative evaluation of 14 prominent VLMs. Solving these math problems requires high-resolution visual perception and domain-specific mathematical knowledge, which poses a challenge even for state-of-the-art VLMs. We further explore the impact of image resolution and the zero-shot prompting strategy on the scores, analyzing the reasons behind GPT-4o's reasoning errors. By comparing the gap between InternVL2 and GPT-4o, we find that the latter exhibits some level of cross-view knowledge transfer capability.
      </details>
 
-65. **GeoX: Geometric Problem Solving Through Unified Formalized Vision-Language Pre-training** [[pdf]](https://openreview.net/forum?id=6RiBl5sCDF) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+66. **GeoX: Geometric Problem Solving Through Unified Formalized Vision-Language Pre-training** [[pdf]](https://openreview.net/forum?id=6RiBl5sCDF) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -702,7 +770,7 @@
           Despite their proficiency in general tasks, Multi-modal Large Language Models (MLLMs) struggle with automatic Geometry Problem Solving (GPS), which demands understanding diagrams, interpreting symbols, and performing complex reasoning. This limitation arises from their pre-training on natural images and texts, along with the lack of automated verification in the problem-solving process. Besides, current geometric specialists are limited by their task-specific designs, making them less effective for broader geometric problems. To this end, we present GeoX, a multi-modal large model focusing on geometric understanding and reasoning tasks. Given the significant differences between geometric diagram-symbol and natural image-text, we introduce unimodal pre-training to develop a diagram encoder and symbol decoder, enhancing the understanding of geometric images and corpora. Furthermore, we introduce geometry-language alignment, an effective pre-training paradigm that bridges the modality gap between unimodal geometric experts. We propose a Generator-And-Sampler Transformer (GS-Former) to generate discriminative queries and eliminate uninformative representations from unevenly distributed geometric signals. Finally, GeoX benefits from visual instruction tuning, empowering it to take geometric images and questions as input and generate verifiable solutions. Experiments show that GeoX outperforms both generalists and geometric specialists on publicly recognized benchmarks, such as GeoQA, UniGeo, Geometry3K, and PGPS9k. Our data and code will be released soon to accelerate future research on automatic GPS.
      </details>
 
-66. **GraphIC: A Graph-Based In-Context Example Retrieval Model for Multi-Step Reasoning** [[pdf]](http://arxiv.org/abs/2410.02203) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+67. **GraphIC: A Graph-Based In-Context Example Retrieval Model for Multi-Step Reasoning** [[pdf]](http://arxiv.org/abs/2410.02203) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -716,7 +784,7 @@
           In-context learning (ICL) enables large language models (LLMs) to generalize to new tasks by incorporating a few in-context examples (ICEs) directly in the input, without updating parameters. However, the effectiveness of ICL heavily relies on the selection of ICEs, and conventional text-based embedding methods are often inadequate for tasks that require multi-step reasoning, such as mathematical and logical problem solving. This is due to the bias introduced by shallow semantic similarities that fail to capture the deeper reasoning structures required for these tasks. We present GraphIC, a novel approach that leverages graph-based representations of reasoning processes, coupled with Bayesian Networks (BNs) to select ICEs. Graph structures inherently filter out shallow semantics while preserving the core reasoning structure. Importantly, BNs capture the dependency of a node's attributes on its parent nodes, closely mirroring the hierarchical nature of human cognition-where each thought is shaped by preceding ones. This makes BNs particularly well-suited for multi-step reasoning tasks, aligning the process more closely with human-like reasoning. Extensive experiments across three types of reasoning tasks (mathematical reasoning, code generation, and logical reasoning) demonstrate that GraphIC outperforms both training-free and training-based models in selecting ICEs, excelling in terms of both effectiveness and efficiency. We show that GraphIC enhances ICL's performance and interoperability, significantly advancing ICE selection for multi-step reasoning tasks.
      </details>
 
-67. **HDFlow: Enhancing LLM Complex Problem-Solving with Hybrid Thinking and Dynamic Workflows** [[pdf]](http://arxiv.org/abs/2409.17433) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+68. **HDFlow: Enhancing LLM Complex Problem-Solving with Hybrid Thinking and Dynamic Workflows** [[pdf]](http://arxiv.org/abs/2409.17433) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -730,7 +798,7 @@
           Despite recent advancements in large language models (LLMs), their performance on complex reasoning problems requiring multi-step thinking and combining various skills is still limited. To address this, we propose a novel framework HDFlow for complex reasoning with LLMs that combines fast and slow thinking modes in an adaptive manner. Our approach consists of two key components: 1) a new approach for slow, deliberate reasoning called Dynamic Workflow, which automatically decomposes complex problems into more manageable sub-tasks and dynamically designs a workflow to assemble specialized LLM or symbolic reasoning tools to solve sub-tasks; 2) Hybrid Thinking, a general framework that dynamically combines fast and slow thinking based on problem complexity. Finally, we propose an easy-to-scale method for automatically synthesizing a large-scale dataset of 27K challenging reasoning problems for complex reasoning and a hybrid thinking tuning method that trains smaller LLMs on this dataset to internalize the fast/slow hybrid reasoning strategies. Experiments on four reasoning benchmark datasets demonstrate that our slow thinking with dynamic workflows significantly outperforms Chain-of-Thought, and hybrid thinking achieves the highest accuracy while providing an effective balance between computational efficiency and performance. Fine-tuning using our hybrid thinking approach also significantly boosts the complex reasoning capabilities of open-source language models. The results showcase the promise of slow thinking, dynamic workflows, and hybrid thinking in expanding the frontier of complex problem-solving with LLMs\footnote{Code and data will be released at \url{https://github.com/wenlinyao/HDFlow}.}.
      </details>
 
-68. **Harnessing Proof Assistant Feedback for Reinforcement Learning and Monte-Carlo Tree Search** [[pdf]](https://openreview.net/forum?id=I4YAIwrsXa) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
+69. **Harnessing Proof Assistant Feedback for Reinforcement Learning and Monte-Carlo Tree Search** [[pdf]](https://openreview.net/forum?id=I4YAIwrsXa) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -738,7 +806,7 @@
           Lean is an advanced proof assistant designed to facilitate formal theorem proving by providing a variety of interactive feedback. In this paper, we explore methodologies to leverage proof assistant feedback to augment the capabilities of large language models in constructing formal proofs. First, we deploy online reinforcement learning using Lean verification outcomes as the reward signal to improve the proof completion policy. This straightforward approach shows great promise in enhancing the model's alignment with the formal verification system. In addition, we propose RMaxTS, a variant of Monte-Carlo tree search that employs an intrinsic-reward-driven exploration strategy to generate diverse proof paths. The tree structure is organized to represent the transitions of intermediate tactic states, extracted from the compilation messages given by Lean's tactic mode. The intrinsic reward is constructed to incentivize the discovery of novel tactic states, which helps to to mitigate the sparse-reward problem inherent in proof search. These techniques lead to a more efficient planning scheme for formal proof generation, achieving new state-of-the-art results on both miniF2F and ProofNet benchmarks.
      </details>
 
-69. **Hint Marginalization for Improved Reasoning in Large Language Models** [[pdf]](https://openreview.net/forum?id=DzKdjWe59v) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+70. **Hint Marginalization for Improved Reasoning in Large Language Models** [[pdf]](https://openreview.net/forum?id=DzKdjWe59v) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -746,7 +814,7 @@
           Large Language Models (LLMs) have exhibited an impressive capability to perform reasoning tasks, especially if they are encouraged to generate a sequence of intermediate steps. Reasoning performance can be improved by suitably combining multiple LLM responses, generated either in parallel in a single query, or via sequential interactions with LLMs throughout the reasoning process. Existing strategies for combination, such as self-consistency and progressive-hint-prompting, make inefficient usage of the LLM responses. We present Hint Marginalization, a novel and principled algorithmic framework to enhance the reasoning capabilities of LLMs. Our approach can be viewed as an iterative sampling strategy for forming a Monte Carlo approximation of an underlying distribution of answers, with the goal of identifying the mode the most likely answer. Empirical evaluation on several benchmark datasets for arithmetic reasoning demonstrates the superiority of the proposed approach.
      </details>
 
-70. **How Can Language Models Learn from Mistakes on Grade-School Math Problems** [[pdf]](https://openreview.net/forum?id=zpDGwcmMV4) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+71. **How Can Language Models Learn from Mistakes on Grade-School Math Problems** [[pdf]](https://openreview.net/forum?id=zpDGwcmMV4) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -754,7 +822,7 @@
           Language models have demonstrated remarkable performance in solving reasoning tasks; however, even the strongest models still occasionally make reasoning mistakes. Recently, there has been active research aimed at improving reasoning accuracy, particularly by using pretrained language models to "self-correct'' their mistakes via multi-round prompting. In this paper, we follow this line of work but focus on understanding the usefulness of incorporating ``error-correction'' data directly into the pretraining stage. This data consists of erroneous solution steps immediately followed by their corrections. Using a synthetic math dataset, we show promising results: this type of pretrain data can help language models achieve higher reasoning accuracy directly (i.e., through simple auto-regression, without multi-round prompting) compared to pretraining on the same amount of error-free data. We also delve into many details, such as (1) how this approach differs from beam search, (2) how such data can be prepared, (3) whether masking is needed on the erroneous tokens, (4) the amount of error required, (5) whether such data can be deferred to the fine-tuning stage, and many others.
      </details>
 
-71. **IS TRANSFORMER A STOCHASTIC PARROT? A CASE STUDY IN SIMPLE ARITHMETIC TASK** [[pdf]](https://openreview.net/forum?id=tYVmxoRps3) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+72. **IS TRANSFORMER A STOCHASTIC PARROT? A CASE STUDY IN SIMPLE ARITHMETIC TASK** [[pdf]](https://openreview.net/forum?id=tYVmxoRps3) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -762,7 +830,7 @@
           Large pre-trained language models have demonstrated impressive capabilities, but  there is still much to learn about how they operate. In this study, we  conduct a investigation of the autoregressive transformer’s ability to  perform basic addition operations.   Specifically, by using causal analysis we found that a few different attention heads in the middle layers control the addition carry, with each head processing carries of different lengths. Due to the lack of globality in these attention heads, the model struggles to handle long-sequence addition tasks. By performing inference intervention on mistral-7B, partial task performance can be restored, with the accuracy on 20-digit long-sequence additions from 2\% to 38\%. Moreover, through fine-tuning, we discovered that the model still struggles to generalize carry chains beyond the training sequence length and the formation of the attention heads is crucial to the length generalization. Our research reveals how the model performs addition, and further provides insights into the debate on whether these models are merely statistical.
      </details>
 
-72. **ImProver: Agent-Based Automated Proof Optimization** [[pdf]](https://arxiv.org/abs/2410.04753v1) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
+73. **ImProver: Agent-Based Automated Proof Optimization** [[pdf]](https://arxiv.org/abs/2410.04753v1) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -776,7 +844,7 @@
           Large language models (LLMs) have been used to generate formal proofs of mathematical theorems in proofs assistants such as Lean. However, we often want to optimize a formal proof with respect to various criteria, depending on its downstream use. For example, we may want a proof to adhere to a certain style, or to be readable, concise, or modularly structured. Having suitably optimized proofs is also important for learning tasks, especially since human-written proofs may not optimal for that purpose. To this end, we study a new problem of automated proof optimization: rewriting a proof so that it is correct and optimizes for an arbitrary criterion, such as length or readability. As a first method for automated proof optimization, we present ImProver, a large-language-model agent that rewrites proofs to optimize arbitrary user-defined metrics in Lean. We find that naively applying LLMs to proof optimization falls short, and we incorporate various improvements into ImProver, such as the use of symbolic Lean context in a novel Chain-of-States technique, as well as error-correction and retrieval. We test ImProver on rewriting real-world undergraduate, competition, and research-level mathematics theorems, finding that ImProver is capable of rewriting proofs so that they are substantially shorter, more modular, and more readable.
      </details>
 
-73. **Improve Mathematical Reasoning in Language Models with Automated Process Supervision** [[pdf]](https://openreview.net/forum?id=KwPUQOQIKt) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+74. **Improve Mathematical Reasoning in Language Models with Automated Process Supervision** [[pdf]](https://openreview.net/forum?id=KwPUQOQIKt) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -784,7 +852,7 @@
           Complex multi-step reasoning tasks, such as solving mathematical problems or generating code, remain a significant hurdle for even the most advanced large language models (LLMs). Verifying LLM outputs with an Outcome Reward Model (ORM) is a standard inference-time technique aimed at enhancing the reasoning performance of LLMs. However, this still proves insufficient for reasoning tasks with a lengthy or multi-hop reasoning chain, where the intermediate outcomes are neither properly rewarded nor penalized. Process supervision addresses this limitation by assigning intermediate rewards during the reasoning process. To date, the methods used to collect process supervision data have relied on either human annotation or per-step Monte Carlo estimation, both prohibitively expensive to scale, thus hindering the broad application of this technique. In response to this challenge, we propose a novel divide-and-conquer style Monte Carlo Tree Search (MCTS) algorithm named \textit{OmegaPRM} for the efficient collection of high-quality process supervision data. This algorithm swiftly identifies the first error in the Chain of Thought (CoT) with binary search and balances the positive and negative examples, thereby ensuring both efficiency and quality. As a result, we are able to collect over 1.5 million process supervision annotations to train Process Reward Models (PRMs). This fully automated process supervision alongside the weighted self-consistency algorithm is able to enhance LLMs' math reasoning performances. We improved the success rates of the instruction-tuned Gemini Pro model from 51\% to 69.4\% on MATH500 and from 86.4\% to 93.6\% on GSM8K. Similarly, we boosted the success rates of Gemma2 27B from 42.3\% to 58.2\% on MATH500 and from 74.0\% to 92.2\% on GSM8K. The entire process operates without any human intervention or supervision, making our method both financially and computationally cost-effective compared to existing methods.
      </details>
 
-74. **Improving Complex Reasoning with Dynamic Prompt Corruption: A Soft Prompt Optimization Approach** [[pdf]](https://openreview.net/forum?id=h7Qz1ulnvF) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+75. **Improving Complex Reasoning with Dynamic Prompt Corruption: A Soft Prompt Optimization Approach** [[pdf]](https://openreview.net/forum?id=h7Qz1ulnvF) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -792,7 +860,13 @@
           Prompt Tuning (PT) has emerged as a promising Parameter-Efficient Fine-Tuning (PEFT) approach by appending trainable continuous prompt vectors to the input, maintaining competitive performance with significantly fewer trainable parameters. While PT has shown effectiveness in enhancing task performance, particularly for classification tasks, its application to complex reasoning tasks has been largely overlooked. Our investigation reveals that PT provides limited improvement and may even degrade performance in reasoning tasks. This phenomenon suggests that soft prompts can positively impact certain instances while negatively affecting others, particularly during the latter stages of reasoning. To address these challenges, we propose a novel method called Dynamic Prompt Corruption (DPC), which seeks to optimize the use of soft prompts in reasoning tasks. DPC dynamically adjusts the influence of soft prompts based on their impact on the reasoning process. Specifically, it involves two key components: Dynamic Trigger and Dynamic Corruption. Dynamic Trigger measures the influence of soft prompts, determining whether their impact is beneficial or detrimental. Dynamic Corruption mitigates the negative effects of soft prompts by selectively masking key tokens that interfere with the reasoning process. We validate our approach through extensive experiments on various large language models (LLMs) and reasoning tasks, including GSM8K, MATH, and AQuA. The results demonstrate that Dynamic Prompt Corruption consistently improves the performance of LLMs, achieving  4\%-8\% accuracy gains compared to standard prompt tuning. These findings highlight the effectiveness of our approach and its potential to enhance complex reasoning in LLMs.
      </details>
 
-75. **Improving LLM Reasoning through Scaling Inference Computation with Collaborative Verification** [[pdf]](http://arxiv.org/abs/2410.05318) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+76. **Improving LLM Reasoning through Scaling Inference Computation with Collaborative Verification** [[pdf]](http://arxiv.org/abs/2410.05318) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          This work introduces a comprehensive dataset consisting of correct and incorrect solutions for math and code tasks, generated by multiple LLMs, and proposes a novel collaborative method integrating Chain-of-Thought (CoT) and Program-of-Thought (PoT) solutions for verification.
+     </details>
 
 
      <details>
@@ -800,7 +874,7 @@
           Despite significant advancements in the general capability of large language models (LLMs), they continue to struggle with consistent and accurate reasoning, especially in complex tasks such as mathematical and code reasoning. One key limitation is that LLMs are trained primarily on correct solutions, reducing their ability to detect and learn from errors, which hampers their ability to reliably verify and rank outputs. To address this, we scale up the inference-time computation by generating multiple reasoning paths and employing verifiers to assess and rank the generated outputs by correctness. To facilitate this, we introduce a comprehensive dataset consisting of correct and incorrect solutions for math and code tasks, generated by multiple LLMs. This diverse set of solutions enables verifiers to more effectively distinguish and rank correct answers from erroneous outputs. The training methods for building verifiers were selected based on an extensive comparison of existing approaches. Moreover, to leverage the unique strengths of different reasoning strategies, we propose a novel collaborative method integrating Chain-of-Thought (CoT) and Program-of-Thought (PoT) solutions for verification. CoT provides a clear, step-by-step reasoning process that enhances interpretability, while PoT, being executable, offers a precise and error-sensitive validation mechanism. By taking both of their strengths, our approach significantly improves the accuracy and reliability of reasoning verification. Our verifiers, Math-Rev and Code-Rev, demonstrate substantial performance gains to existing LLMs, achieving state-of-the-art results on benchmarks such as GSM8k and MATH and even outperforming GPT-4o with Qwen-72B-Instruct as the reasoner.
      </details>
 
-76. **Improving Language Model Self-Correction Capability with Meta-Feedback** [[pdf]](https://openreview.net/forum?id=jJvJqgPZCD) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+77. **Improving Language Model Self-Correction Capability with Meta-Feedback** [[pdf]](https://openreview.net/forum?id=jJvJqgPZCD) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -808,7 +882,7 @@
           Large language models (LLMs) are capable of self-correcting their responses by generating feedback and refining the initial output. However, their performance may sometimes decline following self-correction, either because the feedback contains errors or due to unnecessarily attempting to refine an already accurate response. To address these limitations, we investigate whether the same LLM can generate meta-feedback that pinpoints errors in the feedback rather than the response, an ability that remains under-explored despite extensive research on LLMs' self-feedback generation. We design a novel self-correction prompting framework, Feedback-on-Feedback (FoF), which leverages meta-feedback to improve the feedback before refining the response. Our framework first samples multiple pieces of feedback for the initial response, and prompts the LLM to generate meta-feedback that analyzes the inconsistency between these feedback pieces. Based on the meta-feedback, the LLM generates refined feedback that subsequently guides the revision of the response. Our FoF framework consistently outperforms competitive baselines across two LLMs on three datasets, covering arithmetic reasoning, machine translation, and programming tasks. Specifically, FoF improves performance on GSM8K by 3.6 points (45.2% vs. 41.6% for the initial answer) and on MBPP by 6.4 points (51.7% vs. 45.3%) using the LLaMA-3-8B model.
      </details>
 
-77. **Improving Reasoning Ability of Large Language Models via Iterative Uncertainty-based Preference Optimization** [[pdf]](https://openreview.net/forum?id=bGGMLWAGMc) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+78. **Improving Reasoning Ability of Large Language Models via Iterative Uncertainty-based Preference Optimization** [[pdf]](https://openreview.net/forum?id=bGGMLWAGMc) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -816,7 +890,7 @@
           Direct Preference Optimization (DPO) has recently emerged as an efficient and effective method for aligning large language models with human preferences. However, constructing high-quality preference datasets remains challenging, often necessitating expensive manual or powerful LM annotations. Additionally, standard DPO exhibits suboptimal performance in complex reasoning tasks, such as mathematical and code reasoning. In this paper, we introduce an approach to collect preference pairs through iterative sampling and execution feedback, tailored to the current learning state (e.g. well-learned, mis-learned, and unlearned) of the policy model. To alleviate the failures of DPO and improve its applicability in reasoning tasks, we propose IUPO, an iterative uncertainty-based preference optimization method that achieves fine-grained preference control by assessing model confidence. We validate our approach across three reasoning tasks, incorporating five established reasoning datasets and one self-curated dataset. Our experimental results demonstrate an overall improvement of 3.6% over the standard DPO method.  Furthermore, our approach exhibits promising generalizability involving weak-to-strong (8B to 70B) and cross-model (Llama to Mistral) generalizations.
      </details>
 
-78. **Improving Soft Unification with Knowledge Graph Embedding Methods** [[pdf]](https://openreview.net/forum?id=OOqvY9yvVG) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+79. **Improving Soft Unification with Knowledge Graph Embedding Methods** [[pdf]](https://openreview.net/forum?id=OOqvY9yvVG) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -824,7 +898,7 @@
           Neural Theorem Provers (NTPs) present a promising framework for neuro-symbolic reasoning, combining end-to-end differentiability with the interpretability of symbolic logic programming. However, optimizing NTPs remains a significant challenge due to their complex objective landscape and gradient sparcity. On the other hand, Knowledge Graph Embedding (KGE) methods offer smooth optimization with well-defined learning objectives but often lack interpretability. In this work, we propose several strategies to integrate the strengths of NTPs and KGEs. By incorporating KGE objectives into the NTP framework, we demonstrate substantial improvements in both accuracy and computational efficiency.
      </details>
 
-79. **Inference Scaling Laws: An Empirical Analysis of Compute-Optimal Inference for LLM Problem-Solving** [[pdf]](https://openreview.net/forum?id=VNckp7JEHn) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+80. **Inference Scaling Laws: An Empirical Analysis of Compute-Optimal Inference for LLM Problem-Solving** [[pdf]](https://openreview.net/forum?id=VNckp7JEHn) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -832,7 +906,7 @@
           While the scaling laws of large language models (LLMs) training have been extensively studied, optimal inference configurations of LLMs remain underexplored. We study _inference scaling laws_ and _compute-optimal inference_, focusing on the trade-offs between model sizes and generating additional tokens with different inference strategies. As a first step towards understanding and designing compute-optimal inference methods, we studied cost-performance trade-offs for inference strategies such as greedy search, majority voting, best-of-$n$, weighted voting, and two different tree search algorithms, using different model sizes and compute budgets. Our findings indicate smaller models (e.g., Llemma-7B) can outperform larger models given the same computation budgets, and that smaller models paired with advanced inference algorithms yield Pareto-optimal cost-performance trade-offs. For instance, the Llemma-7B model, equipped with our novel tree search algorithm, consistently outperforms Llemma-34B with standard majority voting on the MATH benchmark across all FLOPs budgets. We hope these findings contribute to a broader understanding of inference scaling laws for LLMs.
      </details>
 
-80. **Inference-Aware Fine-Tuning for Best-of-N Sampling in Large Language Models** [[pdf]](https://openreview.net/forum?id=77gQUdQhE7) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+81. **Inference-Aware Fine-Tuning for Best-of-N Sampling in Large Language Models** [[pdf]](https://openreview.net/forum?id=77gQUdQhE7) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -840,7 +914,7 @@
           Recent studies indicate that effectively utilizing inference-time compute is crucial for attaining good performance from large language models (LLMs). Specifically, the Best-of-N (BoN) inference strategy, where an LLM generates multiple responses and a verifier selects the best, has shown strong empirical performance. Motivated by this, we develop a novel inference-aware fine-tuning paradigm, which encompasses the BoN-aware inference framework as a special case. We devise the first imitation learning and reinforcement learning (RL) methods for fine-tuning LLMs using BoN, overcoming the challenging, non-differentiable argmax operator in BoN. We empirically demonstrate that our BoN-aware models implicitly learn a per-example "meta-strategy", which interleaves best responses with more diverse responses that might be better suited to a test-time input—a process reminiscent of the exploration-exploitation trade-off in RL. Our experiments demonstrate the effectiveness of BoN-aware fine-tuning in terms of improved performance and inference-time compute. In particular, we show that our methods improve the BoN performance of Gemma 2B on Hendrycks MATH from 26.8% to 30.8%, and Pass@K from 60% to 67%.
      </details>
 
-81. **Interpretable Contrastive Monte Carlo Tree Search Reasoning** [[pdf]](http://arxiv.org/abs/2410.01707) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+82. **Interpretable Contrastive Monte Carlo Tree Search Reasoning** [[pdf]](http://arxiv.org/abs/2410.01707) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -854,7 +928,7 @@
           We propose SC-MCTS*: a novel Monte Carlo Tree Search (MCTS) reasoning algorithm for Large Language Models (LLMs), significantly improves both reasoning accuracy and speed. Our motivation comes from: 1. Previous MCTS LLM reasoning works often overlooked its biggest drawback--slower speed compared to CoT; 2. Previous research mainly used MCTS as a tool for LLM reasoning on various tasks with limited quantitative analysis or ablation studies of its components from reasoning interpretability perspective. 3. The reward model is the most crucial component in MCTS, however previous work has rarely conducted in-depth study or improvement of MCTS's reward models. Thus, we conducted extensive ablation studies and quantitative analysis on components of MCTS, revealing the impact of each component on the MCTS reasoning performance of LLMs. Building on this, (i) we designed a highly interpretable reward model based on the principle of contrastive decoding and (ii) achieved an average speed improvement of 51.9% per node using speculative decoding. Additionally, (iii) we improved UCT node selection strategy and backpropagation used in previous works, resulting in significant performance improvement. We outperformed o1-mini by an average of 17.4% on the Blocksworld multi-step reasoning dataset using Llama-3.1-70B with SC-MCTS*.
      </details>
 
-82. **It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation** [[pdf]](https://openreview.net/forum?id=NHxwxc3ql6) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+83. **It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation** [[pdf]](https://openreview.net/forum?id=NHxwxc3ql6) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -862,7 +936,7 @@
           Very large language models (LLMs) such as GPT-4 have shown the ability to handle complex tasks by generating and self-refining step-by-step rationales. Smaller language models (SLMs), typically with < 13B parameters, have been improved by using the data generated from very-large LMs through knowledge distillation. However, various practical constraints such as API costs, copyright, legal and ethical policies restrict using large (often opaque) models to train smaller models for commercial use. Limited success has been achieved at improving the ability of an SLM to explore the space of possible rationales and evaluate them by itself through self-deliberation. To address this, we propose COALITION, a trainable framework that facilitates interaction between two variants of the same SLM and trains them to generate and refine rationales optimized for the end-task. The variants exhibit different behaviors to produce a set of diverse candidate rationales during the generation and refinement steps. The model is then trained via Selective Rationale Optimization (SRO) to prefer generating rationale candidates that maximize the likelihood of producing the ground-truth answer. During inference, COALITION employs a controller to select the suitable variant for generating and refining the rationales. On five different datasets covering mathematical problems, commonsense reasoning, and natural language inference, COALITION outperforms several baselines by up to 5%. Our ablation studies reveal that cross-communication between the two variants performs better than using the single model to self-refine the rationales. We also demonstrate the applicability of COALITION for LMs of varying scales (4B to 14B parameters) and model families (Mistral, Llama, Qwen, Phi). We release the code for this work here.
      </details>
 
-83. **LLM Spark: Critical Thinking Evaluation of Large Language Models** [[pdf]](https://openreview.net/forum?id=0sJ8TqOLGS) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+84. **LLM Spark: Critical Thinking Evaluation of Large Language Models** [[pdf]](https://openreview.net/forum?id=0sJ8TqOLGS) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -870,7 +944,7 @@
           Large language models (LLMs) excel in complex tasks but often struggle with inconsistencies in problem framing, a critical skill for real-world scenarios. This paper introduces SPARK, a novel evaluation framework grounded in the Hierar- chical Three-Space Theory, to assess LLMs’ ability to identify missing informa- tion and challenge flawed problem setups. We create benchmarks by introducing inconsistencies and misleading cues in diverse question-answering datasets, cov- ering mathematics, science, and reading comprehension. Our experiments with state-of-the-art LLMs reveal their limitations in critical thinking, particularly in recognizing inconsistencies. We also explore mitigation strategies such as modi- fied prompting and targeted fine-tuning. Furthermore, we conduct comprehensive experiments to investigate how model and problem properties influence critical thinking capabilities in LLMs.
      </details>
 
-84. **Language Model Non-Myopic Generation for Reasoning and Planning** [[pdf]](https://openreview.net/forum?id=OoNazl6T7D) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+85. **Language Model Non-Myopic Generation for Reasoning and Planning** [[pdf]](https://openreview.net/forum?id=OoNazl6T7D) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -878,7 +952,7 @@
           Large Language Models have demonstrated remarkable abilities in reasoning and planning by breaking down complex problems into sequential steps. Despite their success in various domains like mathematical problem-solving and coding, LLMs face challenges in ensuring reliable and optimal planning due to their inherent myopic nature of autoregressive decoding. This paper revisits LLM reasoning from an optimal-control perspective, proposing a novel method, Predictive-Decoding, that leverages Model Predictive Control to enhance planning accuracy. By re-weighting LLM distributions based on foresight trajectories, Predictive-Decoding aims to mitigate early errors and promote non-myopic planning. Our experiments show significant improvements in a wide range of tasks for math, coding, and agents. Furthermore, Predictive-Decoding demonstrates computational efficiency, outperforming search baselines with reduced computational resources. This study provides insights into optimizing LLM planning capabilities.
      </details>
 
-85. **Language Models are Hidden Reasoners: Unlocking Latent Reasoning Capabilities via Self-Rewarding** [[pdf]](https://openreview.net/forum?id=4Po8d9GAfQ) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+86. **Language Models are Hidden Reasoners: Unlocking Latent Reasoning Capabilities via Self-Rewarding** [[pdf]](https://openreview.net/forum?id=4Po8d9GAfQ) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -886,7 +960,7 @@
           Large language models (LLMs) have shown impressive capabilities, but still struggle with complex reasoning tasks requiring multiple steps. While prompt-based methods like Chain-of-Thought (CoT) can improve LLM reasoning at inference time, optimizing reasoning capabilities during training remains challenging. We introduce LaTent Reasoning Optimization (LaTRO), a principled framework that formulates reasoning as sampling from a latent distribution and optimizes it via variational approaches. LaTRO enables LLMs to concurrently improve both their reasoning process and ability to evaluate reasoning quality, without requiring external feedback or reward models. We validate LaTRO through experiments on GSM8K and ARC-Challenge datasets using multiple model architectures. On GSM8K, LaTRO improves zero-shot accuracy by an average of 12.5\% over base models and 9.6\% over supervised fine-tuning across Phi-3.5-mini, Mistral-7B, and Llama-3.1-8B. Our findings suggest that pre-trained LLMs possess latent reasoning capabilities that can be unlocked and enhanced through our proposed optimization approach in a self-improvement manner.
      </details>
 
-86. **Language Models, Grade-School Math, and the Hidden Reasoning Process** [[pdf]](https://openreview.net/forum?id=Tn5B6Udq3E) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+87. **Language Models, Grade-School Math, and the Hidden Reasoning Process** [[pdf]](https://openreview.net/forum?id=Tn5B6Udq3E) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -894,7 +968,7 @@
           Recent advances in language models have demonstrated their capability to solve mathematical reasoning problems, achieving near-perfect accuracy on grade-school level math benchmarks like GSM8K. In this paper, we formally study how language models solve these problems. We design a series of controlled experiments to address several fundamental questions: (1) Can language models truly develop reasoning skills, or do they simply memorize templates? (2) What is the model's hidden (mental) reasoning process? (3) Do models solve math questions using skills similar to or different from humans? (4) Do models trained on GSM8K-like datasets develop reasoning skills beyond those necessary for solving GSM8K problems? (5) What mental process causes models to make reasoning mistakes? (6) How large or deep must a model be to effectively solve GSM8K-level math questions?  Our study uncovers many hidden mechanisms by which language models solve mathematical questions, providing insights that extend beyond current understandings of LLMs.
      </details>
 
-87. **Layer Swapping for Zero-Shot Cross-Lingual Transfer in Large Language Models** [[pdf]](http://arxiv.org/abs/2410.01335) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+88. **Layer Swapping for Zero-Shot Cross-Lingual Transfer in Large Language Models** [[pdf]](http://arxiv.org/abs/2410.01335) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -908,7 +982,7 @@
           Model merging, such as model souping, is the practice of combining different models with the same architecture together without further training. In this work, we present a model merging methodology that addresses the difficulty of fine-tuning Large Language Models (LLMs) for target tasks in non-English languages, where task-specific data is often unavailable. We focus on mathematical reasoning and without in-language math data, facilitate cross-lingual transfer by composing language and math capabilities. Starting from the same pretrained model, we fine-tune separate "experts" on math instruction data in English and on generic instruction data in the target language. We then replace the top and bottom transformer layers of the math expert directly with layers from the language expert, which consequently enhances math performance in the target language. The resulting merged models outperform the individual experts and other merging methods on the math benchmark, MGSM, by 10% across four major languages where math instruction data is scarce. In addition, this layer swapping is simple, inexpensive, and intuitive, as it is based on an interpretative analysis of the most important parameter changes during the fine-tuning of each expert. The ability to successfully re-compose LLMs for cross-lingual transfer in this manner opens up future possibilities to combine model expertise, create modular solutions, and transfer reasoning capabilities across languages all post hoc.
      </details>
 
-88. **Lean-ing on Quality: How High-Quality Data Beats Diverse Multilingual Data in AutoFormalization** [[pdf]](https://openreview.net/forum?id=Qdp7hlenr6) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
+89. **Lean-ing on Quality: How High-Quality Data Beats Diverse Multilingual Data in AutoFormalization** [[pdf]](https://openreview.net/forum?id=Qdp7hlenr6) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -916,7 +990,13 @@
           Autoformalization, the process of transforming informal mathematical language into formal specifications and proofs remains a difficult task for state-of-the-art (large) language models. Existing works point to competing explanations for the performance gap. On one hand, large language models exhibit exceptional performance on translation tasks, suggesting their significant potential for autoformalization.  On the other hand, the quantitative reasoning capabilities of standard language models remain limited, leading to suboptimal performance on autoformalization and the subsequent task of formal theorem proving. To this end, we introduce a novel methodology that leverages backtranslation with hand-curated prompts to enhance the mathematical capabilities of language models, particularly addressing the challenge posed by the scarcity of labeled data.  Specifically, we evaluate three primary variations of this strategy: (1) on-the-fly (online) backtranslation, (2) distilled (offline) backtranslation with few-shot amplification, and (3) line-by-line proof analysis integrated with proof state information. Each variant is designed to optimize data quality over quantity, focusing on the high fidelity of generated proofs rather than sheer data scale. Our findings provide evidence that employing our proposed approaches to generate synthetic data, which prioritizes quality over volume, improves the autoformalization performance of LLMs as measured by standard benchmarks such as ProofNet. Crucially, our approach outperforms pretrained models using a minimal number of tokens. We also show, through strategic prompting and backtranslation, that our approaches surpass the performance of finetuning with extensive multilingual datasets such as MMA on ProofNet with only 1/150th of the tokens. Taken together, our methods show a promising new approach to significantly reduce the resources required to formalize proofs, thereby accelerating AI for math.
      </details>
 
-89. **LeanAgent: Lifelong Learning for Formal Theorem Proving** [[pdf]](http://arxiv.org/abs/2410.06209) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
+90. **LeanAgent: Lifelong Learning for Formal Theorem Proving** [[pdf]](http://arxiv.org/abs/2410.06209) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          LeanAgent is presented, a novel lifelong learning framework for theorem proving that continuously generalizes to and improves on ever-expanding mathematical knowledge without forgetting previously learned knowledge and achieves exceptional scores in stability and backward transfer.
+     </details>
 
 
      <details>
@@ -924,7 +1004,7 @@
           Large Language Models (LLMs) have been successful in mathematical reasoning tasks such as formal theorem proving when integrated with interactive proof assistants like Lean. Existing approaches involve training or fine-tuning an LLM on a specific dataset to perform well on particular domains, such as undergraduate-level mathematics. These methods struggle with generalizability to advanced mathematics. A fundamental limitation is that these approaches operate on static domains, failing to capture how mathematicians often work across multiple domains and projects simultaneously or cyclically. We present LeanAgent, a novel lifelong learning framework for theorem proving that continuously generalizes to and improves on ever-expanding mathematical knowledge without forgetting previously learned knowledge. LeanAgent introduces several key innovations, including a curriculum learning strategy that optimizes the learning trajectory in terms of mathematical difficulty, a dynamic database for efficient management of evolving mathematical knowledge, and progressive training to balance stability and plasticity. LeanAgent successfully proves 162 theorems previously unproved by humans across 23 diverse Lean repositories, many from advanced mathematics. It performs up to 11$\times$ better than the static LLM baseline, proving challenging theorems in domains like abstract algebra and algebraic topology while showcasing a clear progression of learning from basic concepts to advanced topics. In addition, we analyze LeanAgent's superior performance on key lifelong learning metrics. LeanAgent achieves exceptional scores in stability and backward transfer, where learning new tasks improves performance on previously learned tasks. This emphasizes LeanAgent's continuous generalizability and improvement, explaining its superior theorem proving performance.
      </details>
 
-90. **MAVIS: Mathematical Visual Instruction Tuning with an Automatic Data Engine** [[pdf]](https://openreview.net/forum?id=MnJzJ2gvuf) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+91. **MAVIS: Mathematical Visual Instruction Tuning with an Automatic Data Engine** [[pdf]](https://openreview.net/forum?id=MnJzJ2gvuf) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -932,7 +1012,7 @@
           Multi-modal Large Language Models (MLLMs) have recently showcased superior proficiency in general visual scenarios. However, we identify their mathematical capabilities remain under-explored with three areas to be improved: visual encoding of math diagrams, diagram-language alignment, and chain-of-thought (CoT) reasoning. This draws forth an urgent demand for an effective training paradigm and a large-scale, comprehensive dataset with detailed CoT rationales, which is challenging to collect and costly to annotate manually. To tackle this issue, we propose MAVIS, a MAthematical VISual instruction tuning pipeline for MLLMs, featuring an automatic data engine to efficiently create mathematical visual datasets. We design the data generation process to be entirely independent of human intervention or GPT API usage, while ensuring the diagram-caption correspondence, question-answer correctness, and CoT reasoning quality. With this approach, we curate two datasets, MAVIS-Caption (558K diagram-caption pairs) and MAVIS-Instruct (834K visual math problems with CoT rationales), and propose four progressive stages for training MLLMs from scratch. First, we utilize MAVIS-Caption to fine-tune a math-specific vision encoder (CLIP-Math) through contrastive learning, tailored for improved diagram visual encoding. Second, we also leverage MAVIS-Caption to align the CLIP-Math with a large language model (LLM) by a projection layer, enhancing vision-language alignment in mathematical domains. Third, we adopt MAVIS-Instruct to perform the instruction tuning for robust problem-solving skills, and term the resulting model as MAVIS-7B. Fourth, we apply Direct Preference Optimization (DPO) to enhance the CoT capabilities of our model, further refining its step-wise reasoning performance. On various mathematical benchmarks, our MAVIS-7B achieves leading results among open-source MLLMs, e.g., surpassing other 7B models by +9.3% and the second-best LLaVA-NeXT (110B) by +6.9%, demonstrating the effectiveness of our method.
      </details>
 
-91. **MAgICoRe: Multi-Agent, Iterative, Coarse-to-Fine Refinement for Reasoning** [[pdf]](https://arxiv.org/abs/2409.12147v1) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+92. **MAgICoRe: Multi-Agent, Iterative, Coarse-to-Fine Refinement for Reasoning** [[pdf]](https://arxiv.org/abs/2409.12147v1) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -946,7 +1026,7 @@
           Large Language Models' (LLM) reasoning can be improved using test-time aggregation strategies, i.e., generating multiple samples and voting among generated samples. While these improve performance, they often reach a saturation point. Refinement offers an alternative by using LLM-generated feedback to improve solution quality. However, refinement introduces 3 key challenges: (1) Excessive refinement: Uniformly refining all instances can over-correct and reduce the overall performance. (2) Inability to localize and address errors: LLMs have a limited ability to self-correct and struggle to identify and correct their own mistakes. (3) Insufficient refinement: Deciding how many iterations of refinement are needed is non-trivial, and stopping too soon could leave errors unaddressed. To tackle these issues, we propose MAgICoRe, which avoids excessive refinement by categorizing problem difficulty as easy or hard, solving easy problems with coarse-grained aggregation and hard ones with fine-grained and iterative multi-agent refinement. To improve error localization, we incorporate external step-wise reward model (RM) scores. Moreover, to ensure effective refinement, we employ a multi-agent loop with three agents: Solver, Reviewer (which generates targeted feedback based on step-wise RM scores), and the Refiner (which incorporates feedback). To ensure sufficient refinement, we re-evaluate updated solutions, iteratively initiating further rounds of refinement. We evaluate MAgICoRe on Llama-3-8B and GPT-3.5 and show its effectiveness across 5 math datasets. Even one iteration of MAgICoRe beats Self-Consistency by 3.4%, Best-of-k by 3.2%, and Self-Refine by 4.0% while using less than half the samples. Unlike iterative refinement with baselines, MAgICoRe continues to improve with more iterations. Finally, our ablations highlight the importance of MAgICoRe's RMs and multi-agent communication.
      </details>
 
-92. **MIND: Math Informed syNthetic Dialogues for Pretraining LLMs** [[pdf]](http://arxiv.org/abs/2410.12881) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+93. **MIND: Math Informed syNthetic Dialogues for Pretraining LLMs** [[pdf]](http://arxiv.org/abs/2410.12881) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -954,20 +1034,18 @@
           The utility of synthetic data to enhance pretraining data quality and hence to improve downstream task accuracy has been widely explored in recent large language models (LLMs). Yet, these approaches fall inadequate in complex, multi-hop and mathematical reasoning tasks as the synthetic data typically fails to add complementary knowledge to the existing raw corpus. In this work, we propose a novel large-scale and diverse Math Informed syNthetic Dialogue (MIND) generation method that improves the mathematical reasoning ability of LLMs. Specifically, using MIND, we generate synthetic conversations based on OpenWebMath (OWM), resulting in a new math corpus, MIND-OWM. Our experiments with different conversational settings reveal that incorporating knowledge gaps between dialog participants is essential for generating high-quality math data. We further identify an effective way to format and integrate synthetic and raw data during pretraining to maximize the gain in mathematical reasoning, emphasizing the need to restructure raw data rather than use it as-is. Compared to pretraining just on raw data, a model pretrained on MIND-OWM shows significant boost in mathematical reasoning (GSM8K: +13.42%, MATH: +2.30%), including superior performance in specialized knowledge (MMLU: +4.55%, MMLU-STEM: +4.28%) and general purpose reasoning tasks (GENERAL REASONING: +2.51%).
      </details>
 
-93. **MIRAGE: Evaluating and Explaining Inductive Reasoning Process in Language Models** [[pdf]](http://arxiv.org/abs/2410.09542) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+94. **MIRAGE: Evaluating and Explaining Inductive Reasoning Process in Language Models** [[pdf]](http://arxiv.org/abs/2410.09542) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          This work evaluates LLMs' capabilities in both the inductive and deductive stages, allowing for flexible variation in input distribution, task scenario, and task difficulty to analyze the factors influencing LLMs' inductive reasoning.
+     </details>
 
 
      <details>
           <summary>Abstract</summary>
           Inductive reasoning is an essential capability for large language models (LLMs) to achieve higher intelligence, which requires the model to generalize rules from observed facts and then apply them to unseen examples. We present {\scshape Mirage}, a synthetic dataset that addresses the limitations of previous work, specifically the lack of comprehensive evaluation and flexible test data. In it, we evaluate LLMs' capabilities in both the inductive and deductive stages, allowing for flexible variation in input distribution, task scenario, and task difficulty to analyze the factors influencing LLMs' inductive reasoning. Based on these multi-faceted evaluations, we demonstrate that the LLM is a poor rule-based reasoner. In many cases, when conducting inductive reasoning, they do not rely on a correct rule to answer the unseen case. From the perspectives of different prompting methods, observation numbers, and task forms, models tend to consistently conduct correct deduction without correct inductive rules. Besides, we find that LLMs are good neighbor-based reasoners. In the inductive reasoning process, the model tends to focus on observed facts that are close to the current test example in feature space. By leveraging these similar examples, the model maintains strong inductive capabilities within a localized region, significantly improving its deductive performance.
-     </details>
-
-94. **MR-GSM8K: A Meta-Reasoning Benchmark for Large Language Model Evaluation** [[pdf]](http://arxiv.org/abs/2312.17080) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
-
-
-     <details>
-          <summary>Abstract</summary>
-          In this work, we introduce a novel evaluation paradigm for Large Language Models (LLMs) that compels them to transition from a traditional question-answering role, akin to a student, to a solution-scoring role, akin to a teacher. This paradigm, focusing on "reasoning about reasoning," hence termed meta-reasoning, shifts the emphasis from result-oriented assessments, which often neglect the reasoning process, to a more comprehensive evaluation that effectively distinguishes between the cognitive capabilities of different models. By applying this paradigm in the GSM8K dataset, we have developed the MR-GSM8K benchmark. Our extensive analysis includes several state-of-the-art models from both open-source and commercial domains, uncovering fundamental deficiencies in their training and evaluation methodologies. Notably, while models like Deepseek-v2 and Claude3-Sonnet closely competed with GPT-4 in GSM8K, their performance disparities expanded dramatically in MR-GSM8K, with differences widening to over 20 absolute points, underscoring the significant challenge posed by our meta-reasoning approach.
      </details>
 
 95. **Math for AI: On the Generalization of Learning Mathematical Problem Solving** [[pdf]](https://openreview.net/forum?id=th63j8qHa6) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
@@ -979,6 +1057,12 @@
      </details>
 
 96. **MathCoder2: Better Math Reasoning from Continued Pretraining on Model-translated Mathematical Code** [[pdf]](http://arxiv.org/abs/2410.08196) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          A novel method for generating mathematical code accompanied with corresponding reasoning steps for continued pretraining, leading to a 19.2B-token high-performing mathematical pretraining corpus, which is training several popular base models with this corpus significantly improves their mathematical abilities, leading to the creation of the MathCoder2 family of models.
+     </details>
 
 
      <details>
@@ -1049,6 +1133,12 @@
      </details>
 
 104. **Omni-MATH: A Universal Olympiad Level Mathematic Benchmark For Large Language Models** [[pdf]](http://arxiv.org/abs/2410.07985) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          This work proposes a comprehensive and challenging benchmark specifically designed to assess LLMs' mathematical reasoning at the Olympiad level, and shows that even the most advanced models, OpenAI o1-mini and OpenAI o1-preview, struggle with highly challenging Olympiad-level problems.
+     </details>
 
 
      <details>
@@ -1206,6 +1296,12 @@
 
 
      <details>
+          <summary>SemanticsScholar tldr</summary>
+          This work describes the set of good provers and shows that optimizing process rewards from such provers improves exploration during test-time search and online RL and shows that weak prover policies can substantially improve a stronger base policy.
+     </details>
+
+
+     <details>
           <summary>Abstract</summary>
           A promising approach for improving reasoning in large language models is to use process reward models (PRMs). PRMs provide feedback at each step of a multi-step reasoning trace, potentially improving credit assignment over outcome reward models (ORMs) that only provide feedback at the final step. However, collecting dense, per-step human labels is not scalable, and training PRMs from automatically-labeled data has thus far led to limited gains. To improve a base policy by running search against a PRM or using it as dense rewards for reinforcement learning (RL), we ask: "How should we design process rewards?". Our key insight is that, to be effective, the process reward for a step should measure progress: a change in the likelihood of producing a correct response in the future, before and after taking the step, corresponding to the notion of step-level advantages in RL. Crucially, this progress should be measured under a prover policy distinct from the base policy. We theoretically characterize the set of good provers and our results show that optimizing process rewards from such provers improves exploration during test-time search and online RL. In fact, our characterization shows that weak prover policies can substantially improve a stronger base policy, which we also observe empirically. We validate our claims by training process advantage verifiers (PAVs) to predict progress under such provers, and show that compared to ORMs, test-time search against PAVs is $>8\%$ more accurate, and $1.5-5\times$ more compute-efficient. Online RL with dense rewards from PAVs enables one of the first results with $5-6\times$ gain in sample efficiency, and $>6\%$ gain in accuracy, over ORMs.
      </details>
@@ -1310,11 +1406,23 @@
 
 
      <details>
+          <summary>SemanticsScholar tldr</summary>
+          A novel preference learning framework called RISE, which injects predefined subtle errors into partial tokens of correct solutions to construct hard pairs for error mitigation, and refines the training objective to focus on predefined errors and their tokens, without requiring fine-grained sampling or preference annotation.
+     </details>
+
+
+     <details>
           <summary>Abstract</summary>
           Large Language Models (LLMs) have exhibited strong mathematical reasoning and computational prowess, tackling tasks ranging from basic arithmetic to advanced competition-level problems. However, frequently occurring subtle errors, such as miscalculations or incorrect substitutions, limit the models' full mathematical potential. Existing studies to improve mathematical ability typically involve distilling reasoning skills from stronger LLMs or applying preference learning to step-wise response pairs. Although these methods leverage samples of varying granularity to mitigate reasoning errors, they overlook the frequently occurring subtle errors. A major reason is that sampled preference pairs involve differences unrelated to the errors, which may distract the model from focusing on subtle errors. In this work, we propose a novel preference learning framework called eRror-Injected Self-Editing (RISE), which injects predefined subtle errors into partial tokens of correct solutions to construct hard pairs for error mitigation. In detail, RISE uses the model itself to edit a small number of tokens in the solution, injecting designed subtle errors. Then, pairs composed of self-edited solutions and their corresponding correct ones, along with pairs of correct and incorrect solutions obtained through sampling, are used together for subtle error-aware DPO training. Compared with other preference learning methods, RISE further refines the training objective to focus on predefined errors and their tokens, without requiring fine-grained sampling or preference annotation. Extensive experiments validate the effectiveness of RISE, with preference learning on Qwen2-7B-Instruct yielding notable improvements of 3.0% on GSM8K and 7.9% on MATH.
      </details>
 
 132. **SuperCorrect: Supervising and Correcting Language Models with Error-Driven Insights** [[pdf]](http://arxiv.org/abs/2410.09008) `ICLR 2025 Submission` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          This work proposes SuperCorrect, a novel two-stage framework that uses a large teacher model to supervise and correct both the reasoning and reflection processes of a smaller student model and introduces cross-model collaborative direct preference optimization (DPO) to enhance the self-correction abilities of the student model by following the teacher's correction traces during training.
+     </details>
 
 
      <details>
@@ -1462,6 +1570,12 @@
 
 
      <details>
+          <summary>SemanticsScholar tldr</summary>
+          VerifierQ is among the first to investigate the verifier (critic) aspect in LLMs through Q-learning, and introduces a modified Bellman update for bounded Q-values, incorporates Implicit Q-learning (IQL) for efficient action space management, and integrates a novel Conservative Q-learning (CQL) formulation for balanced Q-value estimation.
+     </details>
+
+
+     <details>
           <summary>Abstract</summary>
           Recent advancements in test time compute, particularly through the use of verifier models, have significantly enhanced the reasoning capabilities of Large Language Models (LLMs). This generator-verifier approach closely resembles the actor-critic framework in reinforcement learning (RL). However, current verifier models in LLMs often rely on supervised fine-tuning without temporal difference learning such as Q-learning. This paper introduces VerifierQ, a novel approach that integrates Offline Q-learning into LLM verifier models. We address three key challenges in applying Q-learning to LLMs: (1) handling utterance-level Markov Decision Processes (MDPs), (2) managing large action spaces, and (3) mitigating overestimation bias. VerifierQ introduces a modified Bellman update for bounded Q-values, incorporates Implicit Q-learning (IQL) for efficient action space management, and integrates a novel Conservative Q-learning (CQL) formulation for balanced Q-value estimation. Our method enables parallel Q-value computation and improving training efficiency. While recent work has explored RL techniques like MCTS for generators, VerifierQ is among the first to investigate the verifier (critic) aspect in LLMs through Q-learning. This integration of RL principles into verifier models complements existing advancements in generator techniques, potentially enabling more robust and adaptive reasoning in LLMs. Experimental results on mathematical reasoning tasks demonstrate VerifierQ's superior performance compared to traditional supervised fine-tuning approaches, with improvements in efficiency, accuracy and robustness. By enhancing the synergy between generation and evaluation capabilities, VerifierQ contributes to the ongoing evolution of AI systems in addressing complex cognitive tasks across various domains.
      </details>
@@ -1514,7 +1628,21 @@
 
 
      <details>
+          <summary>SemanticsScholar tldr</summary>
+          This study investigates the effects of a wide range of prompting strategies with a focus on automatic re-prompting over multiple turns and computational requirements, and reveals strategies that consistently improve performance across all models with small and large sampling budgets.
+     </details>
+
+
+     <details>
           <summary>Abstract</summary>
           Prompting techniques such as chain-of-thought have established themselves as a popular vehicle for improving the outputs of large language models (LLMs). For code generation, however, their exact mechanics and efficacy are under-explored. We thus investigate the effects of a wide range of prompting strategies with a focus on automatic re-prompting over multiple turns and computational requirements. After systematically decomposing reasoning, instruction, and execution feedback prompts, we conduct an extensive grid search on the competitive programming benchmarks CodeContests and TACO for multiple LLM families and sizes (Llama 3.0 and 3.1, 8B, 70B, 405B, and GPT-4o). Our study reveals strategies that consistently improve performance across all models with small and large sampling budgets. We then show how finetuning with such an optimal configuration allows models to internalize the induced reasoning process and obtain improvements in performance and scalability for multi-turn code generation.
+     </details>
+
+153. **ZIP-FIT: Embedding-Free Data Selection via Compression-Based Alignment** [[pdf]](https://openreview.net/forum?id=4JBEpP6eRS) `ICLR 2025 Submission` `Lean` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>Abstract</summary>
+          Selecting high-quality, aligned fine-tuning data is crucial for improving the downstream performance of language models (LMs). Automatic data selection in these scenarios is challenging and often inefficient due to previous approaches relying on neural embeddings or limited n-gram representations to identify aligned datasets. In addition, traditional data selection methods often focus on increasing the size of the training data, making them computationally expensive to use and data inefficient. In this work, we introduce ZIP-FIT, an embedding-free, data-efficient selection framework that leverages gzip compression to measure the alignment between training data and target domains. We show that ZIP-FIT significantly outperforms two leading baselines, DSIR and D4, in selecting high-quality data for ProofNet, a formal mathematical dataset, and HumanEval, a benchmark for code generation tasks. Specifically, ZIP-FIT demonstrates a computational speed advantage, performing data selection up to  65.8\% faster than DSIR and achieving its lowest cross-entropy loss up to 85.1\% faster. Our findings suggest that ZIP-FIT offers a scalable and adaptable approach for data selection, enabling more precise fine-tuning for code generation domains. By demonstrating that embedding-free data selection can outperform established methods like DSIR and D4, our research opens new avenues for optimizing model training, thereby enhancing the effectiveness and efficiency of machine learning workflows.
      </details>
 
