@@ -15,6 +15,7 @@ It is a by-product when I read papers, and is open sourced because I hope it may
 
 Here are some sub-lists that may be potentially interesting:
 
+* [ICLR 2025 Submissions](render/iclr_2025_submissions.md)
 * [NeurIPS 2024](render/neurips_2024.md)
 * [All top conferences](render/top_conferences.md)
 * [Papers using proof assistants](render/proof_assistants.md) (Lean / Isabelle / ...)
