@@ -44,15 +44,7 @@
           Large language models (LLMs) have demonstrated impressive capabilities in various reasoning tasks, aided by techniques like chain-of-thought (CoT) prompting that elicits verbalized reasoning. However, LLMs often generate text with obvious mistakes and contradictions, raising doubts about their ability to robustly process and utilize generated rationales. In this work, we investigate CoT reasoning in LLMs through the lens of internal representations, focusing on how these representations are influenced by generated rationales. Our preliminary analysis reveals that while generated rationales improve answer accuracy, inconsistencies emerge between the model's internal representations in middle layers and those in final layers, potentially undermining the reliability of their reasoning processes. To address this, we propose internal consistency as a measure of the model's confidence by examining the agreement of latent predictions decoded from intermediate layers. Extensive empirical studies across different models and datasets demonstrate that internal consistency effectively distinguishes between correct and incorrect reasoning paths. Motivated by this, we propose a new approach to calibrate CoT reasoning by up-weighting reasoning paths with high internal consistency, resulting in a significant boost in reasoning performance. Further analysis uncovers distinct patterns in attention and feed-forward modules across layers, providing insights into the emergence of internal inconsistency. In summary, our results demonstrate the potential of using internal representations for self-evaluation of LLMs.
      </details>
 
-4. **Autoformalize Mathematical Statements by Symbolic Equivalence and Semantic Consistency** [[pdf]](https://neurips.cc/virtual/2024/poster/96359) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
-
-
-     <details>
-          <summary>Abstract</summary>
-          Autoformalization, the task of automatically translating natural language descriptions into a formal language, poses a significant challenge across various domains, especially in mathematics. Recent advancements in large language models (LLMs) have unveiled their promising capabilities to formalize even competition-level math problems. However, we observe a considerable discrepancy between pass@1 and pass@k accuracies in LLM-generated formalizations. To address this gap, we introduce a novel framework that scores and selects the best result from k autoformalization candidates based on two complementary self-consistency methods: symbolic equivalence and semantic consistency. Elaborately, symbolic equivalence identifies the logical homogeneity among autoformalization candidates using automated theorem provers, and semantic consistency evaluates the preservation of the original meaning by informalizing the candidates and computing the similarity between the embeddings of the original and informalized texts. Our extensive experiments on the MATH and miniF2F datasets demonstrate that our approach significantly enhances autoformalization accuracy, achieving up to 0.22-1.35x relative improvements across various LLMs and baseline methods.
-     </details>
-
-5. **Benchmarking the Reasoning Robustness against Noisy Rationales in Chain-of-thought Prompting** [[pdf]](https://neurips.cc/virtual/2024/poster/95956) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+4. **Benchmarking the Reasoning Robustness against Noisy Rationales in Chain-of-thought Prompting** [[pdf]](https://neurips.cc/virtual/2024/poster/95956) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -60,7 +52,7 @@
           This paper investigates an under-explored challenge in large language models (LLMs): chain-of-thought prompting with noisy rationales—irrelevant or inaccurate reasoning steps—despite advancements in in-context learning. We construct the NoRa dataset, specifically designed to evaluate LLMs’ robustness to noisy rationales, based on which we reveal a widespread vulnerability among LLMs to such noise, with limited efficacy from existing reasoning methods. To combat this, we propose the contrastive denoising with noisy chain-of-thought (CD-CoT) method to enhance denoising-reasoning capabilities by contrasting noisy rationales with only one clean rationale, thereby advancing the robustness of LLMs in reasoning.
      </details>
 
-6. **Counterfactual PPO Enhanced Shared Reflector for LLM-based Multi-agent Collaboration** [[pdf]](https://neurips.cc/virtual/2024/poster/93147) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+5. **Counterfactual PPO Enhanced Shared Reflector for LLM-based Multi-agent Collaboration** [[pdf]](https://neurips.cc/virtual/2024/poster/93147) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -68,7 +60,7 @@
           Benefiting from the powerful language expression and planning capabilities of Large Language Models (LLMs), LLM-based autonomous agents achieve promising performance in various downstream tasks. Recently, based on the development of single-agent systems, researchers propose to construct LLM-based multi-agent systems to tackle more complicated tasks. In this paper, we propose a novel framework, named COPPER, to enhance the collaboration ability of multi-agent systems through learnable self-reflection mechanism. To improve the quality of reflections, we propose to fine-tune a shared reflector, which automatically tunes the prompts of actor models using our counterfactual PPO mechanism. On the one hand, we propose counterfactual rewards to assess the contribution of a single agent’s reflection within the system, alleviating the credit assignment problem. On the other hand, we propose to train a shared reflector, which enables the reflector to personalize generated reflections according to agent roles, while reducing the computational resource requirements and improving training stability. We conduct experiments on three datasets to evaluate the performance of multi-agent systems in multi-hop question answering, mathematics, and chess scenarios. Experimental results show that COPPER possesses stronger reflection capabilities and exhibits excellent generalization performance across different actor models.
      </details>
 
-7. **Diffusion of Thought: Chain-of-Thought Reasoning in Diffusion Language Models** [[pdf]](https://neurips.cc/virtual/2024/poster/95935) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+6. **Diffusion of Thought: Chain-of-Thought Reasoning in Diffusion Language Models** [[pdf]](https://neurips.cc/virtual/2024/poster/95935) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -76,7 +68,7 @@
           Recently, diffusion models have garnered significant interest in the field of text processing due to their many potential advantages compared to conventional autoregressive models.In this work, we propose Diffusion-of-Thought (DoT),  a novel approach that integrates diffusion models with Chain-of-Thought, a well-established technique for improving the reasoning ability of autoregressive language models. In contrast to autoregressive language models that make decisions in a left-to-right, token-by-token manner, DoT allows reasoning steps to diffuse over time through a diffusion language model and offers greater flexibility in trading-off computation for reasoning performance. Our experimental results demonstrate the effectiveness of DoT in multi-digit multiplication, boolean logic, and grade school math problems. In addition to that, DoT showcases promising self-correction abilities and benefits from existing reasoning-enhancing techniques like self-consistency decoding. Our findings contribute to the understanding and development of reasoning with diffusion language models.
      </details>
 
-8. **Learning Goal-Conditioned Representations in Reward Models for Aligning Language Models** [[pdf]](https://neurips.cc/virtual/2024/poster/95067) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+7. **Learning Goal-Conditioned Representations in Reward Models for Aligning Language Models** [[pdf]](https://neurips.cc/virtual/2024/poster/95067) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -84,7 +76,7 @@
           Representation learning is important for the success of Reinforcement Learning (RL) algorithms, but has been less explored for Language Model (LM) alignment with Reinforcement learning from Human Feedback (RLHF).In this work, we present a simple yet effective approach to improve the representations learned by reward models for aligning LMs.Our method uses a contrastive loss that encourages reward models to learn goal-conditioned representations which encode the expected reward at intermediate steps of the input sequence.By enforcing this loss on representations from intermediate steps, we can capture which trajectories are likely to reach a desired goal (e.g., correct solution or helpful response) at different points in the sequence.This method is flexible enough to support different kinds of alignment data and does not require extra annotations.We demonstrate the effectiveness of this approach in 2 domains: mathematical reasoning and natural language alignment.On math benchmarks, such as GSM8k, we show that our approach improves the reward model's ability to discern between correct/incorrect solutions, increasing AUROC score by up to 0.11 points, and that the learned representations can help prune undesirable generations.Using this reward model to improve a policy model via RLHF yields accuracy gains of 1.7\% across several math benchmarks when compared to a standard preference-ranking trained reward model.Additionally, we show the that learned representations can be used to steer LMs toward generations that are more aligned with human preferences via guided decoding.Overall, our study underscores the potential of incorporating feedback signals in RLHF frameworks via learned representations, which we believe is a promising avenue for improving the alignment of LLMs.
      </details>
 
-9. **MathPile: A Billion-Token-Scale Pretraining Corpus for Math** [[pdf]](https://neurips.cc/virtual/2024/poster/97685) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+8. **MathPile: A Billion-Token-Scale Pretraining Corpus for Math** [[pdf]](https://arxiv.org/abs/2312.17120) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -92,7 +84,7 @@
           High-quality, large-scale corpora are the cornerstone of building foundation models. In this work, we introduce MathPile, a diverse and high-quality math-centric corpus comprising about 9.5 billion tokens. Throughout its creation, we adhered to the principle of “less is more”, firmly believing in the supremacy of data quality over quantity, even in the pre-training phase. Our meticulous data collection and processing efforts included a complex suite of preprocessing, prefiltering, language identification, cleaning, filtering, and deduplication, ensuring the high quality of our corpus. Furthermore, we performed data contamination detection on downstream benchmark test sets to eliminate duplicates and conducted continual pre-training experiments, booting the performance on common mathematical reasoning benchmarks. We aim for our MathPile to boost language models’ mathematical reasoning and plan to open-source its different versions and processing scripts to advance the field.
      </details>
 
-10. **Multi-language Diversity Benefits Autoformalization** [[pdf]](https://neurips.cc/virtual/2024/poster/96799) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+9. **Multi-language Diversity Benefits Autoformalization** [[pdf]](https://neurips.cc/virtual/2024/poster/96799) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -100,7 +92,7 @@
           Autoformalization is the task of translating natural language materials into machine-verifiable formalisations. Progress in autoformalization research is hindered by the lack of a sizeable dataset consisting of informal-formal pairs expressing the same essence. Existing methods tend to circumvent this challenge by manually curating small corpora or using few-shot learning with large language models. But these methods suffer from data scarcity and formal language acquisition difficulty. In this work, we create mma, a large, flexible, multi-language, and multi-domain dataset of informal-formal pairs, by using a language model to translate in the reverse direction, that is, from formal mathematical statements into corresponding informal ones. Experiments show that language models fine-tuned on mma can produce up to $29-31$\% of statements acceptable with minimal corrections on the miniF2F and ProofNet benchmarks, up from $0$\% with the base model. We demonstrate that fine-tuning on multi-language formal data results in more capable autoformalization models even on single-language tasks.
      </details>
 
-11. **Neuro-Symbolic Data Generation for Math Reasoning** [[pdf]](https://neurips.cc/virtual/2024/poster/96151) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+10. **Neuro-Symbolic Data Generation for Math Reasoning** [[pdf]](https://neurips.cc/virtual/2024/poster/96151) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -108,7 +100,7 @@
           A critical question about Large Language Models (LLMs) is whether their apparent deficiency in mathematical reasoning is inherent, or merely a result of insufficient exposure to high-quality mathematical data. To explore this, we developed an automated method for generating high-quality, supervised mathematical datasets. The method carefully mutates existing math problems, ensuring both diversity and validity of the newly generated problems. This is achieved by a neuro-symbolic data generation framework combining the intuitive informalization strengths of LLMs, and the precise symbolic reasoning of math solvers along with projected Markov chain Monte Carlo sampling in the highly-irregular symbolic space.Empirical experiments demonstrate the high quality of data generated by the proposed method, and that the LLMs, specifically LLaMA-2 and Mistral, when realigned with the generated data, surpass their state-of-the-art counterparts.
      </details>
 
-12. **Not All Tokens Are What You Need for Pretraining** [[pdf]](https://neurips.cc/virtual/2024/poster/96931) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+11. **Not All Tokens Are What You Need for Pretraining** [[pdf]](https://neurips.cc/virtual/2024/poster/96931) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -116,7 +108,7 @@
           Previous language model pre-training methods have uniformly applied a next-token prediction loss to all training tokens. Challenging this norm, we posit that ''Not all tokens in a corpus are equally important for language model training''. Our initial analysis examines token-level training dynamics of language model, revealing distinct loss patterns for different tokens. Leveraging these insights, we introduce a new language model called Rho-1. Unlike traditional LMs that learn to predict every next token in a corpus, Rho-1 employs Selective Language Modeling (SLM), which selectively trains on useful tokens that aligned with the desired distribution. This approach involves scoring pretraining tokens using a reference model, and then training the language model with a focused loss on tokens with higher scores. When continual pretraining on 15B OpenWebMath corpus, Rho-1 yields an absolute improvement in few-shot accuracy of up to 30% in 9 math tasks. After fine-tuning, Rho-1-1B and 7B achieved state-of-the-art results of 40.6% and 51.8% on MATH dataset, respectively - matching DeepSeekMath with only 3% of the pretraining tokens. Furthermore, when pretraining on 80B general tokens, Rho-1 achieves 6.8% average enhancement across 15 diverse tasks, increasing both efficiency and performance of the language model pre-training.
      </details>
 
-13. **Pretrained Large Language Models Use Fourier Features to Compute Addition** [[pdf]](https://neurips.cc/virtual/2024/poster/94033) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+12. **Pretrained Large Language Models Use Fourier Features to Compute Addition** [[pdf]](https://neurips.cc/virtual/2024/poster/94033) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -124,7 +116,7 @@
           Pre-trained large language models (LLMs) exhibit impressive mathematical reasoning capabilities, yet how they compute basic arithmetic, such as addition, remains unclear. This paper shows that pre-trained LLMs add numbers using Fourier features---dimensions in the hidden state that represent numbers via a set of features sparse in the frequency domain. Within the model, MLP and attention layers use Fourier features in complementary ways: MLP layers primarily approximate the magnitude of the answer using low-frequency features, while attention layers primarily perform modular addition (e.g., computing whether the answer is even or odd) using high-frequency features.Pre-training is crucial for this mechanism: models trained from scratch to add numbers only exploit low-frequency features, leading to lower accuracy.Introducing pre-trained token embeddings to a randomly initialized model rescues its performance.Overall, our analysis demonstrates that appropriate pre-trained representations (e.g., Fourier features) can unlock the ability of Transformers to learn precise mechanisms for algorithmic tasks.
      </details>
 
-14. **Recursive Introspection: Teaching Foundation Model Agents How to Self-Improve** [[pdf]](https://neurips.cc/virtual/2024/poster/96089) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+13. **Recursive Introspection: Teaching Foundation Model Agents How to Self-Improve** [[pdf]](https://neurips.cc/virtual/2024/poster/96089) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -132,7 +124,7 @@
           A central piece in enabling intelligent agentic behavior in foundation models is to make them capable of introspecting upon their behavior, to reason and correct their mistakes. Even strong proprietary large language models (LLMs) do not exhibit the ability of continually improving their responses sequentially, even in scenarios where they are explicitly told that they are making a mistake. In this paper, we develop $\textbf{RISE}$: $\textbf{R}$ecursive $\textbf{I}$ntro$\textbf{s}$p$\textbf{e}$ction, an approach for fine-tuning LLMs to introduce this ability. Our approach prescribes an iterative fine-tuning procedure, which attempts to teach the model how to alter its response after having seen previously unsuccessful attempts to solve a problem with additional environment feedback. RISE poses fine-tuning for a single-turn problem as solving a multi-turn Markov decision process (MDP), where the initial state is the prompt. Inspired by principles in online imitation learning, we derive effective strategies to dictate multi-turn data collection and training so as to imbue in an LLM the capability to recursively detect and correct its previous mistakes in subsequent iterations. Our experiments show that $\textbf{RISE}$ enables 7B Llama2 and Mistral models to improve themselves with more turns on math reasoning tasks, outperforming several single-turn strategies given an equal amount of inference-time computation. Our analysis shows that RISE makes meaningful improvements to responses to arrive at the correct solution for challenging prompts, without disrupting one-turn abilities.
      </details>
 
-15. **SciInstruct: a Self-Reflective Instruction Annotated Dataset for Training Scientific Language Models** [[pdf]](https://neurips.cc/virtual/2024/poster/97744) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+14. **SciInstruct: a Self-Reflective Instruction Annotated Dataset for Training Scientific Language Models** [[pdf]](https://neurips.cc/virtual/2024/poster/97744) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -140,7 +132,7 @@
           Large Language Models (LLMs) have shown promise in assisting scientific discovery. However, such applications are currently limited by LLMs' deficiencies in understanding intricate scientific concepts, deriving symbolic equations, and solving advanced numerical calculations. To bridge these gaps, we introduce SciInstruct, a suite of scientific instructions for training scientific language models capable of college-level scientific reasoning. Central to our approach is a novel self-reflective instruction annotation framework to address the data scarcity challenge in the science domain. This framework leverages existing LLMs to generate step-by-step reasoning for unlabelled scientific questions, followed by a process of self-reflective critic-and-revise. Applying this framework, we curated a diverse and high-quality dataset encompassing physics, chemistry, math, and formal proofs. We analyze the curated SciInstruct from multiple interesting perspectives (e.g., domain, scale, source, question type, answer length, etc.). To verify the effectiveness of SciInstruct, we fine-tuned different language models with SciInstruct, i.e., ChatGLM3 (6B and 32B), Llama3-8b-Instruct, and Mistral-7B, enhancing their scientific and mathematical reasoning capabilities, without sacrificing the language understanding capabilities of the base model. We release code and SciInstruct at https://github.com/THUDM/SciGLM.
      </details>
 
-16. **Solving Intricate Problems with Human-like Decomposition and Rethinking** [[pdf]](https://neurips.cc/virtual/2024/poster/95441) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+15. **Solving Intricate Problems with Human-like Decomposition and Rethinking** [[pdf]](https://neurips.cc/virtual/2024/poster/95441) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -148,7 +140,7 @@
           In this paper, we introduce a novel reasoning framework DeAR (Decompose-Analyze-Rethink) for large language models (LLMs) to conduct intricate reasoning. Our key idea is inspired by human cognitive reasoning, which refines complex problem-solving by breaking it down into sub-questions within a Reasoning Tree and then updating prior answers based on the responses to these sub-questions. In our framework, we propose a Decompose-Analyze-Rethink cycle, which gradually forms a reasoning tree guiding the reasoning process. Specifically, given the problem, the Decompose stage introduces a prompt-based method to break it into simpler sub-ones at subsequent tree nodes. Then, the Analyze stage generates and self-checks the rationales at the node level. Last, the Rethink stage updates the rationales of parent nodes based on its children's feedback. Our reasoning paradigm is more flexible than state-of-the-art methods including Tree-of-Thoughts (ToT), and Graph-of-Thoughts (GoT), as each branch is autonomously generated without fixed settings, and moreover, allows for timely and globally rationale correction throughout the entire process. We conduct extensive experiments on three reasoning benchmarks including ScienceQA, StrategyQA, and GSM8K. Experimental results show that our approach can significantly reduce logical errors and enhance the performance with different LLMs. Our codes are available at: https://anonymous.4open.science/r/Coarse-to-Fine-F216/.
      </details>
 
-17. **Unsupervised Discovery of Formulas for Mathematical Constants** [[pdf]](https://neurips.cc/virtual/2024/poster/95491) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+16. **Unsupervised Discovery of Formulas for Mathematical Constants** [[pdf]](https://neurips.cc/virtual/2024/poster/95491) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -156,12 +148,20 @@
           In recent years, we are witnessing a rise of AI and machine learning methods for scientific discovery and hypothesis creation. Despite the strides in other fields of science, a persistent challenge lies in the creation of formulas for mathematical constants.In the landscape of formula creation, there is no straightforward ‘’distance metric'' between two samples that can guide progress. Formulas are either true or false, with no continuous adjustments that can enhance their correctness.The absence of a systematic method left the realm of formula discovery elusive for automated methods. In this work, we propose a systematic methodology for categorization, characterization, and pattern identification of such formulas. We demonstrate this methodology on Polynomial Continued Fraction formulas, which are ubiquitous in their intrinsic connections to mathematical constants, and generalize many mathematical functions and structures.We discover organizing metrics for the space of polynomial continued fractions. We test our methodology on a set of 1,768,900 such formulas, identifying many known formulas for mathematical constants, and discover previously unknown formulas for $\pi$, $\ln(2)$, Gauss, and Lemniscate constants. The uncovered patterns enable a direct generalization of individual formulas to infinite families, unveiling rich mathematical structures. This success paves the way towards a generative model that creates continued fractions fulfilling requested mathematical properties, potentially accelerating by orders of magnitude the rate of discovery of useful formulas.
      </details>
 
-18. **When and How Does Synthetic Data Improve Reasoning Capabilities of Language Models?** [[pdf]](https://neurips.cc/virtual/2024/poster/96295) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+17. **When and How Does Synthetic Data Improve Reasoning Capabilities of Language Models?** [[pdf]](https://neurips.cc/virtual/2024/poster/96295) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
           <summary>Abstract</summary>
           Training on model-generated synthetic data is a promising approach for finetuning LLMs, but it remains unclear when it helps or hurts. In this paper, we investigate this for reasoning problems via an empirical study, followed by a theoretical formalization of our observations. First, we find that while the typical approach of finetuning a model on synthetic correct or positive problem-solution pairs generated by capable models offers modest performance gains, sampling more correct solutions from the finetuned learner doubles the sample efficiency of synthetic data. At the same time, training on model-generated positives can amplify various spurious  correlations, resulting in flat or even inverse scaling trends as the amount of data increases. Surprisingly, we find that several of these issues can be addressed if we also utilize negative responses, i.e. model-generated responses that are deemed incorrect via final answer checking. Crucially, these negatives must be constructed such that the training can appropriately recover the utility or credit of each intermediate step in the negative response. With this per-step scheme, we are able to attain consistent gains over only positive data, attaining performance similar to amplifying the amount of synthetic data by 8x. We show that training on per-step negatives can help to unlearn spurious correlations in the positive data, and is equivalent to advantage-weighted reinforcement learning (RL), implying that it inherits benefits of RL over imitating positive data alone.
+     </details>
+
+18. **Autoformalize Mathematical Statements by Symbolic Equivalence and Semantic Consistency** [[pdf]](http://arxiv.org/abs/2410.20936) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>Abstract</summary>
+          Autoformalization, the task of automatically translating natural language descriptions into a formal language, poses a significant challenge across various domains, especially in mathematics. Recent advancements in large language models (LLMs) have unveiled their promising capabilities to formalize even competition-level math problems. However, we observe a considerable discrepancy between pass@1 and pass@k accuracies in LLM-generated formalizations. To address this gap, we introduce a novel framework that scores and selects the best result from k autoformalization candidates based on two complementary self-consistency methods: symbolic equivalence and semantic consistency. Elaborately, symbolic equivalence identifies the logical homogeneity among autoformalization candidates using automated theorem provers, and semantic consistency evaluates the preservation of the original meaning by informalizing the candidates and computing the similarity between the embeddings of the original and informalized texts. Our extensive experiments on the MATH and miniF2F datasets demonstrate that our approach significantly enhances autoformalization accuracy, achieving up to 0.22-1.35x relative improvements across various LLMs and baseline methods.
      </details>
 
 19. **Unlocking the Boundaries of Thought: A Reasoning Granularity Framework to Quantify and Optimize Chain-of-Thought** [[pdf]](http://arxiv.org/abs/2410.05695) `NeurIPS 2024` (1 cite) (0 AI4Math cite) 
