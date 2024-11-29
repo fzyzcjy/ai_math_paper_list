@@ -242,7 +242,7 @@
           This paper formalizes the problem of solving multi-sentence algebraic word problems as that of generating and scoring equation trees. We use integer linear programming to generate equation trees and score their likelihood by learning local and global discriminative models. These models are trained on a small set of word problems and their answers, without any manual annotation, in order to choose the equation that best matches the problem text. We refer to the overall system as Alges. We compare Alges with previous work and show that it covers the full gamut of arithmetic operations whereas Hosseini et al. (2014) only handle addition and subtraction. In addition, Alges overcomes the brittleness of the Kushman et al. (2014) approach on single-equation problems, yielding a 15% to 50% reduction in error.
      </details>
 
-19. **Self-Refine: Iterative Refinement with Self-Feedback** [[pdf]](http://arxiv.org/abs/2303.17651) `NeurIPS 2023 Poster` (846 cite) (31 AI4Math cite) 
+19. **Self-Refine: Iterative Refinement with Self-Feedback** [[pdf]](http://arxiv.org/abs/2303.17651) `NeurIPS 2023 Poster` (846 cite) (32 AI4Math cite) 
 
 
      <details>
@@ -340,7 +340,21 @@
           Large language models (LLMs), such as GPT-4, have shown remarkable performance in natural language processing (NLP) tasks, including challenging mathematical reasoning. However, most existing open-source models are only pre-trained on large-scale internet data and without math-related optimization. In this paper, we present WizardMath, which enhances the mathematical reasoning abilities of Llama-2, by applying our proposed Reinforcement Learning from Evol-Instruct Feedback (RLEIF) method to the domain of math. Through extensive experiments on two mathematical reasoning benchmarks, namely GSM8k and MATH, we reveal the extraordinary capabilities of our model. WizardMath surpasses all other open-source LLMs by a substantial margin. Furthermore, our model even outperforms ChatGPT-3.5, Claude Instant-1, PaLM-2 and Minerva on GSM8k, simultaneously surpasses Text-davinci-002, PaLM-1 and GPT-3 on MATH. More details and model weights are public at https://github.com/nlpxucan/WizardLM and https://huggingface.co/WizardLM.
      </details>
 
-26. **PAL: Program-aided Language Models** [[pdf]](http://arxiv.org/abs/2211.10435) `ICML 2023 Poster` (330 cite) (26 AI4Math cite) 
+26. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models** [[pdf]](http://arxiv.org/abs/2305.10601) `NeurIPS 2023 Oral` (1000 cite) (26 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          A new framework for language model inference, Tree of Thoughts (ToT), which generalizes over the popular Chain of Thought approach to prompting language models, and enables exploration over coherent units of text (thoughts) that serve as intermediate steps toward problem solving.
+     </details>
+
+
+     <details>
+          <summary>Abstract</summary>
+          Language models are increasingly being deployed for general problem solving across a wide range of tasks, but are still confined to token-level, left-to-right decision-making processes during inference. This means they can fall short in tasks that require exploration, strategic lookahead, or where initial decisions play a pivotal role. To surmount these challenges, we introduce a new framework for language model inference, Tree of Thoughts (ToT), which generalizes over the popular Chain of Thought approach to prompting language models, and enables exploration over coherent units of text (thoughts) that serve as intermediate steps toward problem solving. ToT allows LMs to perform deliberate decision making by considering multiple different reasoning paths and self-evaluating choices to decide the next course of action, as well as looking ahead or backtracking when necessary to make global choices.Our experiments show that ToT significantly enhances language models’ problem-solving abilities on three novel tasks requiring non-trivial planning or search: Game of 24, Creative Writing, and Mini Crosswords. For instance, in Game of 24, while GPT-4 with chain-of-thought prompting only solved 4\% of tasks, our method achieved a success rate of 74\%. Code repo with all prompts: https://github.com/princeton-nlp/tree-of-thought-llm.
+     </details>
+
+27. **PAL: Program-aided Language Models** [[pdf]](http://arxiv.org/abs/2211.10435) `ICML 2023 Poster` (330 cite) (26 AI4Math cite) 
 
 
      <details>
@@ -354,7 +368,7 @@
           Large language models (LLMs) have demonstrated an impressive ability to perform arithmetic and symbolic reasoning tasks, when provided with a few examples at test time ("few-shot prompting"). Much of this success can be attributed to prompting methods such as "chain-of-thought", which employ LLMs for both understanding the problem description by decomposing it into steps, as well as solving each step of the problem. While LLMs seem to be adept at this sort of step-by-step decomposition, LLMs often make logical and arithmetic mistakes in the solution part, even when the problem is decomposed correctly. In this paper, we present Program-Aided Language models (PAL): a novel approach that uses the LLM to read natural language problems and generate programs as the intermediate reasoning steps, but offloads the solution step to a runtime such as a Python interpreter. With PAL, decomposing the natural language problem into runnable steps remains the only learning task for the LLM, while solving is delegated to the interpreter. We demonstrate this synergy between a neural LLM and a symbolic interpreter across 13 mathematical, symbolic, and algorithmic reasoning tasks from BIG-Bench Hard and others. In all these natural language reasoning tasks, generating code using an LLM and reasoning using a Python interpreter leads to more accurate results than much larger models. For example, PAL using Codex achieves state-of-the-art few-shot accuracy on GSM8K, surpassing PaLM which uses chain-of-thought by absolute 15% top-1.
      </details>
 
-27. **DeepMath - Deep Sequence Models for Premise Selection** [[pdf]](http://arxiv.org/abs/1606.04442) `NeurIPS 2016` `Mizar` (212 cite) (26 AI4Math cite) 
+28. **DeepMath - Deep Sequence Models for Premise Selection** [[pdf]](http://arxiv.org/abs/1606.04442) `NeurIPS 2016` `Mizar` (212 cite) (26 AI4Math cite) 
 
 
      <details>
@@ -366,20 +380,6 @@
      <details>
           <summary>Abstract</summary>
           We study the effectiveness of neural sequence models for premise selection in automated theorem proving, one of the main bottlenecks in the formalization of mathematics. We propose a two stage approach for this task that yields good results for the premise selection task on the Mizar corpus while avoiding the hand-engineered features of existing state-of-the-art models. To our knowledge, this is the first time deep learning has been applied to theorem proving on a large scale.
-     </details>
-
-28. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models** [[pdf]](http://arxiv.org/abs/2305.10601) `NeurIPS 2023 Oral` (1000 cite) (25 AI4Math cite) 
-
-
-     <details>
-          <summary>SemanticsScholar tldr</summary>
-          A new framework for language model inference, Tree of Thoughts (ToT), which generalizes over the popular Chain of Thought approach to prompting language models, and enables exploration over coherent units of text (thoughts) that serve as intermediate steps toward problem solving.
-     </details>
-
-
-     <details>
-          <summary>Abstract</summary>
-          Language models are increasingly being deployed for general problem solving across a wide range of tasks, but are still confined to token-level, left-to-right decision-making processes during inference. This means they can fall short in tasks that require exploration, strategic lookahead, or where initial decisions play a pivotal role. To surmount these challenges, we introduce a new framework for language model inference, Tree of Thoughts (ToT), which generalizes over the popular Chain of Thought approach to prompting language models, and enables exploration over coherent units of text (thoughts) that serve as intermediate steps toward problem solving. ToT allows LMs to perform deliberate decision making by considering multiple different reasoning paths and self-evaluating choices to decide the next course of action, as well as looking ahead or backtracking when necessary to make global choices.Our experiments show that ToT significantly enhances language models’ problem-solving abilities on three novel tasks requiring non-trivial planning or search: Game of 24, Creative Writing, and Mini Crosswords. For instance, in Game of 24, while GPT-4 with chain-of-thought prompting only solved 4\% of tasks, our method achieved a success rate of 74\%. Code repo with all prompts: https://github.com/princeton-nlp/tree-of-thought-llm.
      </details>
 
 29. **Complexity-Based Prompting for Multi-step Reasoning** [[pdf]](http://arxiv.org/abs/2210.00720) `ICLR 2023 Poster` (309 cite) (25 AI4Math cite) 
@@ -670,7 +670,21 @@
           N/A
      </details>
 
-50. **Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification** [[pdf]](http://arxiv.org/abs/2308.07921) `ICLR 2024 Poster` (106 cite) (17 AI4Math cite) 
+50. **REFINER: Reasoning Feedback on Intermediate Representations** [[pdf]](http://arxiv.org/abs/2304.01904) `2024-02-04` (108 cite) (17 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          REFINER is a framework for finetuning LMs to explicitly generate intermediate reasoning steps while interacting with a critic model that provides automated feedback on the reasoning that provides structured feedback that the reasoning LM uses to iteratively improve its intermediate arguments.
+     </details>
+
+
+     <details>
+          <summary>Abstract</summary>
+          Language models (LMs) have recently shown remarkable performance on reasoning tasks by explicitly generating intermediate inferences, e.g., chain-of-thought prompting. However, these intermediate inference steps may be inappropriate deductions from the initial context and lead to incorrect final predictions. Here we introduce REFINER, a framework for finetuning LMs to explicitly generate intermediate reasoning steps while interacting with a critic model that provides automated feedback on the reasoning. Specifically, the critic provides structured feedback that the reasoning LM uses to iteratively improve its intermediate arguments. Empirical evaluations of REFINER on three diverse reasoning tasks show significant improvements over baseline LMs of comparable scale. Furthermore, when using GPT-3.5 or ChatGPT as the reasoner, the trained critic significantly improves reasoning without finetuning the reasoner. Finally, our critic model is trained without expensive human-in-the-loop data but can be substituted with humans at inference time.
+     </details>
+
+51. **Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification** [[pdf]](http://arxiv.org/abs/2308.07921) `ICLR 2024 Poster` (106 cite) (17 AI4Math cite) 
 
 
      <details>
@@ -684,7 +698,7 @@
           Recent progress in large language models (LLMs) like GPT-4 and PaLM-2 has brought significant advancements in addressing math reasoning problems. In particular, OpenAI's latest version of GPT-4, known as GPT-4 Code Interpreter, shows remarkable performance on challenging math datasets. In this paper, we explore the effect of code on enhancing LLMs' reasoning capability by introducing different constraints on the Code Usage Frequency of GPT-4 Code Interpreter. We found that its success can be largely attributed to its powerful skills in generating and executing code, evaluating the output of code execution, and rectifying its solution when receiving unreasonable outputs. Based on this insight, we propose a novel and effective prompting method, explicit $\underline{\text{c}}$ode-based $\underline{\text{s}}$elf-$\underline{\text{v}}$erification (CSV), to further boost the mathematical reasoning potential of GPT-4 Code Interpreter. This method employs a zero-shot prompt on GPT-4 Code Interpreter to encourage it to use code to self-verify its answers. In instances where the verification state registers as "False", the model shall automatically amend its solution, analogous to our approach of rectifying errors during a mathematics examination. Furthermore, we recognize that the states of the verification result indicate the confidence of a solution, which can improve the effectiveness of majority voting. With GPT-4 Code Interpreter and CSV, we achieve an impressive zero-shot accuracy on MATH dataset $\textbf{(53.9}$% → $\textbf{84.3}$%$\textbf{)}$.
      </details>
 
-51. **Dynamic Prompt Learning via Policy Gradient for Semi-structured Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2209.14610) `ICLR 2023` (181 cite) (17 AI4Math cite) 
+52. **Dynamic Prompt Learning via Policy Gradient for Semi-structured Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2209.14610) `ICLR 2023` (181 cite) (17 AI4Math cite) 
 
 
      <details>
@@ -698,7 +712,7 @@
           Mathematical reasoning, a core ability of human intelligence, presents unique challenges for machines in abstract thinking and logical reasoning. Recent large pre-trained language models such as GPT-3 have achieved remarkable progress on mathematical reasoning tasks written in text form, such as math word problems (MWP). However, it is unknown if the models can handle more complex problems that involve math reasoning over heterogeneous information, such as tabular data. To fill the gap, we present Tabular Math Word Problems (TabMWP), a new dataset containing 38,431 open-domain grade-level problems that require mathematical reasoning on both textual and tabular data. Each question in TabMWP is aligned with a tabular context, which is presented as an image, semi-structured text, and a structured table. There are two types of questions: free-text and multi-choice, and each problem is annotated with gold solutions to reveal the multi-step reasoning process. We evaluate different pre-trained models on TabMWP, including the GPT-3 model in a few-shot setting. As earlier studies suggest, since few-shot GPT-3 relies on the selection of in-context examples, its performance is unstable and can degrade to near chance. The unstable issue is more severe when handling complex problems like TabMWP. To mitigate this, we further propose a novel approach, PromptPG, which utilizes policy gradient to learn to select in-context examples from a small amount of training data and then constructs the corresponding prompt for the test example. Experimental results show that our method outperforms the best baseline by 5.31% on the accuracy metric and reduces the prediction variance significantly compared to random selection, which verifies its effectiveness in selecting in-context examples. The data and code are available at https://promptpg.github.io.
      </details>
 
-52. **Galactica: A Large Language Model for Science** [[pdf]](http://arxiv.org/abs/2211.09085) `2022-11-16` (580 cite) (17 AI4Math cite) 
+53. **Galactica: A Large Language Model for Science** [[pdf]](http://arxiv.org/abs/2211.09085) `2022-11-16` (580 cite) (17 AI4Math cite) 
 
 
      <details>
@@ -712,7 +726,7 @@
           Information overload is a major obstacle to scientific progress. The explosive growth in scientific literature and data has made it ever harder to discover useful insights in a large mass of information. Today scientific knowledge is accessed through search engines, but they are unable to organize scientific knowledge alone. In this paper we introduce Galactica: a large language model that can store, combine and reason about scientific knowledge. We train on a large scientific corpus of papers, reference material, knowledge bases and many other sources. We outperform existing models on a range of scientific tasks. On technical knowledge probes such as LaTeX equations, Galactica outperforms the latest GPT-3 by 68.2% versus 49.0%. Galactica also performs well on reasoning, outperforming Chinchilla on mathematical MMLU by 41.3% to 35.7%, and PaLM 540B on MATH with a score of 20.4% versus 8.8%. It also sets a new state-of-the-art on downstream tasks such as PubMedQA and MedMCQA dev of 77.6% and 52.9%. And despite not being trained on a general corpus, Galactica outperforms BLOOM and OPT-175B on BIG-bench. We believe these results demonstrate the potential for language models as a new interface for science. We open source the model for the benefit of the scientific community.
      </details>
 
-53. **Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs** [[pdf]](http://arxiv.org/abs/2210.12283) `ICLR 2023` `Isabelle` (99 cite) (17 AI4Math cite) 
+54. **Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs** [[pdf]](http://arxiv.org/abs/2210.12283) `ICLR 2023` `Isabelle` (99 cite) (17 AI4Math cite) 
 
 
      <details>
@@ -726,7 +740,7 @@
           The formalization of existing mathematical proofs is a notoriously difficult process. Despite decades of research on automation and proof assistants, writing formal proofs remains arduous and only accessible to a few experts. While previous studies to automate formalization focused on powerful search algorithms, no attempts were made to take advantage of available informal proofs. In this work, we introduce Draft, Sketch, and Prove (DSP), a method that maps informal proofs to formal proof sketches, and uses the sketches to guide an automated prover by directing its search to easier sub-problems. We investigate two relevant setups where informal proofs are either written by humans or generated by a language model. Our experiments and ablation studies show that large language models are able to produce well-structured formal sketches that follow the same reasoning steps as the informal proofs. Guiding an automated prover with these sketches enhances its performance from $20.9\%$ to $39.3\%$ on a collection of mathematical competition problems.
      </details>
 
-54. **Formal Mathematics Statement Curriculum Learning** [[pdf]](http://arxiv.org/abs/2202.01344) `ICLR 2023` `Lean` (0 cite) (17 AI4Math cite) 
+55. **Formal Mathematics Statement Curriculum Learning** [[pdf]](http://arxiv.org/abs/2202.01344) `ICLR 2023` `Lean` (0 cite) (17 AI4Math cite) 
 
 
      <details>
@@ -734,7 +748,7 @@
           We explore the use of expert iteration in the context of language modeling applied to formal mathematics. We show that at same compute budget, expert iteration, by which we mean proof search interleaved with learning, dramatically outperforms proof search only. We also observe that when applied to a collection of formal statements of sufficiently varied difficulty, expert iteration is capable of finding and solving a curriculum of increasingly difficult problems, without the need for associated ground-truth proofs. Finally, by applying this expert iteration to a manually curated set of problem statements, we surpass previous state-of-the-art on the miniF2F benchmark, automatically solving multiple challenging problems drawn from high school olympiads.
      </details>
 
-55. **INT: An Inequality Benchmark for Evaluating Generalization in Theorem Proving** [[pdf]](https://arxiv.org/abs/2007.02924) `ICLR 2021` (49 cite) (17 AI4Math cite) 
+56. **INT: An Inequality Benchmark for Evaluating Generalization in Theorem Proving** [[pdf]](https://arxiv.org/abs/2007.02924) `ICLR 2021` (49 cite) (17 AI4Math cite) 
 
 
      <details>
@@ -748,7 +762,7 @@
           In learning-assisted theorem proving, one of the most critical challenges is to generalize to theorems unlike those seen at training time. In this paper, we introduce INT, an INequality Theorem proving benchmark designed to test agents’ generalization ability. INT is based on a theorem generator, which provides theoretically infinite data and allows us to measure 6 different types of generalization, each reflecting a distinct challenge, characteristic of automated theorem proving. In addition, provides a fast theorem proving environment with sequence-based and graph-based interfaces, conducive to performing learning-based research. We introduce base-lines with architectures including transformers and graph neural networks (GNNs)for INT. Using INT, we find that transformer-based agents achieve stronger test performance for most of the generalization tasks, despite having much larger out-of-distribution generalization gaps than GNNs. We further find that the addition of Monte Carlo Tree Search (MCTS) at test time helps to prove new theorems.
      </details>
 
-56. **IsarStep: a Benchmark for High-level Mathematical Reasoning** [[pdf]](https://arxiv.org/abs/2006.09265) `ICLR 2021` `Isabelle` (52 cite) (17 AI4Math cite) 
+57. **IsarStep: a Benchmark for High-level Mathematical Reasoning** [[pdf]](https://arxiv.org/abs/2006.09265) `ICLR 2021` `Isabelle` (52 cite) (17 AI4Math cite) 
 
 
      <details>
@@ -762,7 +776,7 @@
           A well-defined benchmark is essential for measuring and accelerating research progress of machine learning models. In this paper, we present a benchmark for high-level mathematical reasoning and study the reasoning capabilities of neural sequence-to-sequence models. We build a non-synthetic dataset from the largest repository of proofs written by human experts in a theorem prover. The dataset has a broad coverage of undergraduate and research-level mathematical and computer science theorems. In our defined task, a model is required to fill in a missing intermediate proposition given surrounding proofs. This task provides a starting point for the long-term goal of having machines generate human-readable proofs automatically. Our experiments and analysis reveal that while the task is challenging, neural models can capture non-trivial mathematical reasoning. We further design a hierarchical transformer that outperforms the transformer baseline.
      </details>
 
-57. **Semantically-Aligned Equation Generation for Solving and Reasoning Math Word Problems** [[pdf]](http://aclweb.org/anthology/N19-1272) `NAACL 2019 Main` (100 cite) (17 AI4Math cite) 
+58. **Semantically-Aligned Equation Generation for Solving and Reasoning Math Word Problems** [[pdf]](http://aclweb.org/anthology/N19-1272) `NAACL 2019 Main` (100 cite) (17 AI4Math cite) 
 
 
      <details>
@@ -774,20 +788,6 @@
      <details>
           <summary>Abstract</summary>
           Solving math word problems is a challenging task that requires accurate natural language understanding to bridge natural language texts and math expressions. Motivated by the intuition about how human generates the equations given the problem texts, this paper presents a neural approach to automatically solve math word problems by operating symbols according to their semantic meanings in texts. This paper views the process of generating equation as a bridge between the semantic world and the symbolic world, where the proposed neural math solver is based on an encoder-decoder framework. In the proposed model, the encoder is designed to understand the semantics of problems, and the decoder focuses on tracking semantic meanings of the generated symbols and then deciding which symbol to generate next. The preliminary experiments are conducted in a dataset Math23K, and our model significantly outperforms both the state-of-the-art single model and the best non-retrieval-based model over about 10% accuracy, demonstrating the effectiveness of bridging the symbolic and semantic worlds from math word problems.
-     </details>
-
-58. **REFINER: Reasoning Feedback on Intermediate Representations** [[pdf]](http://arxiv.org/abs/2304.01904) `2024-02-04` (108 cite) (16 AI4Math cite) 
-
-
-     <details>
-          <summary>SemanticsScholar tldr</summary>
-          REFINER is a framework for finetuning LMs to explicitly generate intermediate reasoning steps while interacting with a critic model that provides automated feedback on the reasoning that provides structured feedback that the reasoning LM uses to iteratively improve its intermediate arguments.
-     </details>
-
-
-     <details>
-          <summary>Abstract</summary>
-          Language models (LMs) have recently shown remarkable performance on reasoning tasks by explicitly generating intermediate inferences, e.g., chain-of-thought prompting. However, these intermediate inference steps may be inappropriate deductions from the initial context and lead to incorrect final predictions. Here we introduce REFINER, a framework for finetuning LMs to explicitly generate intermediate reasoning steps while interacting with a critic model that provides automated feedback on the reasoning. Specifically, the critic provides structured feedback that the reasoning LM uses to iteratively improve its intermediate arguments. Empirical evaluations of REFINER on three diverse reasoning tasks show significant improvements over baseline LMs of comparable scale. Furthermore, when using GPT-3.5 or ChatGPT as the reasoner, the trained critic significantly improves reasoning without finetuning the reasoner. Finally, our critic model is trained without expensive human-in-the-loop data but can be substituted with humans at inference time.
      </details>
 
 59. **A Survey of Deep Learning for Mathematical Reasoning** [[pdf]](http://arxiv.org/abs/2212.10535) `ACL 2023` (99 cite) (16 AI4Math cite) 
@@ -930,7 +930,7 @@
           In this paper, we demonstrate how to do automated theorem proving in the presence of a large knowledge base of potential premises without learning from human proofs. We suggest an exploration mechanism that mixes in additional premises selected by a tf-idf (term frequency-inverse document frequency) based lookup in a deep reinforcement learning scenario. This helps with exploring and learning which premises are relevant for proving a new theorem. Our experiments show that the theorem prover trained with this exploration mechanism outperforms provers that are trained only on human proofs. It approaches the performance of a prover trained by a combination of imitation and reinforcement learning. We perform multiple experiments to understand the importance of the underlying assumptions that make our exploration approach work, thus explaining our design choices.
      </details>
 
-69. **Holophrasm: a neural Automated Theorem Prover for higher-order logic** [[pdf]](http://arxiv.org/abs/1608.02644) `2016-08-09` (44 cite) (15 AI4Math cite) 
+69. **Holophrasm: a neural Automated Theorem Prover for higher-order logic** [[pdf]](http://arxiv.org/abs/1608.02644) `2016-08-09` `MetaMath` (44 cite) (15 AI4Math cite) 
 
 
      <details>
@@ -972,7 +972,21 @@
           We investigate the ability of language models to perform compositional reasoning tasks where the overall solution depends on correctly composing the answers to sub-problems. We measure how often models can correctly answer all sub-problems but not generate the overall solution, a ratio we call the compositionality gap. We evaluate this ratio by asking multi-hop questions with answers that require composing multiple facts unlikely to have been observed together during pretraining. In the GPT-3 family of models, as model size increases we show that the single-hop question answering performance improves faster than the multi-hop performance does, therefore the compositionality gap does not decrease. This surprising result suggests that while more powerful models memorize and recall more factual knowledge, they show no corresponding improvement in their ability to perform this kind of compositional reasoning. We then demonstrate how elicitive prompting (such as chain of thought) narrows the compositionality gap by reasoning explicitly instead of implicitly. We present a new method, self-ask, that further improves on chain of thought. In our method, the model explicitly asks itself (and then answers) follow-up questions before answering the initial question. We finally show that self-ask’s structured prompting lets us easily plug in a search engine to answer the follow-up questions, which additionally improves accuracy.
      </details>
 
-72. **Progressive-Hint Prompting Improves Reasoning in Large Language Models** [[pdf]](http://arxiv.org/abs/2304.09797) `2023-08-09` (86 cite) (14 AI4Math cite) 
+72. **Large Language Models Cannot Self-Correct Reasoning Yet** [[pdf]](https://openreview.net/forum?id=IkmD3fKBPQ) `ICLR 2024 Poster` (236 cite) (14 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          It is indicated that LLMs struggle to self-correct their responses without external feedback, and at times, their performance even degrades after self-correction.
+     </details>
+
+
+     <details>
+          <summary>Abstract</summary>
+          Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its true potential and limitations. Central to our investigation is the notion of intrinsic self-correction, whereby an LLM attempts to correct its initial responses based solely on its inherent capabilities, without the crutch of external feedback. In the context of reasoning, our research indicates that LLMs struggle to self-correct their responses without external feedback, and at times, their performance might even degrade post self-correction. Drawing from these insights, we offer suggestions for future research and practical applications in this field.
+     </details>
+
+73. **Progressive-Hint Prompting Improves Reasoning in Large Language Models** [[pdf]](http://arxiv.org/abs/2304.09797) `2023-08-09` (86 cite) (14 AI4Math cite) 
 
 
      <details>
@@ -986,7 +1000,7 @@
           The performance of Large Language Models (LLMs) in reasoning tasks depends heavily on prompt design, with Chain-of-Thought (CoT) and self-consistency being critical methods that enhance this ability. However, these methods do not fully exploit the answers generated by the LLM to guide subsequent responses. This paper proposes a new prompting method, named Progressive-Hint Prompting (PHP), that enables automatic multiple interactions between users and LLMs by using previously generated answers as hints to progressively guide toward the correct answers. PHP is orthogonal to CoT and self-consistency, making it easy to combine with state-of-the-art techniques to further improve performance. We conducted extensive and comprehensive experiments on seven benchmarks. The results show that PHP significantly improves accuracy while remaining highly efficient. For instance, with text-davinci-003, we observed a 4.2% improvement on GSM8K with greedy decoding compared to Complex CoT, and a 46.17% reduction in sample paths with self-consistency. With GPT-4 and PHP, we achieve state-of-the-art performances on SVAMP (89.1% -> 91.9%), GSM8K (92% -> 95.5%), AQuA (76.4% -> 79.9%) and MATH (50.3% -> 53.9%).
      </details>
 
-73. **Specializing Smaller Language Models towards Multi-Step Reasoning** [[pdf]](https://proceedings.mlr.press/v202/fu23d.html) `ICML 2023 Oral` (177 cite) (14 AI4Math cite) 
+74. **Specializing Smaller Language Models towards Multi-Step Reasoning** [[pdf]](https://proceedings.mlr.press/v202/fu23d.html) `ICML 2023 Oral` (177 cite) (14 AI4Math cite) 
 
 
      <details>
@@ -1000,7 +1014,7 @@
           The surprising ability of Large Language Models (LLMs) to perform well on complex reasoning with only few-shot chain-of-thought prompts is believed to emerge only in very large-scale models. We show that such abilities can, in fact, be distilled down from GPT-3.5 (≥ 175B) to T5 variants (≤ 11B). We propose model specialization, to specialize the model’s ability towards a target task. The hypothesis is that large models (commonly viewed as larger than 100B) have strong modeling power such that they can perform a large spectrum of tasks. Small models (commonly viewed as smaller than 10B) have limited model capacity, but if we specialize their capacity towards a target task, the model can achieve decent performance improvements. We use multi-step math reasoning as our testbed because it is a very typical emergent ability. We show two important aspects of model abilities: (1) balancing language model’s performance on multiple tasks is a delicate matter, as improvements on one task may compromise other tasks; (2) yet by intentionally paying the price of decreased generic ability, we can clearly improve across different model scales smaller than 10B towards a specialized multi-step math reasoning ability. We further give comprehensive discussions about important design choices for better generalization, including the data format mixture and the start model checkpoint. We hope our practice and discoveries can serve as an important attempt towards specialized smaller models in the new research paradigm set by LLMs.
      </details>
 
-74. **Selection-Inference: Exploiting Large Language Models for Interpretable Logical Reasoning** [[pdf]](http://arxiv.org/abs/2205.09712) `ICLR 2023 Notable-top-5%25` (275 cite) (14 AI4Math cite) 
+75. **Selection-Inference: Exploiting Large Language Models for Interpretable Logical Reasoning** [[pdf]](http://arxiv.org/abs/2205.09712) `ICLR 2023 Notable-top-5%25` (275 cite) (14 AI4Math cite) 
 
 
      <details>
@@ -1014,7 +1028,7 @@
           Large language models (LLMs) have been shown to be capable of impressive few-shot generalisation to new tasks. However, they still tend to perform poorly on multi-step logical reasoning problems. Here we carry out a comprehensive evaluation of LLMs on 46 tasks that probe different aspects of logical reasoning. We show that language models tend to perform fairly well at single step inference or entailment tasks, but struggle to chain together multiple reasoning steps to solve more complex problems. In light of this, we propose a Selection-Inference (SI) framework that exploits pre-trained LLMs as general processing modules, and alternates between selection and inference to generate a series of interpretable, casual reasoning steps leading to the final answer. We show that a 7B parameter LLM used within the SI framework in a 5-shot generalisation setting, with no fine-tuning, yields a performance improvement of over 100% compared to an equivalent vanilla baseline on a suite of 10 logical reasoning tasks. The same model in the same setting even outperforms a significantly larger 280B parameter baseline on the same suite of tasks. Moreover, answers produced by the SI framework are accompanied by a causal natural-language-based reasoning trace, which has important implications for the safety and trustworthiness of the system.
      </details>
 
-75. **Neural Math Word Problem Solver with Reinforcement Learning** [[pdf]](https://www.semanticscholar.org/paper/Neural-Math-Word-Problem-Solver-with-Reinforcement-Huang-Liu/caeb950e503872a903e18a3b259424e3cc3c6006) `2018-08-01` (75 cite) (14 AI4Math cite) 
+76. **Neural Math Word Problem Solver with Reinforcement Learning** [[pdf]](https://www.semanticscholar.org/paper/Neural-Math-Word-Problem-Solver-with-Reinforcement-Huang-Liu/caeb950e503872a903e18a3b259424e3cc3c6006) `2018-08-01` (75 cite) (14 AI4Math cite) 
 
 
      <details>
@@ -1028,7 +1042,7 @@
           Sequence-to-sequence model has been applied to solve math word problems. The model takes math problem descriptions as input and generates equations as output. The advantage of sequence-to-sequence model requires no feature engineering and can generate equations that do not exist in training data. However, our experimental analysis reveals that this model suffers from two shortcomings: (1) generate spurious numbers; (2) generate numbers at wrong positions. In this paper, we propose incorporating copy and alignment mechanism to the sequence-to-sequence model (namely CASS) to address these shortcomings. To train our model, we apply reinforcement learning to directly optimize the solution accuracy. It overcomes the “train-test discrepancy” issue of maximum likelihood estimation, which uses the surrogate objective of maximizing equation likelihood during training while the evaluation metric is solution accuracy (non-differentiable) at test time. Furthermore, to explore the effectiveness of our neural model, we use our model output as a feature and incorporate it into the feature-based model. Experimental results show that (1) The copy and alignment mechanism is effective to address the two issues; (2) Reinforcement learning leads to better performance than maximum likelihood on this task; (3) Our neural model is complementary to the feature-based model and their combination significantly outperforms the state-of-the-art results.
      </details>
 
-76. **MathDQN: Solving Arithmetic Word Problems via Deep Reinforcement Learning** [[pdf]](https://ojs.aaai.org/index.php/AAAI/article/view/11981) `AAAI 2018` (106 cite) (14 AI4Math cite) 
+77. **MathDQN: Solving Arithmetic Word Problems via Deep Reinforcement Learning** [[pdf]](https://ojs.aaai.org/index.php/AAAI/article/view/11981) `AAAI 2018` (106 cite) (14 AI4Math cite) 
 
 
      <details>
@@ -1040,20 +1054,6 @@
      <details>
           <summary>Abstract</summary>
           Designing an automatic solver for math word problems has been considered as a crucial step towards general AI, with the ability of natural language understanding and logical inference. The state-of-the-art performance was achieved by enumerating all the possible expressions from the quantities in the text and customizing a scoring function to identify the one with the maximum probability. However, it incurs exponential search space with the number of quantities and beam search has to be applied to trade accuracy for efficiency. In this paper, we make the first attempt of applying deep reinforcement learning to solve arithmetic word problems. The motivation is that deep Q-network has witnessed success in solving various problems with big search space and achieves promising performance in terms of both accuracy and running time. To fit the math problem scenario, we propose our MathDQN that is customized from the general deep reinforcement learning framework. Technically, we design the states, actions, reward function, together with a feed-forward neural network as the deep Q-network. Extensive experimental results validate our superiority over state-of-the-art methods. Our MathDQN yields remarkable improvement on most of datasets and boosts the average precision among all the benchmark datasets by 15\%.
-     </details>
-
-77. **Large Language Models Cannot Self-Correct Reasoning Yet** [[pdf]](https://openreview.net/forum?id=IkmD3fKBPQ) `ICLR 2024 Poster` (236 cite) (13 AI4Math cite) 
-
-
-     <details>
-          <summary>SemanticsScholar tldr</summary>
-          It is indicated that LLMs struggle to self-correct their responses without external feedback, and at times, their performance even degrades after self-correction.
-     </details>
-
-
-     <details>
-          <summary>Abstract</summary>
-          Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its true potential and limitations. Central to our investigation is the notion of intrinsic self-correction, whereby an LLM attempts to correct its initial responses based solely on its inherent capabilities, without the crutch of external feedback. In the context of reasoning, our research indicates that LLMs struggle to self-correct their responses without external feedback, and at times, their performance might even degrade post self-correction. Drawing from these insights, we offer suggestions for future research and practical applications in this field.
      </details>
 
 78. **MetaMath: Bootstrap Your Own Mathematical Questions for Large Language Models** [[pdf]](http://arxiv.org/abs/2309.12284) `ICLR 2024 Spotlight` (163 cite) (13 AI4Math cite) 
