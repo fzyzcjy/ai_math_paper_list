@@ -192,7 +192,7 @@
           This paper presents a deep neural solver to automatically solve math word problems. In contrast to previous statistical learning approaches, we directly translate math word problems to equation templates using a recurrent neural network (RNN) model, without sophisticated feature engineering. We further design a hybrid model that combines the RNN model and a similarity-based retrieval model to achieve additional performance improvement. Experiments conducted on a large dataset show that the RNN model and the hybrid model significantly outperform state-of-the-art statistical learning methods for math word problem solving.
      </details>
 
-15. **Generative Language Modeling for Automated Theorem Proving** [[pdf]](https://arxiv.org/abs/2009.03393) `N/A` (234 cite) (39 AI4Math cite) 
+15. **Generative Language Modeling for Automated Theorem Proving** [[pdf]](https://arxiv.org/abs/2009.03393) `N/A` (234 cite) (40 AI4Math cite) 
 
 
      <details>
@@ -396,7 +396,21 @@
           We study the task of prompting large-scale language models to perform multi-step reasoning. Existing work shows that when prompted with a chain of thoughts (CoT), sequences of short sentences describing intermediate reasoning steps towards a final answer, large language models can generate new reasoning chains and predict answers for new inputs. A central question is which reasoning examples make the most effective prompts. In this work, we propose complexity-based prompting, a simple and effective example selection scheme for multi-step reasoning. We show that prompts with higher reasoning complexity, i.e., chains with more reasoning steps, achieve substantially better performance on math word reasoning tasks over strong baselines. We further extend our complexity-based criteria from prompting (selecting inputs) to decoding (selecting outputs), where we sample multiple reasoning chains from the model, then choose the majorityof generated answers from complex reasoning chains (over simple chains). When used to prompt GPT-3, our approach substantially improves multi-step reasoning accuracy, with an 8.6% absolute improvement on GSM8K, and 6.4% on MathQA. Compared with existing example selection schemes like manual tuning or retrieval-based selection, selection based on reasoning complexity is intuitive, easy to implement, and annotation-efficient. Further results demonstrate the robustness of performance gains from complex prompts under format perturbation and distribution shift.
      </details>
 
-30. **MAmmoTH: Building Math Generalist Models through Hybrid Instruction Tuning** [[pdf]](http://arxiv.org/abs/2309.05653) `ICLR 2024` (232 cite) (23 AI4Math cite) 
+30. **Deep Learning for Symbolic Mathematics** [[pdf]](http://arxiv.org/abs/1912.01412) `ICLR 2020 Spotlight` (357 cite) (24 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          It is shown that neural networks can be surprisingly good at more elaborated tasks in mathematics, such as symbolic integration and solving differential equations, and a syntax for representing these mathematical problems, and methods for generating large datasets that can be used to train sequence-to-sequence models.
+     </details>
+
+
+     <details>
+          <summary>Abstract</summary>
+          Neural networks have a reputation for being better at solving statistical or approximate problems than at performing calculations or working with symbolic data. In this paper, we show that they can be surprisingly good at more elaborated tasks in mathematics, such as symbolic integration and solving differential equations. We propose a syntax for representing mathematical problems, and methods for generating large datasets that can be used to train sequence-to-sequence models. We achieve results that outperform commercial Computer Algebra Systems such as Matlab or Mathematica.
+     </details>
+
+31. **MAmmoTH: Building Math Generalist Models through Hybrid Instruction Tuning** [[pdf]](http://arxiv.org/abs/2309.05653) `ICLR 2024` (232 cite) (23 AI4Math cite) 
 
 
      <details>
@@ -410,7 +424,7 @@
           We introduce MAmmoTH, a series of open-source large language models (LLMs) specifically tailored for general math problem-solving. The MAmmoTH models are trained on MathInstruct, our meticulously curated instruction tuning dataset. MathInstruct is compiled from 13 math datasets with intermediate rationales, six of which have rationales newly curated by us. It presents a unique hybrid of chain-of-thought (CoT) and program-of-thought (PoT) rationales, and also ensures extensive coverage of diverse fields in math. The hybrid of CoT and PoT not only unleashes the potential of tool use but also allows different thought processes for different math problems. As a result, the MAmmoTH series substantially outperform existing open-source models on nine mathematical reasoning datasets across all scales with an average accuracy gain between 16% and 32%. Remarkably, our MAmmoTH-7B model reaches 33% on MATH (a competition-level dataset), which exceeds the best open-source 7B model (WizardMath) by 23%, and the MAmmoTH-34B model achieves 44% accuracy on MATH, even surpassing GPT-4's CoT result. Our work underscores the importance of diverse problem coverage and the use of hybrid rationales in developing superior math generalist models.
      </details>
 
-31. **Toolformer: Language Models Can Teach Themselves to Use Tools** [[pdf]](http://arxiv.org/abs/2302.04761) `NeurIPS 2023 Oral` (1000 cite) (23 AI4Math cite) 
+32. **Toolformer: Language Models Can Teach Themselves to Use Tools** [[pdf]](http://arxiv.org/abs/2302.04761) `NeurIPS 2023 Oral` (1000 cite) (23 AI4Math cite) 
 
 
      <details>
@@ -424,7 +438,7 @@
           Language models (LMs) exhibit remarkable abilities to solve new tasks from just a few examples or textual instructions, especially at scale. They also, paradoxically, struggle with basic functionality, such as arithmetic or factual lookup, where much simpler and smaller specialized models excel. In this paper, we show that LMs can teach themselves to *use external tools* via simple APIs and achieve the best of both worlds. We introduce *Toolformer*, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring nothing more than a handful of demonstrations for each API. We incorporate a range of tools, including a calculator, a Q&A system, a search engine, a translation system, and a calendar. Toolformer achieves substantially improved zero-shot performance across a variety of downstream tasks, often competitive with much larger models, without sacrificing its core language modeling abilities.
      </details>
 
-32. **miniF2F: a cross-system benchmark for formal Olympiad-level mathematics** [[pdf]](https://arxiv.org/abs/2109.00110) `ICLR 2022` `Lean, Isabelle, HOL Light, MetaMath` (84 cite) (23 AI4Math cite) 
+33. **miniF2F: a cross-system benchmark for formal Olympiad-level mathematics** [[pdf]](https://arxiv.org/abs/2109.00110) `ICLR 2022` `Lean, Isabelle, HOL Light, MetaMath` (84 cite) (23 AI4Math cite) 
 
 
      <details>
@@ -438,7 +452,7 @@
           We present $\textsf{miniF2F}$, a dataset of formal Olympiad-level mathematics problems statements intended to provide a unified cross-system benchmark for neural theorem proving. The $\textsf{miniF2F}$ benchmark currently targets Metamath, Lean, Isabelle (partially) and HOL Light (partially) and consists of 488 problem statements drawn from the AIME, AMC, and the International Mathematical Olympiad (IMO), as well as material from high-school and undergraduate mathematics courses. We report baseline results using GPT-f, a neural theorem prover based on GPT-3 and provide an analysis of its performance. We intend for $\textsf{miniF2F}$ to be a community-driven effort and hope that our benchmark will help spur advances in neural theorem proving.
      </details>
 
-33. **Measuring Massive Multitask Language Understanding** [[pdf]](http://arxiv.org/abs/2009.03300) `ICLR 2021` (1000 cite) (23 AI4Math cite) 
+34. **Measuring Massive Multitask Language Understanding** [[pdf]](http://arxiv.org/abs/2009.03300) `ICLR 2021` (1000 cite) (23 AI4Math cite) 
 
 
      <details>
@@ -450,20 +464,6 @@
      <details>
           <summary>Abstract</summary>
           We propose a new test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model's academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings.
-     </details>
-
-34. **Deep Learning for Symbolic Mathematics** [[pdf]](http://arxiv.org/abs/1912.01412) `ICLR 2020 Spotlight` (357 cite) (23 AI4Math cite) 
-
-
-     <details>
-          <summary>SemanticsScholar tldr</summary>
-          It is shown that neural networks can be surprisingly good at more elaborated tasks in mathematics, such as symbolic integration and solving differential equations, and a syntax for representing these mathematical problems, and methods for generating large datasets that can be used to train sequence-to-sequence models.
-     </details>
-
-
-     <details>
-          <summary>Abstract</summary>
-          Neural networks have a reputation for being better at solving statistical or approximate problems than at performing calculations or working with symbolic data. In this paper, we show that they can be surprisingly good at more elaborated tasks in mathematics, such as symbolic integration and solving differential equations. We propose a syntax for representing mathematical problems, and methods for generating large datasets that can be used to train sequence-to-sequence models. We achieve results that outperform commercial Computer Algebra Systems such as Matlab or Mathematica.
      </details>
 
 35. **Template-Based Math Word Problem Solvers with Recursive Neural Networks** [[pdf]](https://ojs.aaai.org/index.php/AAAI/article/view/4697) `AAAI 2019 Natural Language Processing` (134 cite) (22 AI4Math cite) 
@@ -564,7 +564,21 @@
           Sequence-to-sequence (SEQ2SEQ) models have been successfully applied to automatic math word problem solving. Despite its simplicity, a drawback still remains: a math word problem can be correctly solved by more than one equations. This non-deterministic transduction harms the performance of maximum likelihood estimation. In this paper, by considering the uniqueness of expression tree, we propose an equation normalization method to normalize the duplicated equations. Moreover, we analyze the performance of three popular SEQ2SEQ models on the math word problem solving. We find that each model has its own specialty in solving problems, consequently an ensemble model is then proposed to combine their advantages. Experiments on dataset Math23K show that the ensemble model with equation normalization significantly outperforms the previous state-of-the-art methods.
      </details>
 
-42. **Automatically Solving Number Word Problems by Semantic Parsing and Reasoning** [[pdf]](http://aclweb.org/anthology/D15-1135) `2015-01-01` (154 cite) (19 AI4Math cite) 
+42. **HyperTree Proof Search for Neural Theorem Proving** [[pdf]](http://arxiv.org/abs/2205.11491) `NeurIPS 2022` `Lean, MetaMath` (84 cite) (19 AI4Math cite) 
+
+
+     <details>
+          <summary>SemanticsScholar tldr</summary>
+          This work shows that with HTPS alone, a model trained on annotated proofs manages to prove 65.4% of a held-out set of Metamath theorems, significantly outperforming the previous state of the art of 56.5% by GPT-f.
+     </details>
+
+
+     <details>
+          <summary>Abstract</summary>
+          We propose an online training procedure for a transformer-based automated theorem prover. Our approach leverages a new search algorithm, HyperTree Proof Search (HTPS), that learns from previous proof searches through online training, allowing it to generalize to domains far from the training distribution. We report detailed ablations of our pipeline’s main components by studying performance on three environments of increasing complexity. In particular, we show that with HTPS alone, a model trained on annotated proofs manages to prove 65.4% of a held-out set of Metamath theorems, significantly outperforming the previous state of the art of 56.5% by GPT-f. Online training on these unproved theorems increases accuracy to 82.6%. With a similar computational budget, we improve the state of the art on the Lean-based miniF2F-curriculum dataset from 31% to 42% proving accuracy.
+     </details>
+
+43. **Automatically Solving Number Word Problems by Semantic Parsing and Reasoning** [[pdf]](http://aclweb.org/anthology/D15-1135) `2015-01-01` (154 cite) (19 AI4Math cite) 
 
 
      <details>
@@ -578,7 +592,7 @@
           This paper presents a semantic parsing and reasoning approach to automatically solving math word problems. A new meaning representation language is designed to bridge natural language text and math expressions. A CFG parser is implemented based on 9,600 semi-automatically created grammar rules. We conduct experiments on a test set of over 1,500 number word problems (i.e., verbally expressed number problems) and yield 95.4% precision and 60.2% recall.
      </details>
 
-43. **Decomposed Prompting: A Modular Approach for Solving Complex Tasks** [[pdf]](https://openreview.net/forum?id=_nGgzQjzaRy) `ICLR 2023 Poster` (284 cite) (18 AI4Math cite) 
+44. **Decomposed Prompting: A Modular Approach for Solving Complex Tasks** [[pdf]](https://openreview.net/forum?id=_nGgzQjzaRy) `ICLR 2023 Poster` (284 cite) (18 AI4Math cite) 
 
 
      <details>
@@ -590,20 +604,6 @@
      <details>
           <summary>Abstract</summary>
           Few-shot prompting is a surprisingly powerful way to use Large Language Models (LLMs) to solve various tasks. However, this approach struggles as the task complexity increases or when the individual reasoning steps of the task themselves are hard to learn, especially when embedded in more complex tasks. To address this, we propose Decomposed Prompting, a new approach to solve complex tasks by decomposing them (via prompting) into simpler sub-tasks that can be delegated to a library of prompting-based LLMs dedicated to these sub-tasks. This modular structure allows each prompt to be optimized for its specific sub-task, further decomposed if necessary, and even easily replaced with more effective prompts, trained models, or symbolic functions if desired.We show that the flexibility and modularity of Decomposed Prompting allows it to outperform prior work on few-shot prompting using GPT3. On symbolic reasoning tasks, we can further decompose sub-tasks that are hard for LLMs into even simpler solvable sub-tasks. When the complexity comes from the input length, we can recursively decompose the task into the same task but with smaller inputs. We also evaluate our approach on textual multi-step reasoning tasks: on long-context multi-hop QA task, we can more effectively teach the sub-tasks via our separate sub-tasks prompts; and on open-domain multi-hop QA, we can incorporate a symbolic information retrieval within our decomposition framework, leading to improved performance on both tasks. Datasets, Code and Prompts available at https://github.com/allenai/DecomP.
-     </details>
-
-44. **HyperTree Proof Search for Neural Theorem Proving** [[pdf]](http://arxiv.org/abs/2205.11491) `NeurIPS 2022` `Lean, MetaMath` (84 cite) (18 AI4Math cite) 
-
-
-     <details>
-          <summary>SemanticsScholar tldr</summary>
-          This work shows that with HTPS alone, a model trained on annotated proofs manages to prove 65.4% of a held-out set of Metamath theorems, significantly outperforming the previous state of the art of 56.5% by GPT-f.
-     </details>
-
-
-     <details>
-          <summary>Abstract</summary>
-          We propose an online training procedure for a transformer-based automated theorem prover. Our approach leverages a new search algorithm, HyperTree Proof Search (HTPS), that learns from previous proof searches through online training, allowing it to generalize to domains far from the training distribution. We report detailed ablations of our pipeline’s main components by studying performance on three environments of increasing complexity. In particular, we show that with HTPS alone, a model trained on annotated proofs manages to prove 65.4% of a held-out set of Metamath theorems, significantly outperforming the previous state of the art of 56.5% by GPT-f. Online training on these unproved theorems increases accuracy to 82.6%. With a similar computational budget, we improve the state of the art on the Lean-based miniF2F-curriculum dataset from 31% to 42% proving accuracy.
      </details>
 
 45. **LILA: A Unified Benchmark for Mathematical Reasoning** [[pdf]](https://arxiv.org/abs/2210.17517) `EMNLP 2022 Main` (103 cite) (18 AI4Math cite) 

@@ -114,7 +114,7 @@
           Integrating large language models (LLMs) with various tools has led to increased attention in the field. Existing approaches either involve fine-tuning the LLM, which is both computationally costly and limited to a fixed set of tools, or prompting LLMs by in-context tool demonstrations. Although the latter method offers adaptability to new tools, it struggles with the inherent context length constraint of LLMs when many new tools are presented, and mastering a new set of tools with few-shot examples remains challenging, resulting in suboptimal performance. To address these limitations, we propose a novel solution, named **ToolkenGPT**, wherein LLMs effectively learn to master tools as predicting tokens through **tool embeddings** for solving complex tasks. In this framework, each tool is transformed into vector embeddings and plugged into the language model head. Once the function is triggered during text generation, the LLM enters a special function mode to execute the tool calls. Our experiments show that function embeddings effectively help LLMs understand tool use and improve on several tasks, including numerical reasoning, knowledge-based question answering and embodied decision-making.
      </details>
 
-9. **Solving olympiad geometry without human demonstrations** [[pdf]](https://www.nature.com/articles/s41586-023-06747-5) `Nature` (162 cite) (7 AI4Math cite) 
+9. **Solving olympiad geometry without human demonstrations** [[pdf]](https://www.nature.com/articles/s41586-023-06747-5) `Nature` (162 cite) (8 AI4Math cite) 
 
 
      <details>
@@ -128,7 +128,7 @@
           Proving mathematical theorems at the olympiad level represents a notable milestone in human-level automated reasoning1–4, owing to their reputed difficulty among the world’s best talents in pre-university mathematics. Current machine-learning approaches, however, are not applicable to most mathematical domains owing to the high cost of translating human proofs into machine-verifiable format. The problem is even worse for geometry because of its unique translation challenges1,5, resulting in severe scarcity of training data. We propose AlphaGeometry, a theorem prover for Euclidean plane geometry that sidesteps the need for human demonstrations by synthesizing millions of theorems and proofs across different levels of complexity. AlphaGeometry is a neuro-symbolic system that uses a neural language model, trained from scratch on our large-scale synthetic data, to guide a symbolic deduction engine through infinite branching points in challenging problems. On a test set of 30 latest olympiad-level problems, AlphaGeometry solves 25, outperforming the previous best method that only solves ten problems and approaching the performance of an average International Mathematical Olympiad (IMO) gold medallist. Notably, AlphaGeometry produces human-readable proofs, solves all geometry problems in the IMO 2000 and 2015 under human expert evaluation and discovers a generalized version of a translated IMO theorem in 2004.
      </details>
 
-10. **Mathematical discoveries from program search with large language models** [[pdf]](https://www.nature.com/articles/s41586-023-06924-6) `2023-12-14` (152 cite) (2 AI4Math cite) 
+10. **Mathematical discoveries from program search with large language models** [[pdf]](https://www.nature.com/articles/s41586-023-06924-6) `2023-12-14` (152 cite) (3 AI4Math cite) 
 
 
      <details>
@@ -1026,7 +1026,7 @@
           We propose a new test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model's academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings.
      </details>
 
-75. **Generative Language Modeling for Automated Theorem Proving** [[pdf]](https://arxiv.org/abs/2009.03393) `N/A` (234 cite) (39 AI4Math cite) 
+75. **Generative Language Modeling for Automated Theorem Proving** [[pdf]](https://arxiv.org/abs/2009.03393) `N/A` (234 cite) (40 AI4Math cite) 
 
 
      <details>
@@ -1096,7 +1096,7 @@
           Large pre-trained language models (LMs) are known to encode substantial amounts of linguistic information. However, high-level reasoning skills, such as numerical reasoning, are difficult to learn from a language-modeling objective only. Consequently, existing models for numerical reasoning have used specialized architectures with limited flexibility. In this work, we show that numerical reasoning is amenable to automatic data generation, and thus one can inject this skill into pre-trained LMs, by generating large amounts of data, and training in a multi-task setup. We show that pre-training our model, GenBERT, on this data, dramatically improves performance on DROP (49.3 –> 72.3 F1), reaching performance that matches state-of-the-art models of comparable size, while using a simple and general-purpose encoder-decoder architecture. Moreover, GenBERT generalizes well to math word problem datasets, while maintaining high performance on standard RC tasks. Our approach provides a general recipe for injecting skills into large pre-trained LMs, whenever the skill is amenable to automatic data augmentation.
      </details>
 
-80. **Deep Learning for Symbolic Mathematics** [[pdf]](http://arxiv.org/abs/1912.01412) `ICLR 2020 Spotlight` (357 cite) (23 AI4Math cite) 
+80. **Deep Learning for Symbolic Mathematics** [[pdf]](http://arxiv.org/abs/1912.01412) `ICLR 2020 Spotlight` (357 cite) (24 AI4Math cite) 
 
 
      <details>
