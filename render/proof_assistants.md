@@ -688,7 +688,7 @@ This is an incomplete list primarily focused on new papers in 2024 + older paper
           The math abilities of large language models can represent their abstract reasoning ability. In this paper, we introduce and open-source our math reasoning LLMs InternLM-Math which is continue pre-trained from InternLM2. We unify chain-of-thought reasoning, reward modeling, formal reasoning, data augmentation, and code interpreter in a unified seq2seq format and supervise our model to be a versatile math reasoner, verifier, prover, and augmenter. These abilities can be used to develop the next math LLMs or self-iteration. InternLM-Math obtains open-sourced state-of-the-art performance under the setting of in-context learning, supervised fine-tuning, and code-assisted reasoning in various informal and formal benchmarks including GSM8K, MATH, Hungary math exam, MathBench-ZH, and MiniF2F. Our pre-trained model achieves 30.3 on the MiniF2F test set without fine-tuning. We further explore how to use LEAN to solve math problems and study its performance under the setting of multi-task learning which shows the possibility of using LEAN as a unified platform for solving and proving in math. Our models, codes, and data are released at \url{https://github.com/InternLM/InternLM-Math}.
      </details>
 
-62. **DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models** [[pdf]](http://arxiv.org/abs/2402.03300) `2024-02-06` `Isabelle` (123 cite) (7 AI4Math cite) 
+62. **DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models** [[pdf]](http://arxiv.org/abs/2402.03300) `2024-02-06` `Isabelle` (123 cite) (8 AI4Math cite) 
 
 
      <details>

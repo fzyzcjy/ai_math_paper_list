@@ -72,7 +72,7 @@
           Recent developments in large language models (LLMs) have been impressive. However, these models sometimes show inconsistencies and problematic behavior, such as hallucinating facts, generating flawed code, or creating offensive and toxic content. Unlike these models, humans typically utilize external tools to cross-check and refine their initial content, like using a search engine for fact-checking, or a code interpreter for debugging. Inspired by this observation, we introduce a framework called CRITIC that allows LLMs, which are essentially “black boxes” to validate and progressively amend their own outputs in a manner similar to human interaction with tools. More specifically, starting with an initial output, CRITIC interacts with appropriate tools to evaluate certain aspects of the text, and then revises the output based on the feedback obtained during this validation process. Comprehensive evaluations involving free-form question answering, mathematical program synthesis, and toxicity reduction demonstrate that CRITIC consistently enhances the performance of LLMs. Meanwhile, our research highlights the crucial importance of external feedback in promoting the ongoing self-improvement of LLMs.
      </details>
 
-6. **DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models** [[pdf]](http://arxiv.org/abs/2402.03300) `2024-02-06` `Isabelle` (123 cite) (7 AI4Math cite) 
+6. **DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models** [[pdf]](http://arxiv.org/abs/2402.03300) `2024-02-06` `Isabelle` (123 cite) (8 AI4Math cite) 
 
 
      <details>
@@ -170,7 +170,7 @@
           Although Large Language Models (LLMs) and Large Multimodal Models (LMMs) exhibit impressive skills in various domains, their ability for mathematical reasoning within visual contexts has not been formally examined. Equipping LLMs and LMMs with this capability is vital for general-purpose AI assistants and showcases promising potential in education, data analysis, and scientific discovery. To bridge this gap, we present MathVista, a benchmark designed to amalgamate challenges from diverse mathematical and visual tasks. We first taxonomize the key task types, reasoning skills, and visual contexts from the literature to guide our selection from 28 existing math-focused and visual question answering datasets. Then, we construct three new datasets, IQTest, FunctionQA, and PaperQA, to accommodate for missing types of visual contexts. The problems featured often require deep visual understanding beyond OCR or image captioning, and compositional reasoning with rich domain-specific tools, thus posing a notable challenge to existing models. We conduct a comprehensive evaluation of 11 prominent open-source and proprietary foundation models (LLMs, LLMs augmented with tools, and LMMs). The best-performing model, Multimodal Bard, achieves only 58\% of human performance (34.8\% vs 60.3\%), indicating ample room for further improvement. Given this significant gap, MathVista fuels future research in the development of general-purpose AI agents capable of tackling mathematically intensive and visually rich real-world tasks.
      </details>
 
-13. **Reasoning with Language Model is Planning with World Model** [[pdf]](http://arxiv.org/abs/2305.14992) `EMNLP 2023 Main` (289 cite) (8 AI4Math cite) 
+13. **Reasoning with Language Model is Planning with World Model** [[pdf]](http://arxiv.org/abs/2305.14992) `EMNLP 2023 Main` (289 cite) (9 AI4Math cite) 
 
 
      <details>
@@ -226,7 +226,7 @@
           Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its true potential and limitations. Central to our investigation is the notion of intrinsic self-correction, whereby an LLM attempts to correct its initial responses based solely on its inherent capabilities, without the crutch of external feedback. In the context of reasoning, our research indicates that LLMs struggle to self-correct their responses without external feedback, and at times, their performance might even degrade post self-correction. Drawing from these insights, we offer suggestions for future research and practical applications in this field.
      </details>
 
-17. **Reflexion: language agents with verbal reinforcement learning** [[pdf]](http://arxiv.org/abs/2303.11366) `NeurIPS 2023 Poster` (615 cite) (6 AI4Math cite) 
+17. **Reflexion: language agents with verbal reinforcement learning** [[pdf]](http://arxiv.org/abs/2303.11366) `NeurIPS 2023 Poster` (615 cite) (7 AI4Math cite) 
 
 
      <details>
@@ -254,7 +254,7 @@
           Large language models (LLMs) have pushed the limits of natural language understanding and exhibited excellent problem-solving ability. Despite the great success, most existing open-source LLMs (\eg, LLaMA-2) are still far away from satisfactory for solving mathematical problems due to the complex reasoning procedures. To bridge this gap, we propose \emph{MetaMath}, a finetuned language model that specializes in mathematical reasoning. Specifically, we start by bootstrapping mathematical questions by rewriting the question from multiple perspectives, which results in a new dataset called {MetaMathQA}. Then we finetune the LLaMA-2 models on MetaMathQA. Experimental results on two popular benchmarks (\ie, GSM8K and MATH) for mathematical reasoning demonstrate that MetaMath outperforms a suite of open-source LLMs by a significant margin. Our MetaMath-7B model achieves $66.5\%$ on GSM8K and $19.8\%$ on MATH, exceeding the state-of-the-art models of the same size by $11.5\%$ and $8.7\%$. Particularly, MetaMath-70B achieves an accuracy of $82.3\%$ on GSM8K, slightly better than GPT-3.5-Turbo. We release the MetaMathQA dataset, the MetaMath models with different model sizes and the training code for public use.
      </details>
 
-19. **MAmmoTH: Building Math Generalist Models through Hybrid Instruction Tuning** [[pdf]](http://arxiv.org/abs/2309.05653) `ICLR 2024` (232 cite) (23 AI4Math cite) 
+19. **MAmmoTH: Building Math Generalist Models through Hybrid Instruction Tuning** [[pdf]](http://arxiv.org/abs/2309.05653) `ICLR 2024 Spotlight` (232 cite) (24 AI4Math cite) 
 
 
      <details>
@@ -304,7 +304,7 @@
           Reasoning, as an essential ability for complex problem-solving, can provide back-end support for various real-world applications, such as medical diagnosis, negotiation, etc. This paper provides a comprehensive survey of cutting-edge research on reasoning with language model prompting. We introduce research works with comparisons and summaries and provide systematic resources to help beginners. We also discuss the potential reasons for emerging such reasoning abilities and highlight future research directions. Resources are available at https://github.com/zjunlp/Prompt4ReasoningPapers (updated periodically).
      </details>
 
-23. **WizardMath: Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct** [[pdf]](http://arxiv.org/abs/2308.09583) `ICLR 2025 Submission` (262 cite) (26 AI4Math cite) 
+23. **WizardMath: Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct** [[pdf]](http://arxiv.org/abs/2308.09583) `ICLR 2025 Submission` (262 cite) (27 AI4Math cite) 
 
 
      <details>
@@ -360,7 +360,7 @@
           The surprising ability of Large Language Models (LLMs) to perform well on complex reasoning with only few-shot chain-of-thought prompts is believed to emerge only in very large-scale models. We show that such abilities can, in fact, be distilled down from GPT-3.5 (≥ 175B) to T5 variants (≤ 11B). We propose model specialization, to specialize the model’s ability towards a target task. The hypothesis is that large models (commonly viewed as larger than 100B) have strong modeling power such that they can perform a large spectrum of tasks. Small models (commonly viewed as smaller than 10B) have limited model capacity, but if we specialize their capacity towards a target task, the model can achieve decent performance improvements. We use multi-step math reasoning as our testbed because it is a very typical emergent ability. We show two important aspects of model abilities: (1) balancing language model’s performance on multiple tasks is a delicate matter, as improvements on one task may compromise other tasks; (2) yet by intentionally paying the price of decreased generic ability, we can clearly improve across different model scales smaller than 10B towards a specialized multi-step math reasoning ability. We further give comprehensive discussions about important design choices for better generalization, including the data format mixture and the start model checkpoint. We hope our practice and discoveries can serve as an important attempt towards specialized smaller models in the new research paradigm set by LLMs.
      </details>
 
-27. **Towards Reasoning in Large Language Models: A Survey** [[pdf]](https://aclanthology.org/2023.findings-acl.67) `ACL 2023 Findings` (386 cite) (9 AI4Math cite) 
+27. **Towards Reasoning in Large Language Models: A Survey** [[pdf]](https://aclanthology.org/2023.findings-acl.67) `ACL 2023 Findings` (386 cite) (10 AI4Math cite) 
 
 
      <details>
@@ -472,7 +472,7 @@
           Like humans, large language models (LLMs) do not always generate the best output on their first try. Motivated by how humans refine their written text, we introduce Self-Refine, an approach for improving initial outputs from LLMs through iterative feedback and refinement. The main idea is to generate an initial output using an LLMs; then, the same LLMs provides *feedback* for its output and uses it to *refine* itself, iteratively. Self-Refine does not require any supervised training data, additional training, or reinforcement learning, and instead uses a single LLM as the generator, refiner and the feedback provider. We evaluate Self-Refine across 7 diverse tasks, ranging from dialog response generation to mathematical reasoning, using state-of-the-art (GPT-3.5, ChatGPT, and GPT-4) LLMs. Across all evaluated tasks, outputs generated with Self-Refine are preferred by humans and automatic metrics over those generated with the same LLM using conventional one-step generation, improving by $\sim$20\% absolute on average in task performance. Our work demonstrates that even state-of-the-art LLMs like GPT-4 can be further improved at test-time using our simple, standalone approach.
      </details>
 
-35. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models** [[pdf]](http://arxiv.org/abs/2305.10601) `NeurIPS 2023 Oral` (1000 cite) (26 AI4Math cite) 
+35. **Tree of Thoughts: Deliberate Problem Solving with Large Language Models** [[pdf]](http://arxiv.org/abs/2305.10601) `NeurIPS 2023 Oral` (1000 cite) (27 AI4Math cite) 
 
 
      <details>
@@ -528,7 +528,7 @@
           Large language models (LLMs) can perform complex reasoning in few- and zero-shot settings by generating intermediate chain of thought (CoT) reasoning steps. Further, each reasoning step can rely on external tools to support computation beyond the core LLM capabilities (e.g. search/running code). Prior work on CoT prompting and tool use typically requires hand-crafting task-specific demonstrations and carefully scripted interleaving of model generations with tool use. We introduce Automatic Reasoning and Tool-use (ART), a framework that uses frozen LLMs to automatically generate intermediate reasoning steps as a program. Given a new task to solve, ART selects demonstrations of multi-step reasoning and tool use from a task library. At test time, ART seamlessly pauses generation whenever external tools are called, and integrates their output before resuming generation. ART achieves a substantial improvement over few-shot prompting and automatic CoT on unseen tasks in the BigBench and MMLU benchmarks, and matches performance of hand-crafted CoT prompts on a majority of these tasks. ART is also extensible, and makes it easy for humans to improve performance by correcting errors in task-specific programs or incorporating new tools, which we demonstrate by drastically improving performance on select tasks with minimal human intervention.
      </details>
 
-39. **ReAct: Synergizing Reasoning and Acting in Language Models** [[pdf]](http://arxiv.org/abs/2210.03629) `ICLR 2023` (1000 cite) (30 AI4Math cite) 
+39. **ReAct: Synergizing Reasoning and Acting in Language Models** [[pdf]](http://arxiv.org/abs/2210.03629) `ICLR 2023` (1000 cite) (31 AI4Math cite) 
 
 
      <details>
@@ -542,7 +542,7 @@
           While large language models (LLMs) have demonstrated impressive capabilities across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with external sources, such as knowledge bases or environments, to gather additional information. We apply our approach, named ReAct, to a diverse set of language and decision making tasks and demonstrate its effectiveness over state-of-the-art baselines, as well as improved human interpretability and trustworthiness over methods without reasoning or acting components. Concretely, on question answering (HotpotQA) and fact verification (Fever), ReAct overcomes issues of hallucination and error propagation prevalent in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generates human-like task-solving trajectories that are more interpretable than baselines without reasoning traces. On two interactive decision making benchmarks (ALFWorld and WebShop), ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34% and 10% respectively, while being prompted with only one or two in-context examples.
      </details>
 
-40. **Self-Consistency Improves Chain of Thought Reasoning in Language Models** [[pdf]](http://arxiv.org/abs/2203.11171) `ICLR 2023` (1000 cite) (89 AI4Math cite) 
+40. **Self-Consistency Improves Chain of Thought Reasoning in Language Models** [[pdf]](http://arxiv.org/abs/2203.11171) `ICLR 2023` (1000 cite) (90 AI4Math cite) 
 
 
      <details>
@@ -626,7 +626,7 @@
           Large language models (LLMs) have demonstrated an impressive ability to perform arithmetic and symbolic reasoning tasks, when provided with a few examples at test time ("few-shot prompting"). Much of this success can be attributed to prompting methods such as "chain-of-thought", which employ LLMs for both understanding the problem description by decomposing it into steps, as well as solving each step of the problem. While LLMs seem to be adept at this sort of step-by-step decomposition, LLMs often make logical and arithmetic mistakes in the solution part, even when the problem is decomposed correctly. In this paper, we present Program-Aided Language models (PAL): a novel approach that uses the LLM to read natural language problems and generate programs as the intermediate reasoning steps, but offloads the solution step to a runtime such as a Python interpreter. With PAL, decomposing the natural language problem into runnable steps remains the only learning task for the LLM, while solving is delegated to the interpreter. We demonstrate this synergy between a neural LLM and a symbolic interpreter across 13 mathematical, symbolic, and algorithmic reasoning tasks from BIG-Bench Hard and others. In all these natural language reasoning tasks, generating code using an LLM and reasoning using a Python interpreter leads to more accurate results than much larger models. For example, PAL using Codex achieves state-of-the-art few-shot accuracy on GSM8K, surpassing PaLM which uses chain-of-thought by absolute 15% top-1.
      </details>
 
-46. **Let's Verify Step by Step** [[pdf]](https://arxiv.org/abs/2305.20050) `ICLR 2024 Poster` (344 cite) (27 AI4Math cite) 
+46. **Let's Verify Step by Step** [[pdf]](https://arxiv.org/abs/2305.20050) `ICLR 2024 Poster` (344 cite) (28 AI4Math cite) 
 
 
      <details>
@@ -738,7 +738,7 @@
           We evaluate the reasoning abilities of large language models in multilingual settings. We introduce the Multilingual Grade School Math (MGSM) benchmark, by manually translating 250 grade-school math problems from the GSM8K dataset (Cobbe et al., 2021) into ten typologically diverse languages. We find that the ability to solve MGSM problems via chain-of-thought prompting emerges with increasing model scale, and that models have strikingly strong multilingual reasoning abilities, even in underrepresented languages such as Bengali and Swahili. Finally, we show that multilingual reasoning abilities of language models extend to other tasks such as commonsense reasoning and word-in-context semantic judgment. The MGSM benchmark is publicly available at AnonymousLink and the supplementary material.
      </details>
 
-54. **Least-to-Most Prompting Enables Complex Reasoning in Large Language Models** [[pdf]](https://openreview.net/forum?id=WZH7099tgfM) `ICLR 2023 Poster` (788 cite) (49 AI4Math cite) 
+54. **Least-to-Most Prompting Enables Complex Reasoning in Large Language Models** [[pdf]](https://openreview.net/forum?id=WZH7099tgfM) `ICLR 2023 Poster` (788 cite) (50 AI4Math cite) 
 
 
      <details>
@@ -928,7 +928,7 @@
           The practice of mathematics involves discovering patterns and using these to formulate and prove conjectures, resulting in theorems. Since the 1960s, mathematicians have used computers to assist in the discovery of patterns and formulation of conjectures1, most famously in the Birch and Swinnerton-Dyer conjecture2, a Millennium Prize Problem3. Here we provide examples of new fundamental results in pure mathematics that have been discovered with the assistance of machine learning—demonstrating a method by which machine learning can aid mathematicians in discovering new conjectures and theorems. We propose a process of using machine learning to discover potential patterns and relations between mathematical objects, understanding them with attribution techniques and using these observations to guide intuition and propose conjectures. We outline this machine-learning-guided framework and demonstrate its successful application to current research questions in distinct areas of pure mathematics, in each case showing how it led to meaningful mathematical contributions on important open problems: a new connection between the algebraic and geometric structure of knots, and a candidate algorithm predicted by the combinatorial invariance conjecture for symmetric groups4. Our work may serve as a model for collaboration between the fields of mathematics and artificial intelligence (AI) that can achieve surprising results by leveraging the respective strengths of mathematicians and machine learning.
      </details>
 
-68. **Training Verifiers to Solve Math Word Problems** [[pdf]](http://arxiv.org/abs/2110.14168) `2021-11-17` (1000 cite) (129 AI4Math cite) 
+68. **Training Verifiers to Solve Math Word Problems** [[pdf]](http://arxiv.org/abs/2110.14168) `2021-11-17` (1000 cite) (130 AI4Math cite) 
 
 
      <details>
@@ -942,7 +942,7 @@
           State-of-the-art language models can match human performance on many tasks, but they still struggle to robustly perform multi-step mathematical reasoning. To diagnose the failures of current models and support research, we introduce GSM8K, a dataset of 8.5K high quality linguistically diverse grade school math word problems. We find that even the largest transformer models fail to achieve high test performance, despite the conceptual simplicity of this problem distribution. To increase performance, we propose training verifiers to judge the correctness of model completions. At test time, we generate many candidate solutions and select the one ranked highest by the verifier. We demonstrate that verification significantly improves performance on GSM8K, and we provide strong empirical evidence that verification scales more effectively with increased data than a finetuning baseline.
      </details>
 
-69. **Measuring Mathematical Problem Solving With the MATH Dataset** [[pdf]](http://arxiv.org/abs/2103.03874) `NeurIPS 2021` (935 cite) (82 AI4Math cite) 
+69. **Measuring Mathematical Problem Solving With the MATH Dataset** [[pdf]](http://arxiv.org/abs/2103.03874) `NeurIPS 2021` (935 cite) (83 AI4Math cite) 
 
 
      <details>
