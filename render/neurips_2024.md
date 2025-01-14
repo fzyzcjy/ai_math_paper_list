@@ -1002,7 +1002,15 @@ This list will be refined after all paper PDFs are released.
           Understanding the mathematical reasoning capabilities of Large Language Models (LLMs) is a central topic in the study of artificial intelligence. This new domain necessitates the creation of datasets of reasoning tasks for both training and benchmarking the performance of LLMs. To this end, we introduce the Karp dataset: The first dataset composed of detailed proofs of NP-completeness reductions. The reductions vary in difficulty, ranging from simple exercises of undergraduate courses to more challenging reductions from academic papers. We compare the performance of state-of-the-art models on this task and demonstrate the effect of fine-tuning with the Karp dataset on reasoning capacity.
      </details>
 
-93. **VinePPO: Accurate Credit Assignment in RL for LLM Mathematical Reasoning** [[pdf]](https://openreview.net/forum?id=KqALqWJSbF) `NeurIPS 2024 Workshop MATH-AI` (0 cite) (0 AI4Math cite) 
+93. **Unsupervised Discovery of Formulas for Mathematical Constants** [[pdf]](http://arxiv.org/abs/2412.16818) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+
+
+     <details>
+          <summary>Abstract</summary>
+          In recent years, we are witnessing a rise of AI and machine learning methods for scientific discovery and hypothesis creation. Despite the strides in other fields of science, a persistent challenge lies in the creation of formulas for mathematical constants.In the landscape of formula creation, there is no straightforward ‘’distance metric'' between two samples that can guide progress. Formulas are either true or false, with no continuous adjustments that can enhance their correctness.The absence of a systematic method left the realm of formula discovery elusive for automated methods. In this work, we propose a systematic methodology for categorization, characterization, and pattern identification of such formulas. We demonstrate this methodology on Polynomial Continued Fraction formulas, which are ubiquitous in their intrinsic connections to mathematical constants, and generalize many mathematical functions and structures.We discover organizing metrics for the space of polynomial continued fractions. We test our methodology on a set of 1,768,900 such formulas, identifying many known formulas for mathematical constants, and discover previously unknown formulas for $\pi$, $\ln(2)$, Gauss, and Lemniscate constants. The uncovered patterns enable a direct generalization of individual formulas to infinite families, unveiling rich mathematical structures. This success paves the way towards a generative model that creates continued fractions fulfilling requested mathematical properties, potentially accelerating by orders of magnitude the rate of discovery of useful formulas.
+     </details>
+
+94. **VinePPO: Accurate Credit Assignment in RL for LLM Mathematical Reasoning** [[pdf]](https://openreview.net/forum?id=KqALqWJSbF) `NeurIPS 2024 Workshop MATH-AI` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -1010,7 +1018,7 @@ This list will be refined after all paper PDFs are released.
           Large language models (LLMs) are increasingly required to solve complex reasoning tasks, like mathematical problems, that involve multiple reasoning steps before feedback is received. Effectively identifying and prioritizing key steps by accurately assigning credit to these intermediate steps is essential for enhancing model performance. Proximal Policy Optimization (PPO), a state-of-the-art reinforcement learning algorithm for finetuning LLMs, addresses the credit assignment problem by employing value networks to predict the expected cumulative rewards of intermediate states. In this work, we identify significant limitations with this value estimation method. To address this, we propose \methodname that leverages the flexibility of language environments to compute unbiased Monte Carlo-based estimates of the intermediate values. VinePPO consistently outperforms standard PPO, doing so more efficiently and with lower divergence from the reference model. Our findings underscore the critical importance of accurate credit assignment in LLM post-training and present a simple, yet effective solution.
      </details>
 
-94. **When and How Does Synthetic Data Improve Reasoning Capabilities of Language Models?** [[pdf]](https://neurips.cc/virtual/2024/poster/96295) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
+95. **When and How Does Synthetic Data Improve Reasoning Capabilities of Language Models?** [[pdf]](https://neurips.cc/virtual/2024/poster/96295) `NeurIPS 2024` (0 cite) (0 AI4Math cite) 
 
 
      <details>
@@ -1018,7 +1026,7 @@ This list will be refined after all paper PDFs are released.
           Training on model-generated synthetic data is a promising approach for finetuning LLMs, but it remains unclear when it helps or hurts. In this paper, we investigate this for reasoning problems via an empirical study, followed by a theoretical formalization of our observations. First, we find that while the typical approach of finetuning a model on synthetic correct or positive problem-solution pairs generated by capable models offers modest performance gains, sampling more correct solutions from the finetuned learner doubles the sample efficiency of synthetic data. At the same time, training on model-generated positives can amplify various spurious  correlations, resulting in flat or even inverse scaling trends as the amount of data increases. Surprisingly, we find that several of these issues can be addressed if we also utilize negative responses, i.e. model-generated responses that are deemed incorrect via final answer checking. Crucially, these negatives must be constructed such that the training can appropriately recover the utility or credit of each intermediate step in the negative response. With this per-step scheme, we are able to attain consistent gains over only positive data, attaining performance similar to amplifying the amount of synthetic data by 8x. We show that training on per-step negatives can help to unlearn spurious correlations in the positive data, and is equivalent to advantage-weighted reinforcement learning (RL), implying that it inherits benefits of RL over imitating positive data alone.
      </details>
 
-95. **Wu’s Method Boosts Symbolic AI to Rival Silver Medalists and AlphaGeometry to Outperform Gold Medalists at IMO Geometry** [[pdf]](https://openreview.net/forum?id=aKRtC45gle) `NeurIPS 2024 Workshop MATH-AI` (0 cite) (0 AI4Math cite) 
+96. **Wu’s Method Boosts Symbolic AI to Rival Silver Medalists and AlphaGeometry to Outperform Gold Medalists at IMO Geometry** [[pdf]](https://openreview.net/forum?id=aKRtC45gle) `NeurIPS 2024 Workshop MATH-AI` (0 cite) (0 AI4Math cite) 
 
 
      <details>

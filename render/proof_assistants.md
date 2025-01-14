@@ -318,12 +318,12 @@ This is an incomplete list primarily focused on new papers in 2024 + older paper
           When proving an inductive problem, we often prove auxiliary lemmas that are useful for proving the original problem. If these auxiliary lemmas themselves are challenging, we must introduce more lemmas to prove these lemmas. To automate such multi-step conjecturing, we developed Abduction Prover. Given a proof goal, Abduction Prover conjectures a series of lemmas and attempts to prove the original goal using these lemmas. Our working prototype of Abduction Prover for Isabelle/HOL is publicly available on GitHub.
      </details>
 
-33. **Proof Recommendation System for the HOL4 Theorem Prover** [[pdf]](None) `2024-09-01` `HOL 4` (0 cite) (0 AI4Math cite) 
+33. **Proof Recommendation System for the HOL4 Theorem Prover** [[pdf]](https://arxiv.org/abs/2501.05463) `2024-09-01` `HOL 4` (0 cite) (0 AI4Math cite) 
 
 
      <details>
           <summary>Abstract</summary>
-          N/A
+          We introduce a proof recommender system for the HOL4 theorem prover. Our tool is built upon a transformer-based model [2] designed specifically to provide proof assistance in HOL4. The model is trained to discern theorem proving patterns from extensive libraries of HOL4 containing proofs of theorems. Consequently, it can accurately predict the next tactic(s) (proof step(s)) based on the history of previously employed tactics. The tool operates by reading a given sequence of tactics already used in a proof process (in our case, it contains at least three tactics), referred to as the current proof state, and provides recommendations for the next optimal proof step(s).
      </details>
 
 34. **ProofDB: A prototype natural language Coq search engine** [[pdf]](None) `2024-09-01` `Coq` (0 cite) (0 AI4Math cite) 
